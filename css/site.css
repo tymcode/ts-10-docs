@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Anybody;
+  src: url("../musicians-manual/fonts/anybody-latin.woff2") format("woff2");
+  font-weight: 500 650;
+  font-stretch: 87.5%;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --rule: #c8c8c8;
+  --accent: #1a3a4a;
+  --ensoniq: #0b6e7a;
+  --max: 48rem;
+  --font-body: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-ui: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #d5d0c8;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  padding: 0.4rem 0.7rem;
+  z-index: 20;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header {
+  background: var(--accent);
+  color: #f4f7f8;
+  padding: 0.7rem 1.25rem;
+  font-family: var(--font-ui);
+}
+
+.site-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header .chrome > a {
+  display: block;
+}
+
+.site-header .brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.site-header .product {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.chrome {
+  max-width: calc(var(--max) + 4rem);
+  margin: 0 auto;
+}
+
+.paper {
+  max-width: calc(var(--max) + 4rem);
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+  background: #fff;
+  min-height: 70vh;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hub-marks {
+  margin: 1.5rem 0 2.25rem;
+}
+
+.hub-marks .ensoniq-mark {
+  display: block;
+  width: min(18rem, 50%);
+  height: auto;
+  margin: 0 auto 1.75rem;
+}
+
+.hub-marks .ts-logotype {
+  display: block;
+  width: min(22rem, 72%);
+  height: auto;
+  margin: 0 auto;
+}
+
+.lede {
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.doc-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 36rem;
+  border-top: 2px solid var(--ink);
+}
+
+.doc-list li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-list a,
+.doc-list .soon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.95rem 0.15rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.doc-list a:hover .doc-title {
+  color: var(--ensoniq);
+}
+
+.doc-title {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 1.05rem;
+}
+
+.doc-status {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.doc-list .soon {
+  opacity: 0.72;
+}
+
+.placeholder h1 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+}
+
+.site-footer {
+  max-width: calc(var(--max) + 4rem);
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem 2rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .paper {
+    padding: 1.5rem 1rem 3rem;
+  }
+}

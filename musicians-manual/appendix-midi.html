@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appendix — MIDI Implementation — ENSONIQ TS&#8209;10/TS-12 Musician’s Manual</title>
+  <link rel="stylesheet" href="css/manual.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+    </div>
+  </header>
+  <nav class="section-nav">
+    <div><a href="15-sampled-params.html#section-15-sampled-sound-parameters">← Section 15 — Sampled Sound Parameters</a></div>
+    <div><a href="contents.html">Contents</a> · <a href="search.html">Search</a> · <a href="print.html">Print</a></div>
+    <div></div>
+  </nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
+      <h1>Appendix — MIDI Implementation</h1>
+    </header>
+
+    <h3 id="ts-10-midi-implementation">TS&#8209;10 MIDI Implementation</h3>
+    <p>The TS&#8209;10 features an extensive MIDI (Musical Instrument Digital Interface) implementation. For normal applications, you will find all the information you need regarding the TS&#8209;10’s MIDI functions in this manual. You can also refer to the <a href="#midi-implementation-chart">MIDI Implementation Chart</a> on the next page for a summary of the TS&#8209;10 MIDI implementation.</p>
+    <p>If you are writing a computer program to communicate with the TS&#8209;10 via MIDI, or otherwise require a copy of the full TS&#8209;10 System Exclusive Specification, it is available free of charge by writing to:</p>
+    <address>
+      ENSONIQ Corp.<br>
+      MIDI Specification Desk<br>
+      155 Great Valley Parkway<br>
+      P.O. Box 3035<br>
+      Malvern PA 19355-0735<br>
+      USA
+    </address>
+    <p>Include in your written request your name and address, and indicate that you would like a copy of the “TS&#8209;10 System Exclusive Specification.” Please allow 2 to 3 weeks for delivery.</p>
+
+    <h3 id="registered-parameters">Registered Parameters</h3>
+    <p>Registered parameters are transmitted (as four sequential continuous controller messages) by the TS&#8209;10 whenever certain parameters are edited from the front panel. The two registered parameter controllers select the parameter and the following two data entry controllers specify the value.</p>
+
+    <h4 id="controllers">Controllers</h4>
+    <table class="data-table grid">
+      <thead>
+        <tr>
+          <th><em>Number</em></th>
+          <th><em>Name</em></th>
+          <th><em>Value</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>100</td>
+          <td>Registered Parameter Select LSB</td>
+          <td>00 or 01</td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>Registered Parameter Select MSB</td>
+          <td>always 0</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Data Entry MSB (Most Significant Byte)</td>
+          <td>(see below)</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>Data Entry LSB (Least Significant Byte)</td>
+          <td>(see below)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 id="registered-parameter-numbers">Registered Parameters</h4>
+    <table class="data-table grid">
+      <thead>
+        <tr>
+          <th><em>Number</em></th>
+          <th><em>Name</em></th>
+          <th><em>TS&#8209;10 parameter range</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00</td>
+          <td>Pitch Bend Range</td>
+          <td>0..12..0H..12H</td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Fine Tuning</td>
+          <td>0..255 (displayed -99 to +99)</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Coarse Tuning (GM Mode only)</td>
+          <td>0..127 (displayed -64 to +63)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The parameter values are sent as two Data Entry controller messages:</p>
+    <table class="data-table grid">
+      <thead>
+        <tr>
+          <th><em>Parameter</em></th>
+          <th><em>Data Entry MSB (6)</em></th>
+          <th><em>Data Entry LSB (38)</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pitch Bend Range</td>
+          <td>0..25</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Fine Tuning</td>
+          <td>0..127 (internal bits 1..7)</td>
+          <td>64 or 0 (internal bit 0)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For Fine Tuning, which is an 8-bit value internally, the most significant 7 bits are offset by 64 and shifted once before being sent as Data Entry MSB (Controller 6). The least significant bit of the internal value is transmitted as bit 6 of Data Entry LSB (Controller 38).</p>
+    <p>In most system modes, registered parameters 0 and 1 affect the <span class="page-name">System</span> page <span class="param">TUNE</span> and <span class="param">BEND</span> parameters respectively (when received on the Base Channel only). In <span class="mode">General MIDI</span> mode, registered parameters 0, 1, and 2 are received multi-timbrally, and affect each Track/Channel independently.</p>
+
+    <h3 id="midi-implementation-chart">MIDI Implementation Chart</h3>
+    <table class="data-table impl-chart midi-impl">
+      <caption>
+        <span class="caption-bar">
+          <span class="model">MODEL: TS&#8209;10</span>
+          <span class="title">MIDI Implementation Chart</span>
+          <span class="version">Version: 2.0</span>
+        </span>
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="2">Function…</th>
+          <th>Transmitted</th>
+          <th>Recognized</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2">Basic Channel</th>
+          <td>Default</td>
+          <td class="tx">1</td>
+          <td class="rx">1</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>Channels</td>
+          <td class="tx">1-16</td>
+          <td class="rx">1-16</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <th rowspan="3">Mode</th>
+          <td>Default</td>
+          <td class="tx">1</td>
+          <td class="rx">1, 3, 4, <span class="mode">MULTI</span></td>
+          <td class="remarks">current mode is memorized</td>
+        </tr>
+        <tr>
+          <td>Messages</td>
+          <td class="tx">X</td>
+          <td class="rx">X</td>
+          <td class="remarks" rowspan="2">Global Controllers in MONO Mode</td>
+        </tr>
+        <tr>
+          <td>Altered</td>
+          <td class="tx">X</td>
+          <td class="rx">X</td>
+        </tr>
+        <tr>
+          <th>Note Number</th>
+          <td>True Voice</td>
+          <td class="tx">21-108</td>
+          <td class="rx">21-108</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <th rowspan="2">Velocity</th>
+          <td>Note ON</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks" rowspan="2"><sup>1</sup> A Note Off velocity of 64 is always sent for all keys.</td>
+        </tr>
+        <tr>
+          <td>Note OFF</td>
+          <td class="tx">X<sup>1</sup></td>
+          <td class="rx">X</td>
+        </tr>
+        <tr>
+          <th rowspan="2">After Touch</th>
+          <td>Key</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"><span class="term">Poly-Key</span> pressure</td>
+        </tr>
+        <tr>
+          <td>Channel</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <th colspan="2">Pitch Bender</th>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <th rowspan="20" colspan="2">Control Change</th>
+          <td class="tx list">1–127 External Controller</td>
+          <td class="rx list">1–127 External Controller</td>
+          <td class="remarks">assignable (XCTRL)</td>
+        </tr>
+        <tr>
+          <td class="tx list">0 Bank Select MSB</td>
+          <td class="rx list">0 Bank Select MSB</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">1 Mod Wheel</td>
+          <td class="rx list">1 Mod Wheel</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">4 Foot Pedal</td>
+          <td class="rx list">4 Foot Pedal</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">6 Data Entry MSB<sup>2</sup></td>
+          <td class="rx list">6 Data Entry MSB<sup>2</sup></td>
+          <td class="remarks"><sup>2</sup> for Reg. Params only after 100 &amp; 101 are transmitted or received.</td>
+        </tr>
+        <tr>
+          <td class="tx list">7 Volume</td>
+          <td class="rx list">7 Volume</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">10 Pan</td>
+          <td class="rx list">10 Pan</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">12 Effect Mod Foot Switch</td>
+          <td class="rx list">12 Effect Mod Foot Switch</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">32 Bank Select LSB</td>
+          <td class="rx list">32 Bank Select LSB</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">38 Data Entry LSB<sup>2</sup></td>
+          <td class="rx list">38 Data Entry LSB<sup>2</sup></td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">64 Sustain</td>
+          <td class="rx list">64 Sustain</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">66 Sostenuto</td>
+          <td class="rx list">66 Sostenuto</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">70 Sound Variation<sup>3</sup></td>
+          <td class="rx list">70 Sound Variation<sup>3</sup></td>
+          <td class="remarks"><sup>3</sup> Patch Selects; values of 0, 32, 64, 127</td>
+        </tr>
+        <tr>
+          <td class="tx list">71 Harmonic Content<sup>4</sup></td>
+          <td class="rx list">71 Harmonic Content<sup>4</sup></td>
+          <td class="remarks"><sup>4</sup> Timbre</td>
+        </tr>
+        <tr>
+          <td class="tx list">72 Release Time</td>
+          <td class="rx list">72 Release Time</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">73 Attack Time</td>
+          <td class="rx list">73 Attack Time</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">74 Brightness</td>
+          <td class="rx list">74 Brightness</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">75 Rate (LFO &amp;/or Duration)</td>
+          <td class="rx list">75 Rate (LFO &amp;/or Duration)</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td class="tx list">100 Reg. Param. Select LSB<sup>5</sup></td>
+          <td class="rx list">100 Reg. Param. Select LSB<sup>5</sup></td>
+          <td class="remarks"><sup>5</sup> values of 0 &amp; 1 only</td>
+        </tr>
+        <tr>
+          <td class="tx list">101 Reg. Param. Select MSB<sup>6</sup></td>
+          <td class="rx list">101 Reg. Param. Select MSB<sup>6</sup></td>
+          <td class="remarks"><sup>6</sup> always 0</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Program Change</th>
+          <td></td>
+          <td class="tx">0-127</td>
+          <td class="rx">0-119</td>
+          <td class="remarks">in <span class="mode">OMNI</span>, <span class="mode">POLY</span>, &amp; <span class="mode">MONO A</span></td>
+        </tr>
+        <tr>
+          <td>True Number</td>
+          <td class="tx">0-127</td>
+          <td class="rx">0-119</td>
+          <td class="remarks">in <span class="mode">MULTI</span> &amp; <span class="mode">MONO B</span></td>
+        </tr>
+        <tr>
+          <th colspan="2">System Exclusive</th>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks">see TS&#8209;10 Sys-Ex Spec.</td>
+        </tr>
+        <tr>
+          <th rowspan="3">System Common</th>
+          <td>: Song Pos</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: Song Sel</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: Tune</td>
+          <td class="tx">X</td>
+          <td class="rx">X</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <th rowspan="2">System Real Time</th>
+          <td>: Clocks</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: Commands</td>
+          <td class="tx">O<sup>7</sup></td>
+          <td class="rx">O<sup>7</sup></td>
+          <td class="remarks"><sup>7</sup> Start, Stop, Continue</td>
+        </tr>
+        <tr>
+          <th rowspan="4">Aux. Messages</th>
+          <td>: Local On/Off</td>
+          <td class="tx">X</td>
+          <td class="rx">X</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: All Notes Off</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: Active Sense</td>
+          <td class="tx">X</td>
+          <td class="rx">X</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr>
+          <td>: Reset</td>
+          <td class="tx">O</td>
+          <td class="rx">O</td>
+          <td class="remarks"></td>
+        </tr>
+        <tr class="notes-row">
+          <th colspan="5">Notes</th>
+        </tr>
+      </tbody>
+    </table>
+    <table class="impl-legend">
+      <tbody>
+        <tr>
+          <td>Mode 1= OMNI ON, POLY</td>
+          <td>Mode 2= OMNI ON, MONO</td>
+          <td>O = YES</td>
+        </tr>
+        <tr>
+          <td>Mode 3= OMNI OFF, POLY</td>
+          <td>Mode 4= OMNI OFF, MONO</td>
+          <td>X = NO</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </article>
+  <footer class="site-footer">
+    Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
+    This is a working HTML transcription for the Toniq project; original pagination
+    and the printed Index are omitted.
+  </footer>
+</body>
+</html>
