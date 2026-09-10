@@ -420,6 +420,10 @@ span.term {
   font-weight: 600;
 }
 
+span.product-name {
+  white-space: nowrap;
+}
+
 span.param,
 .param {
   font-family: inherit;
@@ -1537,6 +1541,16 @@ body.print-book > article.manual {
     page-break-inside: avoid !important;
   }
 
+  figure.vfd-unit {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  :is(p, li, ul, ol, h2, h3, h4, h5, h6, div):has(+ figure.vfd-unit) {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
   table,
   .memory-map,
   .twin-tables,
@@ -1551,20 +1565,51 @@ body.print-book > article.manual {
     page-break-inside: avoid;
   }
 
-  aside.tip,
-  aside.note,
-  aside.model-note,
-  aside.edition-note {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  /* Tall figures with break-inside:avoid overflow a letter page and
+     Chromium then inserts a blank page. Cap height so image + caption fit. */
+  figure.figure img,
+  figure.panel-photo img,
+  figure.vfd-photo img {
+    max-height: 8.25in;
+    width: auto;
+    object-fit: contain;
+  }
+
+  aside {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   .vfd-bezel,
   .vfd-screen,
-  aside.tip,
-  aside.note,
-  aside.model-note {
+  .soft-row button.soft-btn,
+  aside {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  /* Print engines often fail to blur/clip shadows (especially at page
+     starts), painting them as unmasked rectangles: gray around the bezel,
+     vivid green over pressed soft-buttons, and a green wash behind VFD
+     glyphs. */
+  .vfd-bezel,
+  .button-group-bezel {
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .vfd-screen {
+    box-shadow: none;
+  }
+
+  .soft-row button.soft-btn,
+  .soft-row button.soft-btn.pressed,
+  .soft-row button.soft-btn[aria-pressed="true"] {
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .vfd-screen td.cell {
+    text-shadow: none;
   }
 }

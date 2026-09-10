@@ -27,9 +27,9 @@ function snippet(text, terms) {
 
 function search(q) {
   const terms = tokenize(q);
-  if (!terms.length || !window.TONIQ_SEARCH_DOCS) return [];
+  if (!terms.length || !window.TSONIQ_SEARCH_DOCS) return [];
   const hits = [];
-  for (const doc of window.TONIQ_SEARCH_DOCS) {
+  for (const doc of window.TSONIQ_SEARCH_DOCS) {
     const hay = (doc.title + " " + doc.heading + " " + doc.text).toLowerCase();
     let score = 0;
     for (const t of terms) {

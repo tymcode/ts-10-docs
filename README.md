@@ -22,6 +22,6 @@ Add later documents as sibling folders and list them on `index.html` and in this
 
 ## About
 
-These are working HTML transcriptions for study and for the [Toniq](https://github.com/tymcode/toniq) TS-10/TS-12 editor/librarian project. Original pagination and the printed indexes are omitted.
+These are working HTML transcriptions for study and for the [T-Soniq](https://github.com/tymcode/t-soniq) TS-10/TS-12 editor/librarian project. Original pagination and the printed indexes are omitted.
 
 Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
