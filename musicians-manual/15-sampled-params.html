@@ -171,7 +171,7 @@
     <h4 id="xpos" class="param-name"><span class="param">XPOS</span><span class="range">Range: -64 to +63</span></h4>
     <p>This parameter is the default transposition for the Sampled Sound. It is a transposition offset independent of
       the Track <span class="param">TRANSPOSE</span> setting, and determines the pitch of the Sampled Sound when Track
-      <span class="param">TRANSPOSE</span> is set to <span class="value">+0 +00</span> (i.e.: nominal pitch). Editing this parameter will not edit
+      <span class="param">TRANSPOSE</span> is set to <span class="value"><span class="plus">+</span>0 <span class="plus">+</span>00</span> (i.e.: nominal pitch). Editing this parameter will not edit
       the Track <span class="param">TRANSPOSE</span> value.</p>
     <h4 id="bright" class="param-name"><span class="param">BRIGHT</span><span class="range">Range: -64 to +63</span>
     </h4>
@@ -1398,7 +1398,7 @@
     <p>The effect of any selected modulators will be added to (or subtracted from) this level.</p>
     <h4 id="kbd" class="param-name"><span class="param">KBD</span><span class="range">Range: -99 to +99</span></h4>
     <p>Sets the amount by which the location of a note on the keyboard will modulate the filter cutoff frequency (filter
-      keyboard tracking). To have the filter track the keyboard exactly set <span class="value">KBD=+50</span>.</p>
+      keyboard tracking). To have the filter track the keyboard exactly set <span class="value">KBD=<span class="plus">+</span>50</span>.</p>
     <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
     <p>Selects a modulation source for the filter cutoff frequency from among the 15 available modulators.</p>
     <h4 id="modamt-2" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span>
@@ -1614,8 +1614,8 @@
       <figcaption>Destination-bus signal routing.</figcaption>
     </figure>
     <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Pans the WaveSample within the stereo field. A setting of <span class="value">-99</span> is panned hard left, and <span class="value">+99</span> is panned hard right.
-      A value of <span class="value">+00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
+    <p>Pans the WaveSample within the stereo field. A setting of <span class="value">-99</span> is panned hard left, and <span class="value"><span class="plus">+</span>99</span> is panned hard right.
+      A value of <span class="value"><span class="plus">+</span>00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
     <h4 id="modsrc-4" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
     <p>Selects a modulation source for the WaveSample <span class="param">PAN</span> from among the 15 available modulators. This will cause the WaveSample's location in the stereo field to vary with the output level of the modulation source.</p>
     <h4 id="modamt-4" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span>
@@ -1861,7 +1861,7 @@
         with positive <span class="param">MODAMT</span> values, and backward (toward the beginning of the WaveSample)
         with negative <span class="param">MODAMT</span> values.</li>
       <li><span class="value">START</span> — The <span class="param">SAMPLE-START</span> will be modulated.</li>
-      <li><span class="value">START+LP</span> — Both the <span class="param">SAMPLE-START</span> <em>and</em> the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START+LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
+      <li><span class="value">START<span class="plus">+</span>LP</span> — Both the <span class="param">SAMPLE-START</span> <em>and</em> the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START<span class="plus">+</span>LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
         rather than at the <span class="param">SAMPLE-START</span> value.</li>
       <li><span class="value">LOOPSTRT</span> — Modulates the <span class="param">LOOPSTART</span> parameter. This will have the effect of either
         making the loop shorter (with positive <span class="param">MODAMT</span> values moving the <span
@@ -1881,14 +1881,14 @@
     </h4>
     <p>The <span class="param">MODAMT</span> and <span class="param">MODRANGE</span> parameters determine the amount by which the assigned wave modulator will affect the <span class="page-name">WAVE</span> page parameters:</p>
     <ul>
-      <li><span class="value">MOD AMT</span> — This parameter determines the amount of modulation that will be applied to the wave parameter specified in the <span class="param">WAVE-MODULATION-TYPE</span> parameter. This parameter has a value range of <span class="value">-99</span> to <span class="value">+99</span>.</li>
+      <li><span class="value">MOD AMT</span> — This parameter determines the amount of modulation that will be applied to the wave parameter specified in the <span class="param">WAVE-MODULATION-TYPE</span> parameter. This parameter has a value range of <span class="value">-99</span> to <span class="value"><span class="plus">+</span>99</span>.</li>
       <li><span class="value">MODRANGE</span> — This parameter determines the range that will be covered by the <span class="param">MODAMT</span>. The range is displayed in sample size. The reason for this parameter is due to the nature of Sampled Sounds. Whereas ROM-based synthesizers contain waveforms that have a defined length that will always be the same, the size of each individual WaveSample will vary from Sampled Sound to Sampled Sound. The <span class="param">MODAMT</span> parameter has no way of knowing this sample size, so the TS&#8209;10 uses the <span class="param">MODRANGE</span> parameter to define it.</li>
       </ul>
       <p>To determine what value to set the <span class="param">MODRANGE</span> parameter to, go to the <span class="param">SAMPLE-END</span> parameter and examine at the value. This value tells you how large the selected WaveSample is. You can then select the <span class="param">MODRANGE</span> value that comes closest to the actual size of the WaveSample.</p>
      
     <p>If you were working with a very small WaveSample, you would adjust the wave modulation amount to something like
-      this <span class="value">MOD AMT=+99</span> <span class="value">RANGE=128</span>. If you
-      were working with a much larger WaveSample, you would adjust the wave modulation to <span class="value">MOD AMT=+99</span> <span class="value">RANGE=1 MG</span> (MegaSample). Think of <span class="value">RANGE</span> as a multiplier, and <span class="value">MOD AMT=-99</span> to <span class="value">+99</span> as fine tuning.</p>
+      this <span class="value">MOD AMT=<span class="plus">+</span>99</span> <span class="value">RANGE=128</span>. If you
+      were working with a much larger WaveSample, you would adjust the wave modulation to <span class="value">MOD AMT=<span class="plus">+</span>99</span> <span class="value">RANGE=1 MG</span> (MegaSample). Think of <span class="value">RANGE</span> as a multiplier, and <span class="value">MOD AMT=-99</span> to <span class="value"><span class="plus">+</span>99</span> as fine tuning.</p>
     <h2 id="volume-mod-source-shaper-page">Volume Mod Source Shaper Page </h2>
     <p>Press the <kbd class="button">Mod Mixer</kbd> button. The <span class="page-name">VOL MODSRC SHAPER</span> page
       is displayed.</p>

@@ -17,11 +17,11 @@
 
 @font-face {
   font-family: "Anybody Star";
-  src: url("../fonts/anybody-star.woff2") format("woff2");
+  src: url("../fonts/anybody-star.woff2?v=1.003") format("woff2");
   font-weight: 400 700;
   font-style: normal;
   font-display: block;
-  unicode-range: U+002A;
+  unicode-range: U+002A, U+002B;
 }
 
 @font-face {
@@ -441,7 +441,8 @@ span.value,
   letter-spacing: 0em;
 }
 
-span.star {
+span.star,
+span.plus {
   font-family: "Anybody Star", var(--font-panel);
   font-style: normal;
   font-stretch: normal;

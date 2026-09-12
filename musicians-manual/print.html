@@ -688,7 +688,7 @@
   <figcaption><span class="page-name">System</span> page — <span class="param">TUNE</span> selected</figcaption>
 </figure>
 <h4 id="tune" class="param-name"><span class="param">TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
-<p>Adjusts the overall master tuning of the keyboard up or down as much as one semitone. A value of <span class="value">+00</span> will set the TS&#8209;10 to concert A=440 tuning.</p>
+<p>Adjusts the overall master tuning of the keyboard up or down as much as one semitone. A value of <span class="value"><span class="plus">+</span>00</span> will set the TS&#8209;10 to concert A=440 tuning.</p>
 <h4 id="pitch-bend" class="param-name"><span class="param">PITCH-BEND</span><span class="range">Range: 00 to 12 semitones <br>Held Range: 00H to 12H semitones</span></h4>
 <p>Adjusts the system pitch bend range, which is the maximum amount of pitch bend that can be applied with the pitch wheel. Each increment represents a semitone.</p>
 <p>The bend range will apply to all programs <em>except</em> those which have been programmed to override the system bend range. If you adjust the system bend range, and a program does not seem to pitch-bend the correct amount, check the setting of the <span class="param">BEND</span> parameter on the <span class="page-name">Pitch Mods</span> page for each voice in that particular program. If <span class="value">BEND=SYS</span>, then the program uses the system bend range. Otherwise, the program has its own bend range and will ignore the system bend range.</p>
@@ -1954,9 +1954,9 @@ You have now selected User RAM BankSet U1.</li>
   
   
 </figure>
-<p>The <span class="page-name">Pan</span> Page gives you control over the placement of the track’s sound in a stereo field. A <span class="param">PAN</span> setting of <span class="value">-64</span> is hard left, and <span class="value">+63</span> is hard right.</p>
+<p>The <span class="page-name">Pan</span> Page gives you control over the placement of the track’s sound in a stereo field. A <span class="param">PAN</span> setting of <span class="value">-64</span> is hard left, and <span class="value"><span class="plus">+</span>63</span> is hard right.</p>
 <p>Press the soft button underneath the <span class="param">PAN</span> value again to select either <span class="value">STEREO</span> or <span class="value">-MONO-</span>.</p>
-<p>When <span class="value">-MONO-</span> is selected, it will override the settings originally programmed on the <span class="page-name">Output</span> page and force ALL of the voices of the sound to the new pan location. <span class="value">-MONO-</span> is the optimal setting when using parallel effects, because it allows for discrete routing into the two components of the FX-1 effect. When this is set to <span class="value">STEREO</span>, and the <span class="param">PAN</span> is set to <span class="value">+00</span>, the voices of a sound are panned according to the settings originally programmed on the <span class="page-name">Output</span> page.</p>
+<p>When <span class="value">-MONO-</span> is selected, it will override the settings originally programmed on the <span class="page-name">Output</span> page and force ALL of the voices of the sound to the new pan location. <span class="value">-MONO-</span> is the optimal setting when using parallel effects, because it allows for discrete routing into the two components of the FX-1 effect. When this is set to <span class="value">STEREO</span>, and the <span class="param">PAN</span> is set to <span class="value"><span class="plus">+</span>00</span>, the voices of a sound are panned according to the settings originally programmed on the <span class="page-name">Output</span> page.</p>
 <p>All tracks whose MIDI Status is set to <span class="value">SEND/RECV</span>, <span class="value">SEND/----</span>, <span class="value">LOCAL-OFF</span> or <span class="value">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 10) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
 <h4 id="attack-page" class="param-name"><span class="param">Attack Page</span><span class="range">Range: -64 to +63</span></h4>
 <ul>
@@ -3571,7 +3571,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>All of the parallel effect algorithms follow the topology shown in the illustration above. The heavy lines are
       stereo paths. Voices assigned to <span class="param">FX1</span> (on the <span class="page-name">Output</span> Page) will be sent to Effect A,
       if the <span class="param">PAN</span> parameter is set to -99 (hard left) or sent to Effect B, if the <span
-        class="param">PAN</span> parameter is set to <span class="value">+99</span> (hard right). Note that by setting
+        class="param">PAN</span> parameter is set to <span class="value"><span class="plus">+</span>99</span> (hard right). Note that by setting
       the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a <em>parallel</em> routing
       between Effect A and Effect B.
       There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into Effect B.
@@ -3832,7 +3832,7 @@ You have now selected User RAM BankSet U1.</li>
         class="value">00</span> will offer no audible delay.</p>
     <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right. If set to either hard left or hard right, the delayed
       signal for the opposite side is inaudible.</p>
     <h4 id="ddl-regen-l" class="param-name"><span class="param">DDL REGEN L</span><span class="range">Range: -99 to
         +99</span></h4>
@@ -3857,11 +3857,11 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
     <p>Determines the location of the chorused signal in the stereo spectrum. A value of <span class="value">-99</span>
-      is panned hard left, and <span class="value">+99</span> is hard right.</p>
+      is panned hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
     <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is
-      panned hard left, and <span class="value">+99</span> is hard right.</p>
+      panned hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
         127</span></h4>
     <p>Controls the nominal delay time of the chorus about which the delay modulation occurs. Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
@@ -3924,7 +3924,7 @@ You have now selected User RAM BankSet U1.</li>
         class="value">00</span> will offer no audible delay.</p>
     <h4 id="pan-2" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right. If set to either hard left or hard right, the delayed
       signal for the opposite side is inaudible.</p>
     <h4 id="eq-fc" class="param-name"><span class="param">EQ FC</span><span class="range">Range: 0 Hz to 15 KHz</span>
     </h4>
@@ -3965,7 +3965,7 @@ You have now selected User RAM BankSet U1.</li>
         class="value">00</span> will eliminate the audio signal.</p>
     <h4 id="pan-3" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right. If set to either hard left or hard right, the delayed
       signal for the opposite side is inaudible.</p>
     <h4 id="wet" class="param-name"><span class="param">WET</span><span class="range">Range: 00 to 99</span></h4>
     <p>This parameter controls the volume of the delayed signal only. Setting this parameter to <span
@@ -4078,7 +4078,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Controls the input level to the pre-amp, to eliminate the possibility of clipping boosted signals.</p>
     <h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the distortion in the stereo spectrum. A value of <span class="value">-99</span> is
-      panned hard left, and <span class="value">+99</span> is hard right.</p>
+      panned hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="preamp" class="param-name"><span class="param">PREAMP</span><span class="range">Range: 00 to 99</span></h4>
     <p>Adjusts the amount of boost or cut applied to the incoming signal. We recommend lower settings, since these
       emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher
@@ -4156,7 +4156,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Controls the output level of the Voltage control filter.</p>
     <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the VCF in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      hard left, and <span class="value">+99</span> is hard right.</p>
+      hard left, and <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="bw-3" class="param-name"><span class="param">BW</span><span class="range">Range: 00 to 99</span></h4>
     <p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">VCF
         FC</span> parameter determines where (at what frequency) this peak will occur, the BW setting controls the
@@ -4741,7 +4741,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="l-r-balance" class="param-name"><span class="param">L/R BALANCE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Controls the left/right stereo balance of the plate reverb signal. A setting of <span class="value">-99</span> would offer hard left,
-      whereas a setting of <span class="value">+99</span> offers hard right. A setting of <span class="value">+00</span> would place the reverb in the center of the stereo
+      whereas a setting of <span class="value"><span class="plus">+</span>99</span> offers hard right. A setting of <span class="value"><span class="plus">+</span>00</span> would place the reverb in the center of the stereo
       spectrum.</p>
     <h4 id="definition-3" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to
         99</span></h4>
@@ -4770,8 +4770,8 @@ You have now selected User RAM BankSet U1.</li>
     <p>Determines the time intervals between the seven discrete echoes produced by the plate. The time intervals are
       adjusted relative to one another.</p>
     <h4 id="shape" class="param-name"><span class="param">SHAPE</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Determines the relative volume of the seven discrete echoes produced by the plate. At <span class="value">+00</span> seven echoes are all
-      the same volume. At <span class="value">-99</span> the first echo is quietest, with successive echoes increasing in volume. At <span class="value">+99</span> produces
+    <p>Determines the relative volume of the seven discrete echoes produced by the plate. At <span class="value"><span class="plus">+</span>00</span> seven echoes are all
+      the same volume. At <span class="value">-99</span> the first echo is quietest, with successive echoes increasing in volume. At <span class="value"><span class="plus">+</span>99</span> produces
       the opposite effect.</p>
 
 
@@ -4919,8 +4919,8 @@ You have now selected User RAM BankSet U1.</li>
       adjusted relative to one another.</p>
     <h4 id="shape-2" class="param-name"><span class="param">SHAPE</span><span class="range">Range: -99 to +99</span>
     </h4>
-    <p>Determines the relative volume of the seven discrete echoes produced by the hall. At <span class="value">+00</span> seven echoes are all the
-      same volume. At <span class="value">-99</span> the first echo is quietest, with successive echoes increasing in volume. At <span class="value">+99</span> produces the
+    <p>Determines the relative volume of the seven discrete echoes produced by the hall. At <span class="value"><span class="plus">+</span>00</span> seven echoes are all the
+      same volume. At <span class="value">-99</span> the first echo is quietest, with successive echoes increasing in volume. At <span class="value"><span class="plus">+</span>99</span> produces the
       opposite effect.</p>
     <h4 id="front-to-back-levs-1-to-3" class="param-name"><span class="param">FRONT-TO-BACK LEVS (1 to 3)</span><span
         class="range">Range: -99 to +99</span></h4>
@@ -4931,7 +4931,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="l-r-balance-2" class="param-name"><span class="param">L/R BALANCE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Controls the left/right stereo balance of the hall reverb signal. A setting of <span class="value">-99</span> would offer hard left, whereas
-      a setting of <span class="value">+99</span> would offer hard right. A setting of <span class="value">+00</span> would place the reverb in the center of the stereo
+      a setting of <span class="value"><span class="plus">+</span>99</span> would offer hard right. A setting of <span class="value"><span class="plus">+</span>00</span> would place the reverb in the center of the stereo
       spectrum.</p>
     <h4 id="primary-send-2" class="param-name"><span class="param">PRIMARY SEND</span><span class="range">Range: -99 to
         +99</span></h4>
@@ -5044,7 +5044,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="l-r-balance-3" class="param-name"><span class="param">L/R BALANCE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Controls the left/right stereo balance of the gated reverb signal. A setting of <span class="value">-99</span> would offer hard left,
-      whereas a setting of <span class="value">+99</span> would offer hard right. A setting of <span class="value">+00</span> would place the reverb in the center of the
+      whereas a setting of <span class="value"><span class="plus">+</span>99</span> would offer hard right. A setting of <span class="value"><span class="plus">+</span>00</span> would place the reverb in the center of the
       stereo spectrum.</p>
     <h4 id="primary-send-3" class="param-name"><span class="param">PRIMARY SEND</span><span class="range">Range: -99 to
         +99</span></h4>
@@ -5194,7 +5194,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="l-r-balance-4" class="param-name"><span class="param">L/R BALANCE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Controls the left/right stereo balance of the gated reverb signal. A setting of <span class="value">-99</span> would offer hard left,
-      whereas a setting of <span class="value">+99</span> would offer hard right. A setting of <span class="value">+0</span> would place the reverb in the center of the
+      whereas a setting of <span class="value"><span class="plus">+</span>99</span> would offer hard right. A setting of <span class="value"><span class="plus">+</span>0</span> would place the reverb in the center of the
       stereo spectrum.</p>
     <h4 id="hf-damping-9" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
         99</span></h4>
@@ -5308,7 +5308,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="l-r-balance-5" class="param-name"><span class="param">L/R BALANCE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Controls the left/right stereo balance of the <dfn class="term">Gated Reverb</dfn> signal. A setting of <span class="value">-99</span> would offer hard left,
-      whereas a setting of <span class="value">+99</span> would offer hard right. A setting of <span class="value">+00</span> would place the reverb in the center of the
+      whereas a setting of <span class="value"><span class="plus">+</span>99</span> would offer hard right. A setting of <span class="value"><span class="plus">+</span>00</span> would place the reverb in the center of the
       stereo spectrum.</p>
     <h4 id="level-8" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
     <p>Adjusts the volume of the <dfn class="term">slapback</dfn> (internal dry) signal. A value of <span class="value">00</span> would eliminate audible slapback.</p>
@@ -5403,7 +5403,7 @@ You have now selected User RAM BankSet U1.</li>
       repeats in the delays. A setting of <span class="value">99</span> would offer an infinite delay.</p>
     <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      far left, and <span class="value">+99</span> is far right.</p>
+      far left, and <span class="value"><span class="plus">+</span>99</span> is far right.</p>
     <table class="param-cols cols-3">
       <tbody>
         <tr>
@@ -5476,7 +5476,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="cross-regen" class="param-name"><span class="param">CROSS REGEN</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Allows you to feedback the delayed signals to their opposite sides; the left voice crosses to the right voice,
-      and the right voice crosses to the left voice. A setting of <span class="value">+99</span> or <span class="value">-99</span> will cause infinite delay. Be careful, if
+      and the right voice crosses to the left voice. A setting of <span class="value"><span class="plus">+</span>99</span> or <span class="value">-99</span> will cause infinite delay. Be careful, if
       the delay regen is set too high, it may cause this parameter to “blow up.”</p>
     <h4 id="regen-damping-2" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to
         99</span></h4>
@@ -5701,10 +5701,10 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
     <p>Determines the location of the chorused signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and
-      <span class="value">+99</span> is hard right.</p>
+      <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
-    <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and <span class="value">+99</span> is
+    <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and <span class="value"><span class="plus">+</span>99</span> is
       hard right.</p>
     <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
         127</span></h4>
@@ -5824,7 +5824,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>For a complete description of the remaining parameters, refer to the <a class="algo"
         href="07-effects-00-21.html#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
     <h2 id="50-eq-chorus-eq-ddl" class="algo">50 EQ- -CHORUS + EQ- -DDL</h2>
-    <p><span class="param">EQ- -CHORUS + EQ- -DDL</span> combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard
+    <p><span class="param">EQ- -CHORUS <span class="plus">+</span> EQ- -DDL</span> combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard
       chorus effect, designed with very long delays to provide a modulated detune effect. This algorithm sounds great
       with a guitar sound, but try it with any source!</p>
     <figure class="figure"><img src="images/eq-chorus-eq-ddl-routing.png"
@@ -5933,7 +5933,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
       Some voices sound best with very low values.</p>
     <h2 id="52-eq-flanger-delay" class="algo">52 EQ- -FLANGER + DELAY</h2>
-    <p><span class="param">EQ- -FLANGER + DELAY</span> combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft
+    <p><span class="param">EQ- -FLANGER <span class="plus">+</span> DELAY</span> combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft
       woosh” effect.</p>
     <figure class="figure"><img src="images/eq-flanger-delay-routing.png"
         alt="EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Flanger with Delay Feedback and Echo (Echo Level) to Main Output L; right path through Flanger with cross-feed from left delay to Main Output R">
@@ -5962,13 +5962,13 @@ You have now selected User RAM BankSet U1.</li>
       the polarity of the feedback.</p>
     <h4 id="notch-depth" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to
         +99</span></h4>
-    <p>Controls the depth of the notches created by the flanging effect. A setting of <span class="value">+00</span> will disable the flanging
-      effect. A setting of <span class="value">+00</span> will also provide a doppler effect for wide moderately slow LFO rates.</p>
+    <p>Controls the depth of the notches created by the flanging effect. A setting of <span class="value"><span class="plus">+</span>00</span> will disable the flanging
+      effect. A setting of <span class="value"><span class="plus">+</span>00</span> will also provide a doppler effect for wide moderately slow LFO rates.</p>
     <h4 id="s-h-rate" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span>
     </h4>
     <p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the flanger. When in
       hold, the effect will be to create momentarily fixed notches within thefrequency spectrum (if the notch depth is
-      not <span class="value">+00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the number of
+      not <span class="value"><span class="plus">+</span>00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the number of
       holds per second, making the flanging flow more smoothly. The sample and hold function can be turned off (when set
       to <span class="value">000</span>).</p>
     <h4 id="l-r-lfo-3" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
@@ -6051,7 +6051,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
       Some voices sound best with very low values.</p>
     <h2 id="54-phaser-delay" class="algo">54 PHASER + DELAY</h2>
-    <p><span class="param">PHASER + DELAY</span> combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches
+    <p><span class="param">PHASER <span class="plus">+</span> DELAY</span> combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches
       in the signal spectrum, whereas a flanger creates harmonic spacing. This phaser implements a stereo twelve pole
       phasing network to achieve time delay which is a function of-frequency; this is what differentiates the phaser
       from the flanger. The phasing effect is achieved within the phaser topology, so it does not depend upon the
@@ -6089,7 +6089,7 @@ You have now selected User RAM BankSet U1.</li>
         100</span></h4>
     <p>Controls the sample rate of a sample and hold network applied to the LFO within the phaser.</p>
     <p>When in hold, the effect will be to create momentarily fixed notches within the-frequency spectrum (if the notch
-      depth is not <span class="value">+00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the
+      depth is not <span class="value"><span class="plus">+</span>00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the
       number of holds per second, making the phasing flow more smoothly. The sample and hold function can be turned off
       (when set to <span class="value">000</span>).</p>
     <h4 id="l-r-lfo-4" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
@@ -6106,7 +6106,7 @@ You have now selected User RAM BankSet U1.</li>
         msec</span></h4>
     <p>Controls the feed forward delay time for the right side. This is the “pong.”</p>
     <h2 id="55-eq-tremolo-delay" class="algo">55 EQ- -TREMOLO + DELAY</h2>
-    <p><span class="param">EQ- -TREMOLO + DELAY</span> combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital
+    <p><span class="param">EQ- -TREMOLO <span class="plus">+</span> DELAY</span> combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital
       delay.</p>
     <figure class="figure"><img src="images/eq-tremolo-delay-routing.png"
         alt="EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R with Regen cross-feed from delay">
@@ -6168,7 +6168,7 @@ You have now selected User RAM BankSet U1.</li>
     </h4>
     <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
     <h2 id="56-eq-vibrato-delay" class="algo">56 EQ- -VIBRATO + DELAY</h2>
-    <p><span class="param">EQ- -VIBRATO + DELAY</span> combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range),
+    <p><span class="param">EQ- -VIBRATO <span class="plus">+</span> DELAY</span> combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range),
       with a digital delay. Many vintage guitar amplifiers offered a vibrato control, but don’t feel that this effect is
       limited to guitar sounds, try this with other sources as well. There is a sample &amp; hold parameter that doesn’t
       hold the instantaneous pitch shift, but if set properly will provide a “chirping” effect when acting on the input
@@ -6240,7 +6240,7 @@ You have now selected User RAM BankSet U1.</li>
     <ul>
       <li><span class="param">PITCH SHIFTER</span> offers a splicer type pitch shifter.</li>
       <li><span class="param">FAST PITCH SHIFTER</span> is a pitch shifter designed for pitch correction.</li>
-      <li><span class="param">PITCH SHIFTER + DELAY</span> combines a pitch shifter with a DDL (described later).</li>
+      <li><span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> combines a pitch shifter with a DDL (described later).</li>
     </ul>
     <p>These algorithms sound best with an Effect Mix of wet and dry. You can assign a modulation controller for the
       Effect Mix parameters to bring in or fade out the pitch shifted signal. Try the different pitch shifters until you
@@ -6260,7 +6260,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="level-15" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
     <p>Allows you to adjust the level of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
     <h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <table class="param-cols">
       <tbody>
@@ -6310,7 +6310,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Allows you to adjust the volume of Voice-1. A setting of <span class="value">00</span> would eliminate any audible pitch shift.</p>
     <h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>This parameter allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far
-      left, and <span class="value">+99</span> would be far right.</p>
+      left, and <span class="value"><span class="plus">+</span>99</span> would be far right.</p>
     <h4 id="vc-2-fine" class="param-name"><span class="param">VC-2 FINE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>This parameter allows you to fine tune the pitch of Voice-2.</p>
@@ -6318,7 +6318,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>This parameter allows you to adjust the volume of Voice-2. A setting of <span class="value">00</span> would eliminate any audible pitch
       shift.</p>
     <h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-2 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-2 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <h4 id="lfo-rate-3" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span>
     </h4>
@@ -6328,7 +6328,7 @@ You have now selected User RAM BankSet U1.</li>
     <p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very
       large.</p>
     <h2 id="59-pitch-shifter-delay" class="algo">59 PITCH SHIFTER + DELAY</h2>
-    <p><span class="param">PITCH SHIFTER + DELAY</span> combines a pitch shifter with a digital delay. <span class="param">PITCH SHIFTER + DELAY</span> uses a continual
+    <p><span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> combines a pitch shifter with a digital delay. <span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> uses a continual
       crossfading technique of pitch shifting. This technique maintains the stereo field exactly. This pitch shifter
       works best for large pitch shift ratios, in some circumstances. Another feature of this algorithm is a digital
       delay that feeds back into the pitch shift. This feature allows spiraling upward or downward pitch shifts. The
@@ -6347,7 +6347,7 @@ You have now selected User RAM BankSet U1.</li>
     <h4 id="level-18" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
     <p>This parameter adjusts the volume of Voice-1.</p>
     <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <table class="param-cols">
       <tbody>
@@ -6448,7 +6448,7 @@ You have now selected User RAM BankSet U1.</li>
 <p>These algorithms recreate the warm sound of a guitar tube amplifier. They do this by emulating tube distortion characteristics. These algorithms are good for all stringed instrument sounds.</p>
 <p><span class="param">GUITAR AMP 1</span>, designed for Hard Rock, offers more distortion than <span class="param">GUITAR AMP 2</span>, which is optimized for “bluesy” type sounds. The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="preamp-gain" class="param-name"><span class="param">PREAMP GAIN</span><span class="range">Range: -48 to +48 dB</span></h4>
-<p>This parameter adjusts the amount of boost or cut applied to the incoming signal. We recommend a setting of <span class="value">+0</span> dB, since these emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher preamp gains will yield clipping distortion. For low preamp gain, it may be desirable to use low tube bias values.</p>
+<p>This parameter adjusts the amount of boost or cut applied to the incoming signal. We recommend a setting of <span class="value"><span class="plus">+</span>0</span> dB, since these emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher preamp gains will yield clipping distortion. For low preamp gain, it may be desirable to use low tube bias values.</p>
 <h4 id="main-level" class="param-name"><span class="param">MAIN LEVEL</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the output level of the main amp before the output EQ.</p>
 <h4 id="tube-bias" class="param-name"><span class="param">TUBE BIAS</span><span class="range">Range: 00 to 99</span></h4>
@@ -6539,7 +6539,7 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="pre-eq-high-fc" class="param-name"><span class="param">PRE-EQ HIGH FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
 <p>Filters out the low frequencies before the EQ. The higher the value, the less low frequencies will pass through.</p>
 <h4 id="pre-dist-vcf-fc" class="param-name"><span class="param">PRE-DIST VCF FC</span><span class="range">Range: 01 to 99</span></h4>
-<p>Determines the filter cut off-frequency before the distortion. Higher values have a brighter sound. This parameter can be modulated, using a CV Pedal for a wah-wah pedal effect. To disable the distortion filter, set this parameter to <span class="value">99</span>. To use as an EQ, set the desired value and make sure <span class="param">ENV AMT</span> is <span class="value">+00</span>. To use as the auto-wah, set this parameter close to <span class="value">01</span> (lower values) and turn on <span class="param">ENV AMT</span>.</p>
+<p>Determines the filter cut off-frequency before the distortion. Higher values have a brighter sound. This parameter can be modulated, using a CV Pedal for a wah-wah pedal effect. To disable the distortion filter, set this parameter to <span class="value">99</span>. To use as an EQ, set the desired value and make sure <span class="param">ENV AMT</span> is <span class="value"><span class="plus">+</span>00</span>. To use as the auto-wah, set this parameter close to <span class="value">01</span> (lower values) and turn on <span class="param">ENV AMT</span>.</p>
 <h4 id="q-8" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 25</span></h4>
 <p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">PRE-DIST VCF FC</span> parameter determines where (at what-frequency) this peak will occur, the <span class="param">Q</span> setting controls the <em>presence</em> of the peak. This setting is important for the auto-wah effect.</p>
 <h4 id="env-amt" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -6550,7 +6550,7 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="q-9" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 25</span></h4>
 <p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">POST-DIST VCF FC</span> (filter cutoff) parameter determines where (at what-frequency) this peak will occur, the <span class="param">Q</span> setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
 <h4 id="env-amt-2" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to <span class="value">+00</span>, no modification will occur. When set to mid positive values, FC will go high, but then come down to its nominal setting. When set to negative mid values, FC will go low, and then go back up to its nominal setting How quickly it does so is determined by the <span class="param">ATTACK</span> and <span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
+<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to <span class="value"><span class="plus">+</span>00</span>, no modification will occur. When set to mid positive values, FC will go high, but then come down to its nominal setting. When set to negative mid values, FC will go low, and then go back up to its nominal setting How quickly it does so is determined by the <span class="param">ATTACK</span> and <span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 50 µsec to 10.0 sec</span></h4>
 <p>Sets the attack of the envelope follower (i.e. determines how closely the attack is followed) once the incoming signal has been detected. Generally the attack should be short.</p>
 <h4 id="release-3" class="param-name"><span class="param">RELEASE</span><span class="range">Range: 1 msec to 10.0 sec</span></h4>
@@ -6578,7 +6578,7 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="compressor-thresh-2" class="param-name"><span class="param">COMPRESSOR THRESH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the threshold level for the compressor. As the input signal dies away below the threshold, the compressor will increase the gain of the system, causing feedback to increase as well. Normal compression is <span class="value">72</span>.</p>
 <h4 id="flange-rate" class="param-name"><span class="param">FLANGE RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of modulation of the notches due to the flanger effect. A setting of <span class="value">00 effectively turns the flanger off.</p>
+<p>Controls the rate of modulation of the notches due to the flanger effect. A setting of <span class="value">00</span> effectively turns the flanger off.</p>
 <h4 id="dist-input-and-output-2" class="param-name"><span class="param">DIST INPUT and OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
 <p>Control the levels going into and coming out of the distortion effect. For more distortion, use a high input level and turn the output level down to keep the volume under control. For less distortion, use a low input level and a higher output level.</p>
 <h4 id="filter-low-fc-high-fc" class="param-name"><span class="param">FILTER - LOW FC/HIGH FC</span><span class="range">Range: 00 to 99</span></h4>
@@ -7240,13 +7240,13 @@ You have now selected User RAM BankSet U1.</li>
       <em>Modulation Amount</em> (the display shows <span class="star">MODAMT=±##</span>), which controls how deeply the
       selected modulator will affect the level to which it is being applied.</p>
     <p>Press the soft button above <span class="value">MODAMT=</span>, and use the data entry controls to adjust the
-      modulation amount. Modulation amount can be positive or negative. A modulation amount of <span class="value">+00</span> has the same effect
+      modulation amount. Modulation amount can be positive or negative. A modulation amount of <span class="value"><span class="plus">+</span>00</span> has the same effect
       as turning the modulator <span class="value"><span class="star">*</span>OFF<span class="star">*</span></span>.</p>
     <aside class="tip">
-      <p>With modulation amount, as with all parameter values that have a center value (in this case, <span class="value">+00</span>), there is an
+      <p>With modulation amount, as with all parameter values that have a center value (in this case, <span class="value"><span class="plus">+</span>00</span>), there is an
         easy way to reach that value. With the <span class="param">MODAMT</span> selected, press the <kbd
           class="button">Down Arrow</kbd> button and <em>while holding it down</em>, press the <kbd class="button">Up Arrow</kbd>
-        button, then quickly release both buttons. This automatically sets the modulation amount to <span class="value">+00</span>.</p>
+        button, then quickly release both buttons. This automatically sets the modulation amount to <span class="value"><span class="plus">+</span>00</span>.</p>
     </aside>
 
 <h3 id="modulation-sources">Modulation Sources</h3>
@@ -7273,11 +7273,11 @@ You have now selected User RAM BankSet U1.</li>
         <td>• <span class="value">PRESS</span> — Pressure (After-touch)</td>
       </tr>
       <tr>
-        <td>• <span class="value">WL + PR</span> — Wheel + Pressure</td>
+        <td>• <span class="value">WL <span class="plus">+</span> PR</span> — Wheel + Pressure</td>
         <td>• <span class="value">KEYBD</span> — Keyboard Tracking</td>
       </tr>
       <tr>
-        <td>• <span class="value">PR + VL</span> — Pressure + Velocity</td>
+        <td>• <span class="value">PR <span class="plus">+</span> VL</span> — Pressure + Velocity</td>
         <td>• <span class="value">VELOC</span> — Velocity</td>
       </tr>
       <tr>
@@ -7430,11 +7430,11 @@ You have now selected User RAM BankSet U1.</li>
           <td><span class="param">TUNED-PERCUS</span></td>
         </tr>
         <tr>
-          <td><span class="param">BRASS+HORNS</span></td>
+          <td><span class="param">BRASS<span class="plus">+</span>HORNS</span></td>
           <td><span class="param">SOUND-EFFECT</span></td>
         </tr>
         <tr>
-          <td><span class="param">WIND+REEDS</span></td>
+          <td><span class="param">WIND<span class="plus">+</span>REEDS</span></td>
           <td><span class="param">WAVEFORM</span></td>
         </tr>
         <tr>
@@ -7649,7 +7649,7 @@ You have now selected User RAM BankSet U1.</li>
           <table class="wave-group">
             <thead>
               <tr>
-                <th><span class="param">BRASS+HORNS</span>:</th>
+                <th><span class="param">BRASS<span class="plus">+</span>HORNS</span>:</th>
               </tr>
             </thead>
             <tbody>
@@ -7687,7 +7687,7 @@ You have now selected User RAM BankSet U1.</li>
           <table class="wave-group">
             <thead>
               <tr>
-                <th><span class="param">WIND+REEDS</span>:</th>
+                <th><span class="param">WIND<span class="plus">+</span>REEDS</span>:</th>
               </tr>
             </thead>
             <tbody>
@@ -7845,7 +7845,7 @@ You have now selected User RAM BankSet U1.</li>
                 <td><span class="param">FAT-KICK</span></td>
               </tr>
               <tr>
-                <td><span class="param">R+B-KICK</span></td>
+                <td><span class="param">R<span class="plus">+</span>B-KICK</span></td>
               </tr>
               <tr>
                 <td><span class="param">KICK-1</span></td>
@@ -8804,7 +8804,7 @@ You have now selected User RAM BankSet U1.</li>
           <td><span class="value">REPEAT RAMP</span></td>
         </tr>
         <tr>
-          <td><span class="value">RAMP UP+DOWN</span></td>
+          <td><span class="value">RAMP UP<span class="plus">+</span>DOWN</span></td>
           <td><span class="value">HI-HAT DECAY</span></td>
           <td><span class="value">TRANSIENT</span></td>
         </tr>
@@ -11085,7 +11085,7 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="octave" class="param-name"><span class="param">OCTAVE</span><span class="range">Range: -4 to +4 octaves</span></h4>
 <p>Changes the pitch of the voice by octaves.</p>
 <h4 id="semitone" class="param-name"><span class="param">SEMITONE</span><span class="range">Range: -11 to +11</span></h4>
-<p>Changes the pitch of the voice by semitones. Incrementing/decrementing this control beyond <span class="value">+11</span> or <span class="value">-11</span> automatically increases/decreases the octave by one.</p>
+<p>Changes the pitch of the voice by semitones. Incrementing/decrementing this control beyond <span class="value"><span class="plus">+</span>11</span> or <span class="value">-11</span> automatically increases/decreases the octave by one.</p>
 <h4 id="fine" class="param-name"><span class="param">FINE</span><span class="range">Range: -99 to +99</span></h4>
 <p>Fine-tunes the pitch of the voice by steps of one cent (1/100 of a semitone).</p>
 <h4 id="glidemode" class="param-name"><span class="param">GLIDEMODE</span><span class="range">Range: (described below)</span></h4>
@@ -11216,7 +11216,7 @@ You have now selected User RAM BankSet U1.</li>
 <p>Press the soft button above the <span class="param">CUTOFF</span> parameter again to enable or disable the Track <span class="param">BRIGHTNESS</span> parameter independently for each Filter. When an asterisk (<span class="star">*</span>) is displayed, the Track <span class="param">BRIGHTNESS</span> parameter will affect the Cutoff frequency of the Filter. If there is no asterisk, then the Track <span class="param">BRIGHTNESS</span> parameter will have no effect on the Cutoff frequency of the Filter. This allows you to define whether or not each Filter in each Voice in a Program will have its Cutoff frequency modulated by the Track <span class="param">BRIGHTNESS</span> parameter. Successive presses of the soft button above <span class="param">CUTOFF</span> will toggle between the Cutoff value and the <span class="param">BRIGHTNESS</span> <span class="param">MODSRC</span> selector.</p>
 <h4 id="kbd" class="param-name"><span class="param">KBD</span><span class="range">Range: -99 to +99</span></h4>
 <p>Sets the amount by which the location of a note on a keyboard will modulate the filter cutoff frequency (filter keyboard tracking). The scaling effect of this parameter is based on a 76-note keyboard, with a center break point at <kbd class="key">F4+</kbd>. 
-  To have the filter track the keyboard exactly, set <span class="value">KBD=+50</span>.
+  To have the filter track the keyboard exactly, set <span class="value">KBD=<span class="plus">+</span>50</span>.
 </p>
 <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the filter cutoff frequency from among the 15 available modulators.</p>
@@ -11297,7 +11297,7 @@ You have now selected User RAM BankSet U1.</li>
   
 </figure>
 <p>Can be used to fade the voice in or out between the two keys specified to the right (see below).</p>
-<p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of <span class="value">+99</span> will fade the voice <em>in</em> from silence to full level from the low keys to the high keys. A value of <span class="value">-99</span> will fade the voice <em>out</em> from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
+<p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of <span class="value"><span class="plus">+</span>99</span> will fade the voice <em>in</em> from silence to full level from the low keys to the high keys. A value of <span class="value">-99</span> will fade the voice <em>out</em> from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
 <figure class="figure"><img src="images/output-kbd-scale.png" alt="OUTPUT KBD-SCALE at +99 and −99 across MIDI keys 0–127, with the TS&#8209;10 keyboard range marked"><figcaption>Keyboard scaling of voice volume.</figcaption></figure>
 <p>Setting a Keyboard Zone Moving the <kbd class="button">Data Entry Slider</kbd> all the way down to the bottom position (below <span class="value">-99</span>) selects <span class="value">KBD-SCAL=ZON</span>. In this position the voice will sound only over the keyboard range specified by the low and high keys. When <span class="value">KBD-SCAL=ZON</span>, the volume scaling function is not in effect — the voice will play at the same volume throughout the zone.</p>
 <figure class="figure"><img src="images/output-kbd-zone.png" alt="KBD-SCALE=ZON: full volume only between the specified low and high keys"><figcaption>Keyboard zone with <span class="value">KBD-SCALE=ZON</span>.</figcaption></figure>
@@ -11306,7 +11306,7 @@ You have now selected User RAM BankSet U1.</li>
 <p>Sets the key range over which the fade-in, fade-out, or keyboard zone will occur. When this parameter is selected, notes can be entered from the keyboard or using the <kbd class="button">Data Entry Slider</kbd> or <kbd class="button">Up/Down Arrow</kbd> buttons. Select this parameter and play the low key; that note is entered as the low key, and the cursor switches to the high key. Now play the high key; that note is entered as the high key, and the cursor disappears. If you made a mistake, or want to enter a different range of values, just press the soft button again and repeat the process.</p>
 <h4 id="vol" class="param-name"><span class="param">VOL</span><span class="range">Range: -50 to +14 dB</span></h4>
 <p>This parameter determines the volume of each voice. Since Envelope 3 is permanently routed to control the volume of the voice, this parameter also determines the amount by which <span class="param">ENV3</span> will affect volume.</p>
-<p>Values above <span class="value">+00</span> dB are intended to let you compensate for the effects of heavy filtering or enveloping, and for the fact that some waves simply have less apparent loudness than others.</p>
+<p>Values above <span class="value"><span class="plus">+</span>00</span> dB are intended to let you compensate for the effects of heavy filtering or enveloping, and for the fact that some waves simply have less apparent loudness than others.</p>
 <p>For example, a percussion sample, which is by nature a quick peak, has less energy than a sustaining square wave. A higher <span class="value">VOL</span> setting lets you raise the level of such waves to equal that of “louder” waves.</p>
 <aside class="warning"><p>We strongly recommended against setting high <span class="value">VOL</span> levels to all the waves in your sounds just to make them louder — doing so will result in clipping (distorting) when you play more than one or two notes.</p></aside>
 <h4 id="modsrc-3" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
@@ -11353,7 +11353,7 @@ You have now selected User RAM BankSet U1.</li>
 <p>The diagram below shows a common routing of the signals for each bus. See the sections on “Effects” for more on programming specific effects.</p>
 <figure class="figure"><img src="images/destination-bus.png" alt="Voice volume and pan feeding DESTINATION-BUS FX1, FX2, DRY, or AUX to Main or Aux outputs"><figcaption>Destination-bus signal routing.</figcaption></figure>
 <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -64 to +63</span></h4>
-<p>Pans the voice within the stereo field. A setting of <span class="value">-64</span> is panned hard left, and <span class="value">+63</span> is panned hard right. A value of <span class="value">+00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
+<p>Pans the voice within the stereo field. A setting of <span class="value">-64</span> is panned hard left, and <span class="value"><span class="plus">+</span>63</span> is panned hard right. A value of <span class="value"><span class="plus">+</span>00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
 <h4 id="modsrc-4" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the voice pan from among the 15 available modulators. This will cause the voice’s location in the stereo field to vary with the output level of the modulation source.</p>
 <h4 id="modamt-4" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -11398,7 +11398,7 @@ You have now selected User RAM BankSet U1.</li>
       <h1 id="section-9-program-parameters-wave-hyper-wave-editors">Section 9 — Program Parameters <br>(Wave, Hyper-Wave, Editors)</h1>
     </header>
     <h2 id="wave-page">Wave Page</h2>
-<p>Press the <kbd class="button">Wave</kbd> button. On the <span class="page-name">Wave</span> page, the same three parameters (Wave Name, Wave Type, and Delay) will always appear on the top line of the display, no matter which type of wave is selected:</p>
+<p>Press the <kbd class="button">Wave</kbd> button. On the <span class="page-name">Wave</span> page, the same three parameters (<span class="param">Wave Name</span>, <span class="param">Wave Type</span>, and <span class="param">Delay</span>) will always appear on the top line of the display, no matter which type of wave is selected:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Wave Name</div><div>Wave Class</div><div>Delay before playing</div><div></div></div>
   <div class="vfd-bezel">
@@ -11428,19 +11428,19 @@ You have now selected User RAM BankSet U1.</li>
   </div>
 </figure>
 <h4 id="wave-name" class="param-name">Wave Name</h4>
-<p>Here you select the actual wave that the voice will play. When this parameter is underlined, the <kbd class="button">Data Entry Slider</kbd> will select only among the waves in the current wave class. Pressing the <kbd class="button">Up/Down Arrow</kbd> button will allow you to cross over into the next Wave Class.</p>
+<p>Here you select the actual wave that the voice will play. When this parameter is underlined, the <kbd class="button">Data Entry Slider</kbd> will select only among the waves in the current wave class. Pressing the <kbd class="button">Up/Down Arrow</kbd> button will allow you to cross over into the next <span class="param">Wave Class</span>.</p>
 <h4 id="wave-class">Wave Class</h4>
 <p>This shows which of the 16 groups the currently selected wave is in. By underlining this parameter, you can use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons to scroll quickly through the different wave classes to the category you want. Then underline the wave name to select a specific wave from that category.</p>
 <p>Whenever the wave class is changed, the first wave in that class is selected, and lower-line parameters are reset to default values for the new wave class.</p>
 <h4 id="delay" class="param-name"><span class="param">DELAY</span><span class="range">Range: 0000 to 5000 msec, KYUP</span></h4>
 <p>This parameter determines how long the voice will wait after a key is struck before playing. A delay of up to 5 seconds is possible.</p>
-<p>When set to <span class="value">DELAY=KYUP</span> (Key Up), the voice will wait until the key is released before it plays.</p>
+<p>When set to <span class="value">DELAY= KYUP</span> (<dfn class="term">Key Up</dfn>), the voice will wait until the key is released before it plays.</p>
 <h2 id="class-specific-wave-parameters">Class-Specific Wave Parameters</h2>
 <p>The parameters shown on the lower line of the display on the <span class="page-name">Wave</span> page will vary depending on the current wave class. For each wave class, the lower line of the display will contain parameters controlling the features which are specific to that class.</p>
 <p>Changing the wave class resets these parameters. However, if you scroll only one step away from the current class and then scroll back, any lower-line settings you had will be restored. Go more than one class from the current one, and any lower-line settings will be lost.</p>
-<p>For the first thirteen wave classes, the bottom line of the display shows:</p>
+<p>For the first thirteen wave classes, the bottom line of the display shows the following parameters:</p>
 <h4 id="multisample-shift" class="param-name"><span class="param">MULTISAMPLE-SHIFT</span><span class="range">Range: -60 to +60</span></h4>
-<p>Changes keyboard split points on multi-sampled waves. This has the effect of setting the <dfn class="term">WaveSamples</dfn> to ranges you wouldn’t otherwise hear (allowing aliasing in some cases), creating completely different colorations. A setting of <span class="value">MULTISAMPLE-SHIFT=+00</span> is the default.</p>
+<p>Changes keyboard split points on multi-sampled waves. This has the effect of setting the <dfn class="term">WaveSamples</dfn> to ranges you wouldn’t otherwise hear (allowing aliasing in some cases), creating completely different colorations. A setting of <span class="value">MULTISAMPLE-SHIFT=<span class="plus">+</span>00</span> is the default.</p>
 <h4 id="dir" class="param-name"><span class="param">DIR</span><span class="range">Range: FORWARD or REVERSE</span></h4>
 <p>Any of the waves in these wave classes can be made to play forward (which is the normal mode) or backward with this parameter. When <span class="param">DIR</span>=<span class="value">REVERSE</span>, the sound will play from the end of the sample to the start point, and will not loop.</p>
 <p>Press the <kbd class="button">Wave</kbd> button again to get to the next <span class="page-name">Wave</span> sub-page:</p>
@@ -11480,7 +11480,7 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="start-modsrc" class="param-name"><span class="param">START-MODSRC</span><span class="range">Range: various</span></h4>
 <p>Here you choose which of the modulators will control the sample-start of the voice. Any of the 15 modulators can be selected.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines how much the selected modulator (above) will affect the wave; i.e. how far away from the start point the sound will move. If <span class="value">MODAMT=+<span class="value">00</span></span>, the sound will remain static.</p>
+<p>Determines how much the selected modulator (above) will affect the wave; i.e. how far away from the start point the sound will move. If <span class="value">MODAMT=<span class="plus">+</span><span class="value">00</span></span>, the sound will remain static.</p>
 <p>Positive amounts will modulate the sound forward (toward the end of the wave); negative modulation amounts will move the sound back toward the beginning.</p>
 <h2 id="transwave-specific-wave-parameters">TRANSWAVE-Specific Wave Parameters</h2>
 <p>Each Transwave is actually composed of many different single-cycle waveforms, which progress from one timbre to another, occupying adjacent areas of memory. Movement within the sound is created by playing different waveforms in succession; that is, by modulating the wavetable.</p>
@@ -11522,10 +11522,10 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
 <p>Here you choose which of the 15 modulators will control the movement of the sound. Any of the modulators can be selected.</p>
 <h4 id="modamt-2" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines how much the selected modulator (above) will affect the wave; i.e. how far away from the start point the sound will move. If <span class="value">MODAMT=+00</span>, the sound will remain static.</p>
+<p>Determines how much the selected modulator (above) will affect the wave; i.e. how far away from the start point the sound will move. If <span class="value">MODAMT=<span class="plus">+</span>00</span>, the sound will remain static.</p>
 <p>Positive amounts will modulate the sound forward (toward the end of the wave); negative modulation amounts will move the sound back toward the beginning.</p>
 <h2 id="hyper-wave-specific-wave-parameters">Hyper-Wave™-Specific Wave Parameters</h2>
-<p><dfn class="term">Hyper-Wave</dfn> architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting <span class="value">WAVE-LIST</span> with the <span class="param">OPTION</span> parameter found on the <span class="page-name">Program Control</span> page. Hyper- Waves have there own specific wave parameters.</p>
+<p><dfn class="term">Hyper-Wave</dfn> architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting <span class="value">WAVE-LIST</span> with the <span class="param">OPTION</span> parameter found on the <span class="page-name">Program Control</span> page. Hyper-Waves have there own specific wave parameters.</p>
 <p>When the Wave Class is <span class="value">WAVE-LIST</span>, the display shows:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Wave Name</div><div>Wave Class</div><div>Delay before playing</div><div></div></div>
@@ -11569,10 +11569,10 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="start-step" class="param-name"><span class="param">START-STEP</span><span class="range">Range: 01 to 16</span></h4>
 <p>Selects which step number in the Wave-List the voice will start playing when a key is pressed.</p>
 <h4 id="loopstart" class="param-name"><span class="param">LOOPSTART</span><span class="range">Range: 01 to 16</span></h4>
-<p>Selects the step number in the Wave-List that the voice will loop back to after playing the End</p>
-<p>Step for its duration.</p>
+<p>Selects the step number in the Wave-List that the voice will loop back to after playing the End Step for its duration.</p>
 <h4 id="end" class="param-name"><span class="param">END</span><span class="range">Range: 01 to 16</span></h4>
 <p>Defines the last step in the Wave-List that the voice will play before looping back to play the Loop Start step.</p>
+<h3 id="hyperwave-sub-page"> HyperWave Sub-Page</h3>
 <p>Press the <kbd class="button">Wave</kbd> button again to get to the next <span class="page-name">Hyper-Wave</span> sub-page:</p>
 <figure class="vfd-unit has-page">
   
@@ -11610,20 +11610,20 @@ You have now selected User RAM BankSet U1.</li>
     A positive <span class="param">MODAMT</span> will cause <span class="param">MODSRC</span> output to increment the <span class="value">START-STEP</span> above the manual level. 
     A negative <span class="param">MODAMT</span> will decrement the <span class="value">START-STEP</span> below the manual level. 
     The manual level is determined by the <span class="value">START-STEP</span> parameter. 
-    After the appropriate <span class="value">START-STEP</span> has played for its duration, the Wave-List will play through all of the successive steps, up to the END step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. 
-    If the output of the <span class="param">MODSRC</span> causes the Wave-List to begin playing at a Step that is past the END Step, the appropriate <span class="value">START-STEP</span> will play for its duration, and then the Wave-List will loop back to play the <span class="param">LOOPSTART</span> Step. 
-    The Wave-List will continue to loop between the <span class="param">LOOPSTART</span> Step and the END Step, until the voice is turned off.
+    After the appropriate <span class="value">START-STEP</span> has played for its duration, the Wave-List will play through all of the successive steps, up to the <span class="param">END</span> step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. 
+    If the output of the <span class="param">MODSRC</span> causes the Wave-List to begin playing at a Step that is past the <span class="param">END</span> Step, the appropriate <span class="value">START-STEP</span> will play for its duration, and then the Wave-List will loop back to play the <span class="param">LOOPSTART</span> Step. 
+    The Wave-List will continue to loop between the <span class="param">LOOPSTART</span> Step and the <span class="param">END</span> Step, until the voice is turned off.
   </li>
-  <li>When set to either <span class="value">LOOP-START</span> or <span class="value">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the END Step values will be modulated in a non-real-time manner, similar to when <span class="value">MOD-DESTINATION=START-STEP</span>. 
-    With either setting, if the output of the <span class="param">MODSRC</span> causes the END Step to be lower than the <span class="param">LOOPSTART</span> Step, the Wave-List will simply repeat the <span class="param">LOOPSTART</span> Step.
+  <li>When set to either <span class="value">LOOP-START</span> or <span class="value">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the <span class="param">END</span> Step values will be modulated in a non-real-time manner, similar to when <span class="value">MOD-DESTINATION=START-STEP</span>. 
+    With either setting, if the output of the <span class="param">MODSRC</span> causes the <span class="param">END</span> Step to be lower than the <span class="param">LOOPSTART</span> Step, the Wave-List will simply repeat the <span class="param">LOOPSTART</span> Step.
   </li>
-  <li>When set to <span class="value">TRAVELER</span>, Step Duration will be ignored, and <span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the <span class="value">START-STEP</span> and the END Step, continuously, in real-time. 
+  <li>When set to <span class="value">TRAVELER</span>, Step Duration will be ignored, and <span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the <span class="value">START-STEP</span> and the <span class="param">END</span> Step, continuously, in real-time. 
     With <span class="param">MODSRC</span> output at zero, a positive <span class="param">MODAMT</span> will cause the Wave-List to play only the <span class="value">START-STEP</span>. 
-    With <span class="param">MODSRC</span> output at full, a positive <span class="param">MODAMT</span> will cause the Wave-List to play only the END Step. 
+    With <span class="param">MODSRC</span> output at full, a positive <span class="param">MODAMT</span> will cause the Wave-List to play only the <span class="param">END</span> Step. 
     A negative <span class="param">MODAMT</span> will have the opposite effects.
   </li>
-  <li>When set to <span class="value">START+LOOP</span>, the <span class="param">MODSRC</span> will modulate the <span class="value">START-STEP</span>, <span class="param">LOOPSTART</span> Step and END Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="value">MOD-DESTINATION=TRAVELER</span>. 
-    The integrity of the loop will be maintained as the Step values are modulated. <span class="value">START+LOOP</span> allows you to move a fixed- length window over a definable range of the Wave-List.
+  <li>When set to <span class="value">START<span class="plus">+</span>LOOP</span>, the <span class="param">MODSRC</span> will modulate the <span class="value">START-STEP</span>, <span class="param">LOOPSTART</span> Step and <span class="param">END</span> Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="value">MOD-DESTINATION=TRAVELER</span>. 
+    The integrity of the loop will be maintained as the Step values are modulated. <span class="value">START<span class="plus">+</span>LOOP</span> allows you to move a fixed-length window over a definable range of the Wave-List.
   </li>
 </ul>
 <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
@@ -11631,14 +11631,14 @@ You have now selected User RAM BankSet U1.</li>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -15 to +15</span></h4>
 <p>This parameter determines the number of steps that the selected Mod Destination will be modulated. Modulation can be either positive or negative.</p>
 <h2 id="drum-map-specific-wave-parameters">Drum-Map Specific Wave Parameters</h2>
-<p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the <span class="value">DRUM-MAP</span> wave page parameters are identical to the first thirteen wave classes, with the exclusion of the <span class="param">MULTISAMPLE-SHIFT parameter.</span></p>
-<p>Also, the <span class="value">DRUM-MAP</span> Wave Class category is only visible when the current program contains a <span class="term">Drum-Map</span>. The wave name parameter in a <span class="term">Drum-Map</span> is meaningless and is not selectable.</p>
+<p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the DRUM-MAP wave page parameters are identical to the first thirteen wave classes, with the exclusion of the <span class="param">MULTISAMPLE-SHIFT</span> parameter.</p>
+<p>Also, the <span class="value">DRUM-MAP</span> Wave Class category is only visible when the current program contains a Drum-Map. The wave name parameter in a Drum-Map is meaningless and is not selectable.</p>
 <aside class="note"><p>When a Program contains a <span class="term">Drum-Map</span>, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the Drum-Map. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <span class="page-name">Drum-Map Editor</span>.</p></aside>
 <h2 id="mod-mixer-page">Mod Mixer Page</h2>
-<p>The Mod Mixer is a unique feature which allows you to:</p>
+<p>The <dfn class="term">Mod Mixer</dfn> is a unique feature which allows you to:</p>
 <ul>
   <li>combine and assign two modulators to a single modulation input</li>
-  <li>scale and/or shape the response of one of those modulators according to one of 16 Mod Shaper Curves</li>
+  <li>scale and/or shape the response of one of those modulators according to one of 16 <dfn class="term">Mod Shaper Curves</dfn></li>
 </ul>
 
 <p>Select the voice you want to edit on the <span class="page-name">Select Voice</span> page, and then press <kbd class="button">Mod Mixer</kbd>. The display shows:</p>
@@ -11757,19 +11757,19 @@ You have now selected User RAM BankSet U1.</li>
 </ul>
 <aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same <span class="param">TYPE</span>.</p></aside>
 <h4 id="option" class="param-name"><span class="param">OPTION</span><span class="range">Range: *-NONE-*, PITCHTBL, WAVELIST, or DRUM-MAP</span></h4>
-<p>The setting of this parameter indicates whether a Custom Pitch-Table, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="value">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="value">WAVE-LIST</span>, <span class="value">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is <em>not</em> changed.</p>
-<p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to <em>eliminate</em> the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
-<p>If you have a program where <span class="value">OPTION=&lt;PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to <em>change</em> the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
+<p>The setting of this parameter indicates whether a Custom Pitch-Table, a Wave-List, or a Drum-Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="lcd">*EXIT*</span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is <em>not</em> changed.</p>
+<p>If you have a program where <span class="param">OPTION=</span> <span class="value">[PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>], and you want to <em>eliminate</em> the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
+<p>If you have a program where <span class="param">OPTION=</span> <span class="value">[PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>], and you want to <em>change</em> the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
 <p>Allows you to select <span class="value">POLY-KEY</span>, <span class="value">CHANNEL</span>, or <span class="value">NONE</span> (or no pressure responsiveness) for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE or HELD</span></h4>
-<p>Selects the default patch select mode for the program. When set to LIVE, it uses the current state of the buttons to select a patch. When set to HELD, it uses the patch set by the first key hit while touching the patch select buttons. For more information about patch selects, refer to Sections <a class="refer-to" href="04-presets.html#section-4-understanding-presets">4</a> and <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">5</a>. This is the default setting that will be installed into a track when the program is selected.</p>
+<p>Selects the default patch select mode for the program. When set to <span class="value">LIVE</span>, it uses the current state of the buttons to select a patch. When set to <span class="value">HELD</span>, it uses the patch set by the first key hit while touching the patch select buttons. For more information about patch selects, refer to Sections <a class="refer-to" href="04-presets.html#section-4-understanding-presets">4</a> and <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">5</a>. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="restrike" class="param-name"><span class="param">RESTRIKE</span><span class="range">Range: 00 to 99</span></h4>
 <p>This parameter controls the voice Restrike time. When you play a particular note and then restrike it again immediately before the old note has finished sounding, the amount of time it takes for the first strike to fadeout is determined by this parameter. By varying the setting of this parameter, you can control how long sounds overlap when a note is restruck.</p>
 <p>For example, if you have a slow string sound, it may sound more natural to use a longer restrike value, which will cause the old note to decay more slowly, rather than end abruptly when the new note starts. 
   Normal values are around <span class="value">10</span>. The higher the value, the longer the fadeout time.</p>
 <aside class="tip"><p>If you hear clicking sounds when you restrike a note, setting the Restrike time to higher values may eliminate the click.</p></aside>
-<p>Along with the <span class="param">PRESS</span> and <span class="param">PATCH</span> parameters, the next page contains copies of <span class="param">Track</span> parameters that are saved in the program. When a program is selected or put on a track, values of these parameters (as saved in the program) are installed in the track as the default initial settings. They can be edited on the track pages without affecting the program default settings, but must be edited on this page in order to be saved with the program. Changes made here will be copied to the current primary track.</p>
+<p>Along with the <span class="param">PRESS</span> and <span class="param">PATCH</span> parameters, the next page contains copies of Track</span> parameters that are saved in the program. When a program is selected or put on a track, values of these parameters (as saved in the program) are installed in the track as the default initial settings. They can be edited on the track pages without affecting the program default settings, but must be edited on this page in order to be saved with the program. Changes made here will be copied to the current primary track.</p>
 <p>Press the <kbd class="button">Program Control</kbd> button again to get to the second sub-page:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-bezel">
@@ -11798,21 +11798,21 @@ You have now selected User RAM BankSet U1.</li>
   </table>
   </div>
 </figure>
-<p>The following parameters are the default settings for the <span class="param">Track</span> parameters that are stored with the Program. 
+<p>The following parameters are the default settings for the Track parameters that are stored with the Program. 
   For more information about how these parameters function, see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>.</p>
 <h4 id="atck" class="param-name"><span class="param">ATCK</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the <span class="param">ATCK</span> parameter default values will simultaneously edit the <span class="param">Track</span> <span class="param">ATTACK</span> Parameter values on the track that the sound is occupying. 
-  This parameter will only function if an asterisk is assigned to any <span class="param">ATTACK</span> parameter (found on the <span class="page-name">ENV1, 2, and 3</span> pages) for any Voice in the selected program. 
+<p>Editing the <span class="param">ATCK</span> parameter default values will simultaneously edit the Track <span class="param">ATTACK</span> Parameter values on the track that the sound is occupying. 
+  This parameter will only function if an asterisk (<span class="star">*</span>) is assigned to any <span class="param">ATTACK</span> parameter (found on the <span class="page-name">ENV1, 2, and 3</span> pages) for any Voice in the selected program. 
   This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="bright" class="param-name"><span class="param">BRIGHT</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the <span class="param">BRIGHT</span> parameter default values will simultaneously edit the <span class="param">Track</span> <span class="param">BRIGHTNESS</span> Parameter values on the track that the Program is occupying. 
-  This parameter will only function if an asterisk is assigned to any filter cutoff parameter (found on the <span class="page-name">Filters</span> page) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+<p>Editing the <span class="param">BRIGHT</span> parameter default values will simultaneously edit the Track <span class="param">BRIGHTNESS</span> Parameter values on the track that the Program is occupying. 
+  This parameter will only function if an asterisk (<span class="star">*</span>) is assigned to any filter cutoff parameter (found on the <span class="page-name">Filters</span> page) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the <span class="param">RATE</span> parameter default values will simultaneously edit the <span class="param">Track</span> <span class="param">RATE</span> Parameter values on the track that the Program is occupying. 
-  This parameter will only function if an asterisk is assigned to any LFO RATE parameter (found on the <span class="page-name">LFO</span> page) for any Voice in the selected program, or if the program contains a voice that plays a Wave-List. 
+<p>Editing the <span class="param">RATE</span> parameter default values will simultaneously edit the Track <span class="param">RATE</span> Parameter values on the track that the Program is occupying. 
+  This parameter will only function if an asterisk (<span class="star">*</span>) is assigned to any LFO RATE parameter (found on the <span class="page-name">LFO</span> page) for any Voice in the selected program, or if the program contains a voice that plays a Wave-List. 
   This is the default setting that will be installed into a track when the program is selected.</p>
   <h4 id="rels" class="param-name"><span class="param">RELS</span><span class="range">Range: -64 to +63</span></h4>
-  <p>Editing the RELS parameter default values will simultaneously edit the Track <span class="param">RELEASE</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any <span class="param">RELEASE</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+  <p>Editing the <span class="param">RELS</span> parameter default values will simultaneously edit the Track <span class="param">RELEASE</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk (<span class="star">*</span>) is assigned to any <span class="param">RELEASE</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
   <h4 id="timbre" class="param-name"><span class="param">TIMBRE</span><span class="range">Range: 000 to 127</span></h4>
   <p>Editing the <span class="param">TIMBRE</span> parameter default values will simultaneously edit the Track <span class="param">TIMBRE</span> Parameter values on the track that the Program is occupying. This parameter will only function if <span class="param">TIMBRE</span> is assigned as a modulator within the selected program, or if the V1 through V6 relative volume modulation amounts on the third <span class="page-name">Program Control</span> sub-page have been assigned to values other than zero. This is the default setting that will be installed into a track when the program is selected.</p>
   <h4 id="xctrl" class="param-name"><span class="param">XCTRL</span><span class="range">Range: 000 to 127</span></h4>
@@ -11857,10 +11857,10 @@ You have now selected User RAM BankSet U1.</li>
   <li>Press the <kbd class="button">Program Control</kbd> button.</li>
   <li>Select the OPTIONS parameter by pressing its soft button.</li>
   <li>Press the <kbd class="button">Up Arrow</kbd> button.</li>
-  <li>Select PITCH-TABLE on the bottom of the display by pressing its soft button.</li>
+  <li>Select <span class="value">PITCH-TABLE</span> on the bottom of the display by pressing its soft button.</li>
   <li>Press either of the soft buttons beneath <span class="lcd">EDIT PITCH-TABLE</span>.</li>
 </ol>
-<p>The <span class="term">Pitch-Table</span> Editor parameters are:</p>
+<p>The Pitch-Table Editor parameters are:</p>
 
 <figure class="vfd-unit">
   <div class="vfd-callouts top"><div></div><div>Go to sub-page for Extrapolate &amp; Interpolate</div><div></div></div>
@@ -11893,19 +11893,19 @@ You have now selected User RAM BankSet U1.</li>
   
 </figure>
 <h4 id="calculator" class="param-name"><span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></h4>
-<p>This parameter selects the <span class="page-name">Extrapolate/Interpolate</span> sub-page, allowing you to create a pitch-table calculated from a user-defined key range.</p>
+<p>The <dfn class="term">Calculator</dfn> is a utility for accelerating definition of custom pitch tables.  This function reveals the <span class="page-name">Extrapolate/Interpolate</span> sub-page, allowing you to create a pitch-table calculated from a user-defined key range.</p>
 <h4 id="key-source-key" class="param-name"><span class="param">KEY Source Key</span><span class="range">Range: A0 to C8</span></h4>
-<p>For every Source Key on the lower left, you can see and edit the pitch of that key. The Source Key can be selected by pressing the keys, or using the Data Entry Controls.</p>
+<p>For every Source Key on the lower left, you can see and edit the pitch that key should play. The Source Key can be selected by pressing the keys, or using the Data Entry Controls.</p>
 <h4 id="playback-pitch" class="param-name"><span class="param">Playback Pitch</span><span class="range">Range: A0 to C8</span></h4>
-<p>The source key can be thought of as the physical location of the key on the keyboard. The playback pitch can be the same as the source key — as shown in the display — or it can be any pitch from A0 to C8.</p>
+<p>While the Source Key can be thought of as the name or physical location of the key on the keyboard, the Playback Pitch is the actual pitch that will be played when that Source Key is pressed. This can be the same as the Source Key — as shown in the display — or it can be any pitch from <kbd class="key">A0</kbd> to <kbd class="key">C8</kbd>.</p>
 <h4 id="fine-tune-parameter" class="param-name"><span class="param">Fine Tune Parameter</span><span class="range">Range: 00 to 99 cents</span></h4>
-<p>Enables you to fine tune the pitch, or create micro-tunings and other alternate tunings.</p>
+<p>Enables you to fine tune the Playback Pitch, or create micro-tunings and other alternate tunings.</p>
 <h4 id="exit" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
 <ul>
   <li>Press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the first <span class="page-name">Program Control</span> sub-page, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor</span> sub-page.</li>
 </ul>
 <h3 id="extrapolate-interpolate" class="param-name">Extrapolate/Interpolate</h3>
-<p>To display the <span class="page-name">Extrapolate/Interpolate</span> sub-page, press the <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span> soft button. The display shows:</p>
+<p>These are mathematical methods by which a few specified Source Key-to-Playback Pitch mappings can be used to set all of the remaining keys in one step. To display the <span class="page-name">Extrapolate/Interpolate</span> sub-page, press the <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span> soft button. The display shows:</p>
 <figure class="vfd-unit">
   
   <div class="vfd-bezel">
@@ -11942,7 +11942,7 @@ You have now selected User RAM BankSet U1.</li>
   Note that you can also set the start and end keys using the data entry controls, and press the soft button beneath them to toggle back and forth.</p>
 <h4 id="extrapolate" class="param-name">EXTRAPOLATE</h4>
 <p>The <span class="function">EXTRAPOLATE</span> command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
-<p>After a key-range has been defined, press the EXTRAPOLATE soft button. The display briefly reads PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns with the newly defined range across the whole keyboard.</p>
+<p>After a key-range has been defined, press the <span class="function">EXTRAPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE *CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
 <h4 id="interpolate" class="param-name">INTERPOLATE</h4>
 <p><span class="function">INTERPOLATE</span> takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
 <p>After a key-range has been defined, press the <span class="function">INTERPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE <span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns with the newly defined range across the whole keyboard.</p>
@@ -12168,7 +12168,8 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>Allows you to fine-tune the wave step's pitch.</p>
 <h4 id="exit-3" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
 <p>Pressing <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> will return you to the <span class="page-name">Wave-List Editor</span> page.</p>
-<p>Copy  Wave-List Parameters Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Edit Wave-List</span> sub-page will display the <span class="page-name">Copy</span> page:</p>
+<h3 id="copy-wave-list-parameters" class="param-name">Copy Wave-List Parameters</h3>
+  <p>Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Edit Wave-List</span> sub-page will display the <span class="page-name">Copy</span> page:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -12238,11 +12239,13 @@ You can control the relative volume of each Program, and you can optionally elim
 </figure>
 <h2 id="drum-map-editor-parameters">Drum-Map Editor Parameters</h2>
 <p>The following parameters are only available when <span class="lcd">OPTION=DRUM-MAP</span> on the <span class="page-name">Program Control</span> Page. To access the <dfn class="term">Drum-Map</dfn> Editor parameters:</p>
-<p>1) Press the <kbd class="button">Program Control</kbd> button.</p>
-<p>2) Select the OPTIONS parameter by pressing its soft button.</p>
-<p>3) Press the <kbd class="button">Up Arrow</kbd> button.</p>
-<p>4) Select <span class="lcd">DRUM-MAP</span> on the bottom of the display by pressing its soft button.</p>
-<p>5) Press either of the soft buttons beneath EDIT <span class="lcd">DRUM-MAP</span>.</p>
+<ol>
+  <li>Press the <kbd class="button">Program Control</kbd> button.</li>
+  <li>Select the OPTIONS parameter by pressing its soft button.</li>
+  <li>Press the <kbd class="button">Up Arrow</kbd> button.</li>
+  <li>Select <span class="lcd">DRUM-MAP</span> on the bottom of the display by pressing its soft button.</li>
+  <li>Press either of the soft buttons beneath <span class="lcd">EDIT DRUM-MAP</span>.</li>
+</ol>
 <p>The <span class="term">Drum-Map</span> Editor parameters are:</p>
 <figure class="vfd-unit has-page">
   
@@ -12278,8 +12281,8 @@ You can control the relative volume of each Program, and you can optionally elim
 <p></p>
 <p>Controls the volume level of the sound(s) played by this key <em>relative</em> to the other keys in the drum-map. 
   Setting this parameter to <span class="value">00</span> does not necessarily silence the voice(s) playing the wave, and the actual volume minimum depends on the base volume level of the original waveform.
-  For example, if the base volume level of the original waveform is <span class="value">+00</span>, then setting the <span class="param">VOL</span> parameter to <span class="value">00</span> will not silence the voice(s) playing the wave.
-  If the base volume level of the original waveform is <span class="value">+00</span>, then setting the <span class="param">VOL</span> parameter to <span class="value">00</span> will silence the voice(s) playing the wave.
+  For example, if the base volume level of the original waveform is <span class="value"><span class="plus">+</span>00</span>, then setting the <span class="param">VOL</span> parameter to <span class="value">00</span> will not silence the voice(s) playing the wave.
+  If the base volume level of the original waveform is <span class="value"><span class="plus">+</span>00</span>, then setting the <span class="param">VOL</span> parameter to <span class="value">00</span> will silence the voice(s) playing the wave.
 </p>
 <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: various</span></h4>
 <p>Determines where the drum wave voice will be panned in the stereo mix. </p>
@@ -13675,7 +13678,7 @@ class="cell" style="text-align: center;">+17</td></tr>
   <li>At the point where you want to insert the new sound, press the soft button next to the new sound. The track will begin to play the new sound and the change is inserted into the track.</li>
   <li>You can continue selecting new sounds in this mode as long as the sequence is in record. Each time the change will be recorded.</li>
 </ul>
-<aside class="tip">To change the sound and install its effect as the current sequence or song effect, double-click the <kbd class="button">Replace Track Sound</kbd> button in step three above. Note that when Track <span class="value">STATUS=VOICE-OFF</span>, <span class="value">LOCAL-OFF</span>, or <span class="param">MIDI-LOOP</span> program changes <span class="value">+60</span> will not change the effect. This is good for sending numbers above <span class="value">60</span> to external devices.
+<aside class="tip">To change the sound and install its effect as the current sequence or song effect, double-click the <kbd class="button">Replace Track Sound</kbd> button in step three above. Note that when Track <span class="value">STATUS=VOICE-OFF</span>, <span class="value">LOCAL-OFF</span>, or <span class="param">MIDI-LOOP</span> program changes <span class="value"><span class="plus">+</span>60</span> will not change the effect. This is good for sending numbers above <span class="value">60</span> to external devices.
 </aside>
 <h5 id="to-change-a-sound-within-a-midi-track">To change a sound within a MIDI track:</h5>
 <ul>
@@ -13802,7 +13805,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 <p>If you want to use the two <span class="button">AUX</span> outputs as independent mono outputs, use the track <span class="param">PAN</span> control in conjunction with the <dfn class="term">Effects Bus Override</dfn>:</p>
 <ul>
   <li>Select a track, press the <kbd class="button">Track Effects</kbd> button and assign the track to <span class="value">–AUX–</span> as shown above.</li>
-  <li>Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN</span> page. Set to <span class="value">-63</span> to assign the track to the left <kbd class="button">AUX</kbd> output only; or set to <span class="value">+64</span> to assign the track to the right <kbd class="button">AUX</kbd> output. You can also press the soft button for the track and define if the <kbd class="button">AUX</kbd> jacks will receive a stereo or mono signal.</li>
+  <li>Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN</span> page. Set to <span class="value">-63</span> to assign the track to the left <kbd class="button">AUX</kbd> output only; or set to <span class="value"><span class="plus">+</span>64</span> to assign the track to the right <kbd class="button">AUX</kbd> output. You can also press the soft button for the track and define if the <kbd class="button">AUX</kbd> jacks will receive a stereo or mono signal.</li>
 </ul>
 <h2 id="edit-track-page-track-edit-functions">Edit Track Page — Track Edit Functions</h2>
 <p>Pressing the <kbd class="button">Edit Track</kbd> button displays the top level track editing page. Pressing the button twice will display the track edit options sub-page. These edit functions will affect the currently selected track. If a sequence is selected, the current sequence track will be edited; if a song is selected, the current song track will be edited.
@@ -14067,8 +14070,8 @@ class="cell" style="text-align: center;">+17</td></tr>
   </div>
 </figure>  
 <p>When the Tempo Track is selected on the <span class="page-name">Seq/Song Track 7-12</span> page, the <span class="function">AUTOPUNCH</span> switch (normally found in the bottom center of the <span class="page-name">Sequencer Control</span> page) is replaced with the <span class="param">ACTUAL</span> tempo value. 
-  The Song <span class="param">TEMPO</span> parameter allows you to increase or decrease the tempo(s) of the sequences that make up the song: When <span class="value">TEMPO=+00</span>, the <span class="param">ACTUAL</span> value shows the actual tempo of the sequence corresponding to the song step that is currently playing.
-<p>Raising or lowering the <span class="param">TEMPO</span> value will re-compute the actual sequence tempo, and the <span class="param">ACTUAL</span> value will show the sequence tempo biased by the <span class="param">TEMPO</span> value. The <span class="param">TEMPO</span> value range for songs is <span class="value">-64</span> to <span class="value">+63</span>.</p>
+  The Song <span class="param">TEMPO</span> parameter allows you to increase or decrease the tempo(s) of the sequences that make up the song: When <span class="value">TEMPO=<span class="plus">+</span>00</span>, the <span class="param">ACTUAL</span> value shows the actual tempo of the sequence corresponding to the song step that is currently playing.
+<p>Raising or lowering the <span class="param">TEMPO</span> value will re-compute the actual sequence tempo, and the <span class="param">ACTUAL</span> value will show the sequence tempo biased by the <span class="param">TEMPO</span> value. The <span class="param">TEMPO</span> value range for songs is <span class="value">-64</span> to <span class="value"><span class="plus">+</span>63</span>.</p>
 <ul>
   <li>We recommend setting the <span class="param">RECORD-MODE</span> parameter to either <span class="value">REPLACE</span> or <span class="value">ADD</span> when recording a Tempo Track (<span class="value">LOOPED</span> and <span class="value">MIXDOWN</span> are not recommended)</li>
   <li>Press the soft button beneath the <span class="param">TEMPO</span> value.</li>
@@ -14130,7 +14133,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 </aside>
 <h3 id="thinning-out-tempo-changes-using-the-event-editor">Thinning Out Tempo Changes Using the Event Editor</h3>
 <p>When you record Tempo changes with the Tempo Track feature, the Data Entry Controls will “scroll” through every value between where you start and where you want to end. 
-  For instance, if your song Tempo Track value starts at <span class="value">+00</span>, at the bridge in your song (song step 3), and you want to slowly increase the tempo to <span class="value">+05</span>, and then at the beginning of the second verse (song step 4) instantly return to <span class="value">+00</span>, the Tempo Track events will scroll through all values between <span class="value">+05</span> and <span class="value">+00</span>. 
+  For instance, if your song Tempo Track value starts at <span class="value"><span class="plus">+</span>00</span>, at the bridge in your song (song step 3), and you want to slowly increase the tempo to <span class="value"><span class="plus">+</span>05</span>, and then at the beginning of the second verse (song step 4) instantly return to <span class="value"><span class="plus">+</span>00</span>, the Tempo Track events will scroll through all values between <span class="value"><span class="plus">+</span>05</span> and <span class="value"><span class="plus">+</span>00</span>. 
   These extra Tempo Track events can be eliminated using the <span class="function">Edit Track</span> <span class="function">EVENT-LIST</span> command. Here’s how:</p>
 <ol>
   <li>First, create a song with at least four song steps, as explained later in this section.</li>
@@ -14171,13 +14174,13 @@ class="cell" style="text-align: center;">+17</td></tr>
   </figure>
 </li>
  <li> Press the soft button beneath the <span class="param">NUM</span> parameter.</li>
- <li> Press the <kbd class="button">Up Arrow</kbd> button once. The display now shows the first Tempo event value <span class="value">+01</span>, as it slowly increases within the third song step.</li>
-<li> Press the <kbd class="button">Up Arrow</kbd> button four more times. The display should show the fifth Tempo event value <span class="value">NUM=00005</span>. This is located within the third song step (the bridge in your song), and is the fastest tempo that we want. The next four Tempo events (<span class="value">+04</span>, <span class="value">+03</span>, <span class="value">+02</span> and <span class="value">+01</span>) are the ones that we want to delete — so that at the beginning of the fourth song step (the second verse), the song tempo will instantly change from <span class="value">+05</span> to <span class="value">+00</span> without any gradual tempo changes.</li>
-<li> Press the <kbd class="button">Up Arrow</kbd> button one more time. This shows the sixth Tempo event <span class="value">NUM=00006</span> with a value of <span class="value">+04</span> (<span class="value">EVENT=TMP.+04.XXX</span>) that we want to delete.</li>
+ <li> Press the <kbd class="button">Up Arrow</kbd> button once. The display now shows the first Tempo event value <span class="value"><span class="plus">+</span>01</span>, as it slowly increases within the third song step.</li>
+<li> Press the <kbd class="button">Up Arrow</kbd> button four more times. The display should show the fifth Tempo event value <span class="value">NUM=00005</span>. This is located within the third song step (the bridge in your song), and is the fastest tempo that we want. The next four Tempo events (<span class="value"><span class="plus">+</span>04</span>, <span class="value"><span class="plus">+</span>03</span>, <span class="value"><span class="plus">+</span>02</span> and <span class="value"><span class="plus">+</span>01</span>) are the ones that we want to delete — so that at the beginning of the fourth song step (the second verse), the song tempo will instantly change from <span class="value"><span class="plus">+</span>05</span> to <span class="value"><span class="plus">+</span>00</span> without any gradual tempo changes.</li>
+<li> Press the <kbd class="button">Up Arrow</kbd> button one more time. This shows the sixth Tempo event <span class="value">NUM=00006</span> with a value of <span class="value"><span class="plus">+</span>04</span> (<span class="value">EVENT=TMP.<span class="plus">+</span>04.XXX</span>) that we want to delete.</li>
 <li> Press the soft button beneath <span class="function"><span class="star">*</span>EDIT<span class="star">*</span></span>.</li>
 <li> Press the top center soft button above <span class="function">DELETE</span>. This returns you to the previous display.</li>
-<li> Press the <kbd class="button">Down Arrow</kbd> button once, then the <kbd class="button">Up Arrow</kbd> button once. This now shows that the sixth Tempo event value (<span class="value">EVENT=TMP.+04</span>) was deleted, and the seventh Tempo event value (<span class="value">EVENT=TMP.+03.XXX</span>) is now in its place.</li>
-<li> Repeat steps 14 through 16 three times. Each time you repeat these three steps, you are eliminating another recorded Tempo event value from the Tempo Track. When you are finished, the display should show the sixth recorded Tempo event (<span class="value">NUM=00006)</span> with a value of <span class="value">EVENT=TMP.+00.XXX</span>.</li>
+<li> Press the <kbd class="button">Down Arrow</kbd> button once, then the <kbd class="button">Up Arrow</kbd> button once. This now shows that the sixth Tempo event value (<span class="value">EVENT=TMP.<span class="plus">+</span>04</span>) was deleted, and the seventh Tempo event value (<span class="value">EVENT=TMP.<span class="plus">+</span>03.XXX</span>) is now in its place.</li>
+<li> Repeat steps 14 through 16 three times. Each time you repeat these three steps, you are eliminating another recorded Tempo event value from the Tempo Track. When you are finished, the display should show the sixth recorded Tempo event (<span class="value">NUM=00006)</span> with a value of <span class="value">EVENT=TMP.<span class="plus">+</span>00.XXX</span>.</li>
 <li> Now let’s place this Tempo event at the exact beginning of the fourth song step (if it isn’t already there).</li>
 <li> Press the soft button beneath <span class="function"><span class="star">*</span>EDIT<span class="star">*</span></span>.</li>
 <li> Press the bottom center button. The display shows<span class="value"> START TIME=<span class="selected">XX</span>.XX.XXX.XX.XX</span>.</li>
@@ -14191,7 +14194,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 <li> You can audition your tempo changes by pressing the soft button above <span class="function">PLAY NEW TRACK</span>, and keep them by selecting <span class="value">KEEP NEW</span>.</li>
 </ol>
   
-<p>You have just successfully eliminated four Tempo Track events (<span class="value">+04</span>, <span class="value">+03</span>, <span class="value">+02</span>, and <span class="value">+01</span>) using the Event Editor.</li>
+<p>You have just successfully eliminated four Tempo Track events (<span class="value"><span class="plus">+</span>04</span>, <span class="value"><span class="plus">+</span>03</span>, <span class="value"><span class="plus">+</span>02</span>, and <span class="value"><span class="plus">+</span>01</span>) using the Event Editor.</li>
 
   <h3 id="using-multi-track-record">Using Multi-Track Record</h3>
 <p>Tracks do not have to be selected in order to have data recorded on them, but they must be defined. Each channel of incoming MIDI data will be recorded on the <em>lowest-numbered</em> TS&#8209;10 track which has the corresponding MIDI channel number. For example, if both track 1 and track 2 are set to MIDI channel 1, only track 1 will receive and record any data because it is the lowestnumbered track set to MIDI channel 1. It is suggested that you set each track to a different MIDI channel to avoid confusion.</p>
@@ -15934,7 +15937,7 @@ class="cell" style="text-align: center;">+17</td></tr>
     </ul>
     <aside class="note">
       <p>For <span class="param-name">TMP</span> (tempo event type) the value is a percentage increase or decrease of the tempo(s) of the
-        sequences that make up the song: when <span class="value">TEMPO=+00</span>, the <span class="param">ACTUAL</span> value shows the actual
+        sequences that make up the song: when <span class="value">TEMPO=<span class="plus">+</span>00</span>, the <span class="param">ACTUAL</span> value shows the actual
         tempo of the sequence corresponding to the song step that is currently playing.</p>
     </aside>
     <h4 id="exit" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
@@ -16386,7 +16389,7 @@ class="cell" style="text-align: center;">+17</td></tr>
       controlled by incoming MIDI clocks.</p>
     <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo
       offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of
-      <span class="value">25-250 BPM</span>. When <span class="value">TEMPO=+00</span> the sequences in the song will play at their designated tempo.
+      <span class="value">25-250 BPM</span>. When <span class="value">TEMPO=<span class="plus">+</span>00</span> the sequences in the song will play at their designated tempo.
     </p>
     <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
     <h4 id="vol" class="param-name"><span class="param">VOL</span><span class="range">Range: -50 to +14 dB</span></h4>
@@ -16493,7 +16496,7 @@ class="cell" style="text-align: center;">+17</td></tr>
       edited.</p>
     <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo
       offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of
-      25-250 BPM. When <span class="value">TEMPO=+00</span> the sequences in the song will play at their designated tempo.
+      25-250 BPM. When <span class="value">TEMPO=<span class="plus">+</span>00</span> the sequences in the song will play at their designated tempo.
     </p>
     <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
     <h4 id="autopunch" class="param-name"><span class="param">AUTOPUNCH</span><span class="range">Range: OFF or
@@ -16916,7 +16919,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 <p>The active controls on the Sequence <span class="page-name">Locate</span> page are:</p>
 <h4 id="tempo-tap-tempo" class="param-name"><span class="param">TEMPO (Tap Tempo)</span><span class="range">Seq Range: 25 to 250 BPM, or EXT<br>Song Range: -64 to +63</span></h4>
 <p>Sets the tempo of the current sequence or song. On any of the three pages where tempo appears (<span class="page-name">Click</span>, <span class="page-name">Sequencer Control</span>, and <span class="page-name">Locate</span>), the soft button nearest the <span class="param">TEMPO</span> field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="value">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control</span> page, this field will read <span class="value">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks.</p>
-<p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the valid limits of 25-250 BPM. When <span class="value">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
+<p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the valid limits of 25-250 BPM. When <span class="value">TEMPO=<span class="plus">+</span>00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
 <h4 id="goto-sequence-autolocate-control" class="param-name">GOTO — Sequence Autolocate Control</h4>
 <p>Displays the <span class="page-name">GOTO</span> sub-page where the auto-locator destination is set. Using the <span class="function">GOTO</span> function you can quickly locate to any bar and beat within the sequence, in order to play or record from there.</p>
@@ -17011,7 +17014,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 <p>Shows your location within the current song step by bar and beat. As with the song steps and reps, you can locate to a different point using the <span class="function">GOTO</span> function.</p>
 <p>The user-controllable parameters on the Song <span class="page-name">Locate</span> page are:</p>
 <h4 id="tempo" class="param-name"><span class="param">TEMPO</span><span class="range">Range: -99 to +99 BPM, or EXT</span></h4>
-<p>This controls the tempo of the song. It is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by +/–99%, within the valid limits of 25-250 BPM. When <span class="value">TEMPO=+00</span> the sequences will play at their designated tempo.</p>
+<p>This controls the tempo of the song. It is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by +/–99%, within the valid limits of 25-250 BPM. When <span class="value">TEMPO=<span class="plus">+</span>00</span> the sequences will play at their designated tempo.</p>
 <p>When <span class="value">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control</span> page, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is being controlled by incoming MIDI clocks.</p>
 <h4 id="goto-song-autolocate-control" class="param-name">GOTO — Song Autolocate control</h4>
 <p>The <span class="page-name">GOTO</span> sub-page looks a little different in song mode, as you can locate to any step or rep in the song, as well as to any bar and beat within the step.</p>
@@ -22922,7 +22925,7 @@ class="cell" style="text-align: center;">+17</td></tr>
 
   <h3>Modulation Amount</h3>
   <p>As shown above, where a modulation source is selected, the parameter immediately to its right controls the Modulation Amount which controls how deeply the selected modulator will affect the level to which it is being applied.</p>
-  <p>Press the <kbd class="button">Right Arrow</kbd> button to underline the Modulation Amount, and use the data entry controls to adjust it. Modulation amount can be positive or negative. A modulation amount of <span class="value">+00</span> has the same effect as turning the modulator <span class="value">OFF</span>.</p>
+  <p>Press the <kbd class="button">Right Arrow</kbd> button to underline the Modulation Amount, and use the data entry controls to adjust it. Modulation amount can be positive or negative. A modulation amount of <span class="value"><span class="plus">+</span>00</span> has the same effect as turning the modulator <span class="value">OFF</span>.</p>
   <!--Missing from manual #lookup-->
 </article>
 <article class="print-section manual">
@@ -23074,7 +23077,7 @@ class="cell" style="text-align: center;">+17</td></tr>
     <h4 id="xpos" class="param-name"><span class="param">XPOS</span><span class="range">Range: -64 to +63</span></h4>
     <p>This parameter is the default transposition for the Sampled Sound. It is a transposition offset independent of
       the Track <span class="param">TRANSPOSE</span> setting, and determines the pitch of the Sampled Sound when Track
-      <span class="param">TRANSPOSE</span> is set to <span class="value">+0 +00</span> (i.e.: nominal pitch). Editing this parameter will not edit
+      <span class="param">TRANSPOSE</span> is set to <span class="value"><span class="plus">+</span>0 <span class="plus">+</span>00</span> (i.e.: nominal pitch). Editing this parameter will not edit
       the Track <span class="param">TRANSPOSE</span> value.</p>
     <h4 id="bright" class="param-name"><span class="param">BRIGHT</span><span class="range">Range: -64 to +63</span>
     </h4>
@@ -24301,7 +24304,7 @@ class="cell" style="text-align: center;">+17</td></tr>
     <p>The effect of any selected modulators will be added to (or subtracted from) this level.</p>
     <h4 id="kbd" class="param-name"><span class="param">KBD</span><span class="range">Range: -99 to +99</span></h4>
     <p>Sets the amount by which the location of a note on the keyboard will modulate the filter cutoff frequency (filter
-      keyboard tracking). To have the filter track the keyboard exactly set <span class="value">KBD=+50</span>.</p>
+      keyboard tracking). To have the filter track the keyboard exactly set <span class="value">KBD=<span class="plus">+</span>50</span>.</p>
     <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
     <p>Selects a modulation source for the filter cutoff frequency from among the 15 available modulators.</p>
     <h4 id="modamt-2" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span>
@@ -24517,8 +24520,8 @@ class="cell" style="text-align: center;">+17</td></tr>
       <figcaption>Destination-bus signal routing.</figcaption>
     </figure>
     <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Pans the WaveSample within the stereo field. A setting of <span class="value">-99</span> is panned hard left, and <span class="value">+99</span> is panned hard right.
-      A value of <span class="value">+00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
+    <p>Pans the WaveSample within the stereo field. A setting of <span class="value">-99</span> is panned hard left, and <span class="value"><span class="plus">+</span>99</span> is panned hard right.
+      A value of <span class="value"><span class="plus">+</span>00</span> pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
     <h4 id="modsrc-4" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
     <p>Selects a modulation source for the WaveSample <span class="param">PAN</span> from among the 15 available modulators. This will cause the WaveSample's location in the stereo field to vary with the output level of the modulation source.</p>
     <h4 id="modamt-4" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span>
@@ -24764,7 +24767,7 @@ class="cell" style="text-align: center;">+17</td></tr>
         with positive <span class="param">MODAMT</span> values, and backward (toward the beginning of the WaveSample)
         with negative <span class="param">MODAMT</span> values.</li>
       <li><span class="value">START</span> — The <span class="param">SAMPLE-START</span> will be modulated.</li>
-      <li><span class="value">START+LP</span> — Both the <span class="param">SAMPLE-START</span> <em>and</em> the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START+LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
+      <li><span class="value">START<span class="plus">+</span>LP</span> — Both the <span class="param">SAMPLE-START</span> <em>and</em> the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START<span class="plus">+</span>LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
         rather than at the <span class="param">SAMPLE-START</span> value.</li>
       <li><span class="value">LOOPSTRT</span> — Modulates the <span class="param">LOOPSTART</span> parameter. This will have the effect of either
         making the loop shorter (with positive <span class="param">MODAMT</span> values moving the <span
@@ -24784,14 +24787,14 @@ class="cell" style="text-align: center;">+17</td></tr>
     </h4>
     <p>The <span class="param">MODAMT</span> and <span class="param">MODRANGE</span> parameters determine the amount by which the assigned wave modulator will affect the <span class="page-name">WAVE</span> page parameters:</p>
     <ul>
-      <li><span class="value">MOD AMT</span> — This parameter determines the amount of modulation that will be applied to the wave parameter specified in the <span class="param">WAVE-MODULATION-TYPE</span> parameter. This parameter has a value range of <span class="value">-99</span> to <span class="value">+99</span>.</li>
+      <li><span class="value">MOD AMT</span> — This parameter determines the amount of modulation that will be applied to the wave parameter specified in the <span class="param">WAVE-MODULATION-TYPE</span> parameter. This parameter has a value range of <span class="value">-99</span> to <span class="value"><span class="plus">+</span>99</span>.</li>
       <li><span class="value">MODRANGE</span> — This parameter determines the range that will be covered by the <span class="param">MODAMT</span>. The range is displayed in sample size. The reason for this parameter is due to the nature of Sampled Sounds. Whereas ROM-based synthesizers contain waveforms that have a defined length that will always be the same, the size of each individual WaveSample will vary from Sampled Sound to Sampled Sound. The <span class="param">MODAMT</span> parameter has no way of knowing this sample size, so the TS&#8209;10 uses the <span class="param">MODRANGE</span> parameter to define it.</li>
       </ul>
       <p>To determine what value to set the <span class="param">MODRANGE</span> parameter to, go to the <span class="param">SAMPLE-END</span> parameter and examine at the value. This value tells you how large the selected WaveSample is. You can then select the <span class="param">MODRANGE</span> value that comes closest to the actual size of the WaveSample.</p>
      
     <p>If you were working with a very small WaveSample, you would adjust the wave modulation amount to something like
-      this <span class="value">MOD AMT=+99</span> <span class="value">RANGE=128</span>. If you
-      were working with a much larger WaveSample, you would adjust the wave modulation to <span class="value">MOD AMT=+99</span> <span class="value">RANGE=1 MG</span> (MegaSample). Think of <span class="value">RANGE</span> as a multiplier, and <span class="value">MOD AMT=-99</span> to <span class="value">+99</span> as fine tuning.</p>
+      this <span class="value">MOD AMT=<span class="plus">+</span>99</span> <span class="value">RANGE=128</span>. If you
+      were working with a much larger WaveSample, you would adjust the wave modulation to <span class="value">MOD AMT=<span class="plus">+</span>99</span> <span class="value">RANGE=1 MG</span> (MegaSample). Think of <span class="value">RANGE</span> as a multiplier, and <span class="value">MOD AMT=-99</span> to <span class="value"><span class="plus">+</span>99</span> as fine tuning.</p>
     <h2 id="volume-mod-source-shaper-page">Volume Mod Source Shaper Page </h2>
     <p>Press the <kbd class="button">Mod Mixer</kbd> button. The <span class="page-name">VOL MODSRC SHAPER</span> page
       is displayed.</p>

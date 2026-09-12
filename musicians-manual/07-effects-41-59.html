@@ -61,7 +61,7 @@
       repeats in the delays. A setting of <span class="value">99</span> would offer an infinite delay.</p>
     <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
-      far left, and <span class="value">+99</span> is far right.</p>
+      far left, and <span class="value"><span class="plus">+</span>99</span> is far right.</p>
     <table class="param-cols cols-3">
       <tbody>
         <tr>
@@ -134,7 +134,7 @@
     <h4 id="cross-regen" class="param-name"><span class="param">CROSS REGEN</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>Allows you to feedback the delayed signals to their opposite sides; the left voice crosses to the right voice,
-      and the right voice crosses to the left voice. A setting of <span class="value">+99</span> or <span class="value">-99</span> will cause infinite delay. Be careful, if
+      and the right voice crosses to the left voice. A setting of <span class="value"><span class="plus">+</span>99</span> or <span class="value">-99</span> will cause infinite delay. Be careful, if
       the delay regen is set too high, it may cause this parameter to “blow up.”</p>
     <h4 id="regen-damping-2" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to
         99</span></h4>
@@ -359,10 +359,10 @@
     <h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
     <p>Determines the location of the chorused signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and
-      <span class="value">+99</span> is hard right.</p>
+      <span class="value"><span class="plus">+</span>99</span> is hard right.</p>
     <h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span>
     </h4>
-    <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and <span class="value">+99</span> is
+    <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is panned hard left, and <span class="value"><span class="plus">+</span>99</span> is
       hard right.</p>
     <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
         127</span></h4>
@@ -482,7 +482,7 @@
     <p>For a complete description of the remaining parameters, refer to the <a class="algo"
         href="07-effects-00-21.html#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
     <h2 id="50-eq-chorus-eq-ddl" class="algo">50 EQ- -CHORUS + EQ- -DDL</h2>
-    <p><span class="param">EQ- -CHORUS + EQ- -DDL</span> combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard
+    <p><span class="param">EQ- -CHORUS <span class="plus">+</span> EQ- -DDL</span> combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard
       chorus effect, designed with very long delays to provide a modulated detune effect. This algorithm sounds great
       with a guitar sound, but try it with any source!</p>
     <figure class="figure"><img src="images/eq-chorus-eq-ddl-routing.png"
@@ -591,7 +591,7 @@
     <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
       Some voices sound best with very low values.</p>
     <h2 id="52-eq-flanger-delay" class="algo">52 EQ- -FLANGER + DELAY</h2>
-    <p><span class="param">EQ- -FLANGER + DELAY</span> combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft
+    <p><span class="param">EQ- -FLANGER <span class="plus">+</span> DELAY</span> combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft
       woosh” effect.</p>
     <figure class="figure"><img src="images/eq-flanger-delay-routing.png"
         alt="EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Flanger with Delay Feedback and Echo (Echo Level) to Main Output L; right path through Flanger with cross-feed from left delay to Main Output R">
@@ -620,13 +620,13 @@
       the polarity of the feedback.</p>
     <h4 id="notch-depth" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to
         +99</span></h4>
-    <p>Controls the depth of the notches created by the flanging effect. A setting of <span class="value">+00</span> will disable the flanging
-      effect. A setting of <span class="value">+00</span> will also provide a doppler effect for wide moderately slow LFO rates.</p>
+    <p>Controls the depth of the notches created by the flanging effect. A setting of <span class="value"><span class="plus">+</span>00</span> will disable the flanging
+      effect. A setting of <span class="value"><span class="plus">+</span>00</span> will also provide a doppler effect for wide moderately slow LFO rates.</p>
     <h4 id="s-h-rate" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span>
     </h4>
     <p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the flanger. When in
       hold, the effect will be to create momentarily fixed notches within thefrequency spectrum (if the notch depth is
-      not <span class="value">+00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the number of
+      not <span class="value"><span class="plus">+</span>00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the number of
       holds per second, making the flanging flow more smoothly. The sample and hold function can be turned off (when set
       to <span class="value">000</span>).</p>
     <h4 id="l-r-lfo-3" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
@@ -709,7 +709,7 @@
     <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
       Some voices sound best with very low values.</p>
     <h2 id="54-phaser-delay" class="algo">54 PHASER + DELAY</h2>
-    <p><span class="param">PHASER + DELAY</span> combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches
+    <p><span class="param">PHASER <span class="plus">+</span> DELAY</span> combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches
       in the signal spectrum, whereas a flanger creates harmonic spacing. This phaser implements a stereo twelve pole
       phasing network to achieve time delay which is a function of-frequency; this is what differentiates the phaser
       from the flanger. The phasing effect is achieved within the phaser topology, so it does not depend upon the
@@ -747,7 +747,7 @@
         100</span></h4>
     <p>Controls the sample rate of a sample and hold network applied to the LFO within the phaser.</p>
     <p>When in hold, the effect will be to create momentarily fixed notches within the-frequency spectrum (if the notch
-      depth is not <span class="value">+00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the
+      depth is not <span class="value"><span class="plus">+</span>00</span>). A setting of <span class="value">001</span> will have the largest space between samples. Higher values will increase the
       number of holds per second, making the phasing flow more smoothly. The sample and hold function can be turned off
       (when set to <span class="value">000</span>).</p>
     <h4 id="l-r-lfo-4" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
@@ -764,7 +764,7 @@
         msec</span></h4>
     <p>Controls the feed forward delay time for the right side. This is the “pong.”</p>
     <h2 id="55-eq-tremolo-delay" class="algo">55 EQ- -TREMOLO + DELAY</h2>
-    <p><span class="param">EQ- -TREMOLO + DELAY</span> combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital
+    <p><span class="param">EQ- -TREMOLO <span class="plus">+</span> DELAY</span> combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital
       delay.</p>
     <figure class="figure"><img src="images/eq-tremolo-delay-routing.png"
         alt="EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R with Regen cross-feed from delay">
@@ -826,7 +826,7 @@
     </h4>
     <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
     <h2 id="56-eq-vibrato-delay" class="algo">56 EQ- -VIBRATO + DELAY</h2>
-    <p><span class="param">EQ- -VIBRATO + DELAY</span> combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range),
+    <p><span class="param">EQ- -VIBRATO <span class="plus">+</span> DELAY</span> combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range),
       with a digital delay. Many vintage guitar amplifiers offered a vibrato control, but don’t feel that this effect is
       limited to guitar sounds, try this with other sources as well. There is a sample &amp; hold parameter that doesn’t
       hold the instantaneous pitch shift, but if set properly will provide a “chirping” effect when acting on the input
@@ -898,7 +898,7 @@
     <ul>
       <li><span class="param">PITCH SHIFTER</span> offers a splicer type pitch shifter.</li>
       <li><span class="param">FAST PITCH SHIFTER</span> is a pitch shifter designed for pitch correction.</li>
-      <li><span class="param">PITCH SHIFTER + DELAY</span> combines a pitch shifter with a DDL (described later).</li>
+      <li><span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> combines a pitch shifter with a DDL (described later).</li>
     </ul>
     <p>These algorithms sound best with an Effect Mix of wet and dry. You can assign a modulation controller for the
       Effect Mix parameters to bring in or fade out the pitch shifted signal. Try the different pitch shifters until you
@@ -918,7 +918,7 @@
     <h4 id="level-15" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
     <p>Allows you to adjust the level of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
     <h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <table class="param-cols">
       <tbody>
@@ -968,7 +968,7 @@
     <p>Allows you to adjust the volume of Voice-1. A setting of <span class="value">00</span> would eliminate any audible pitch shift.</p>
     <h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
     <p>This parameter allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far
-      left, and <span class="value">+99</span> would be far right.</p>
+      left, and <span class="value"><span class="plus">+</span>99</span> would be far right.</p>
     <h4 id="vc-2-fine" class="param-name"><span class="param">VC-2 FINE</span><span class="range">Range: -99 to
         +99</span></h4>
     <p>This parameter allows you to fine tune the pitch of Voice-2.</p>
@@ -976,7 +976,7 @@
     <p>This parameter allows you to adjust the volume of Voice-2. A setting of <span class="value">00</span> would eliminate any audible pitch
       shift.</p>
     <h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-2 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-2 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <h4 id="lfo-rate-3" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span>
     </h4>
@@ -986,7 +986,7 @@
     <p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very
       large.</p>
     <h2 id="59-pitch-shifter-delay" class="algo">59 PITCH SHIFTER + DELAY</h2>
-    <p><span class="param">PITCH SHIFTER + DELAY</span> combines a pitch shifter with a digital delay. <span class="param">PITCH SHIFTER + DELAY</span> uses a continual
+    <p><span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> combines a pitch shifter with a digital delay. <span class="param">PITCH SHIFTER <span class="plus">+</span> DELAY</span> uses a continual
       crossfading technique of pitch shifting. This technique maintains the stereo field exactly. This pitch shifter
       works best for large pitch shift ratios, in some circumstances. Another feature of this algorithm is a digital
       delay that feeds back into the pitch shift. This feature allows spiraling upward or downward pitch shifts. The
@@ -1005,7 +1005,7 @@
     <h4 id="level-18" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
     <p>This parameter adjusts the volume of Voice-1.</p>
     <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value">+99</span> would
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of <span class="value">-99</span> would be far left, and <span class="value"><span class="plus">+</span>99</span> would
       be far right.</p>
     <table class="param-cols">
       <tbody>
