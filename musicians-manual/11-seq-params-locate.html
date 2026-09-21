@@ -32,35 +32,8 @@
   <li>Select a sequence from one of the Sequencer <span class="page-name">Bank</span> pages.</li>
   <li>Press <kbd class="button">Locate</kbd>. When a sequence is selected, the <span class="page-name">Locate</span> page shows:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Current Sequence</div><div>Current Track</div><div>Time Signature</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LOCATE</td><td class="cell">SEQ=SEQ-NAME</td><td class="cell">TRACK=01</td><td class="cell">4/4</td></tr>
-      <tr><td class="cell page-label">STOP</td><td class="cell">TEMPO=120</td><td class="cell">GOTO</td><td class="cell">BAR/BEAT=001.01</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Tempo</div><div>Auto-locate Control</div><div>Current location</div></div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/01-sequence-locate-page.svg" alt="VFD: LOCATE | SEQ=SEQ-NAME | TRACK=01 | 4/4 / STOP | TEMPO=120 | GOTO | BAR/BEAT=001.01">
 </figure>
 <p>The status of the sequencer (whether it is in Play, Stop, Record, etc.) is always shown in the lower left-hand corner of the display on this page.</p>
 <p>The following are <em>display only</em> parameters, provided here for your information:</p>
@@ -81,34 +54,9 @@
 <p>Displays the <span class="page-name">GOTO</span> sub-page where the auto-locator destination is set. Using the <span class="function">GOTO</span> function you can quickly locate to any bar and beat within the sequence, in order to play or record from there.</p>
 <ul>
   <li>Press <span class="function">GOTO</span>. The display shows:</li>
-  <figure class="vfd-unit has-page">
-    
-    <div class="vfd-bezel">
-      <table>
-        <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-        <thead>
-          <tr class="soft-row top">
-            <th class="page-tag-slot"></th>
-            <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-            <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-            <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-          </tr>
-        </thead>
-        <tbody class="vfd-screen">
-          <tr><td class="cell page-label">LOCATE</td><td class="cell">SEQ=&lt;SEQ-NAME&gt;</td><td class="cell" style="text-align: right;">TRACK=01</td><td class="cell">4/4</td></tr>
-          <tr><td class="cell page-label">STOP   TEMPO=120</td><td class="cell classic-blink" style="text-align: right;">GOTO</td><td class="cell" style="text-align: right;" colspan="2">BAR/BEAT=001.01</td></tr>
-        </tbody>
-        <tfoot>
-          <tr class="soft-row bottom">
-            <th class="page-tag-slot"></th>
-            <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-            <td><button type="button" class="soft-btn pressed" data-pos="bc" aria-label="Bottom center soft button" aria-pressed="true"></button></td>
-            <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-  </figure>
+  <figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/02-goto-sequence-autolocate-control.svg" alt="VFD: LOCATE | SEQ=&lt;SEQ-NAME&gt; | TRACK=01 | 4/4 / STOP TEMPO=120 | GOTO | BAR/BEAT=001.01">
+</figure>
   <p><span class="function">GOTO</span> will be flashing and the destination may be set using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Notice there is now a cursor (underline) beneath the bar value at the <span class="param">BAR/BEAT</span> parameter. Press the soft button beneath <span class="param">BAR/BEAT</span> to move the cursor between the Bar and Beat. Continued presses of the <span class="param">BAR/BEAT</span> parameter will toggle between the bar and beat values.</p>
 
     <li>After selecting a new location to go to, press the <span class="function">GOTO</span> soft button again to complete the locating process and return to the main <span class="page-name">Locate</span> page. The <span class="function">GOTO</span> function provides a quick and easy way to repeatedly locate to a certain place in a sequence — the destination remains set until a new sequence or song is selected.</li>
@@ -130,35 +78,8 @@
   <li>Select a song from one of the Sequencer Bank pages.</li>
   <li>Press <kbd class="button">Locate</kbd>. When a song is selected, the <span class="page-name">Locate</span> page shows:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Sequence in Current Song Step</div><div>Current Song Location (Step + Rep)</div><div></div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SONG LOCATE</td><td class="cell">FIRST-VERSE</td><td class="cell" style="text-align: right;" colspan="2">STEP/REP=01.00</td></tr>
-      <tr><td class="cell page-label">SNGS        TEMPO=<span class="selected">+00</span></td><td class="cell" style="text-align: right;"></td><td class="cell" colspan="2" style="text-align: right;">GOTO  BAR/BEAT=001.01</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Tempo</div><div>Auto-locate Control</div><div>Location in current Step (Bar + Beat)</div></div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/03-song-locate-page.svg" alt="VFD: SONG LOCATE | FIRST-VERSE | STEP/REP=01.00 / SNGS TEMPO=+00 | · | GOTO BAR/BEAT=001.01">
 </figure>
 <p>Note that the Sequencer Status (shown in the lower left corner of the display) now shows SNGS, for Song Stop, indicating that a song is selected.</p>
 <p>The following are <em>display only</em> parameters, provided here for your information:</p>
@@ -177,35 +98,8 @@
 <ul>
   <li>Press <span class="function">GOTO</span>. The display shows:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SONG LOCATE</td><td class="cell">FIRST-VERSE</td><td class="cell">STEP/REP=01.00</td><td class="cell">&nbsp;</td></tr>
-      <tr><td class="cell page-label">SNGS</td><td class="cell">*EXIT*</td><td class="cell classic-blink">GOTO</td><td class="cell">BAR/BEAT=001.01</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn pressed" data-pos="bc" aria-label="Bottom center soft button" aria-pressed="true"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/04-goto-song-autolocate-control.svg" alt="VFD: SONG LOCATE | FIRST-VERSE | STEP/REP=01.00 | · / SNGS | *EXIT* | GOTO | BAR/BEAT=001.01">
 </figure>
 <ul>
   <li>Press the soft button above the Step/Rep field to move the cursor between the Step and Repetition selecting the desired destination. Press the soft button beneath the Bar/Beat field to move the cursor between the Bar and Beat.</li>
@@ -222,46 +116,8 @@
 </ul>
 <h4 id="edit-times-using-autopunch" class="param-name">Edit Times  — Using the Autopunch Feature</h4>
 <p>Press <kbd class="button">Locate</kbd> a second time to display the <span class="page-name">Edit Times</span> sub-page:</p>
-<figure class="vfd-unit has-page">
-
-  <div class="vfd-callouts top has-page">
-    <div class="page-spacer"></div>
-      <div class="page-spacer"></div>
-      <div class="page-spacer"></div>
-    <div>Bar|Beat|Clock</div><div></div><div></div></div>
-</div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">EDIT TIMES</td><td class="cell">AUTOPUNCH=ON</td><td class="cell">&nbsp;</td><td class="cell">IN=<span class="selected">001</span>.01.01</td></tr>
-      <tr><td class="cell page-label">STOP</td><td class="cell">RESET</td><td class="cell">SET</td><td class="cell">OUT=007.04.96</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page">
-    <div class="page-spacer"></div>
-    <div class="page-spacer"></div>
-    <div class="page-spacer"></div>
-    <div>Bar|Beat|Clock</div>
-  </div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/05-edit-times-using-the-autopunch-feature.svg" alt="VFD: EDIT TIMES | AUTOPUNCH=ON | · | IN=001.01.01 / STOP | RESET | SET | OUT=007.04.96">
 </figure>
 <h4 id="autopunch" class="param-name"><span class="param">AUTOPUNCH</span><span class="range">Range: ON or OFF</span></h4>
 <p>This is the same parameter found on the <span class="page-name">Sequencer Control</span> page — it is also located on this page so that you have a handy way to enable or disable the Autopunch function on the same page where the Edit Times are located. See “<span class="page-name">Sequencer Control</span> page” earlier in this section for a full description.</p>
@@ -285,46 +141,8 @@
 <p>This sets the selected time to the current sequencer time value (as shown on the <span class="page-name">Locate</span> page) if the sequencer is running. If the sequencer is stopped, the most recent time value is used. Using the Locate function does affect the current time value.</p>
 <h4 id="edit-times-in-song-mode" class="param-name">Edit Times in Song Mode</h4>
 <p>You can use the Autopunch mode and Edit Times to punch in and out on the song tracks as well as sequence tracks. When a song is selected, pressing <kbd class="button">Locate</kbd> twice shows the following:</p>
-<figure class="vfd-unit has-page">
-
-  <div class="vfd-callouts top has-page">
-    <div class="page-spacer"></div>
-      <div class="page-spacer"></div>
-      <div class="page-spacer"></div>
-    <div>Step|Rep|Bar|Beat|Clock</div><div></div><div></div></div>
-</div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">EDIT TIMES</td><td class="cell">AUTOPUNCH=ON</td><td class="cell" colspan="2" style="text-align: right;">IN=01.01.001.01.01</td></tr>
-      <tr><td class="cell page-label">SNGS    RESET</td><td class="cell">SET</td><td class="cell" style="text-align: right;" colspan="2">OUT=05.01.007.04.96</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page">
-    <div class="page-spacer"></div>
-    <div class="page-spacer"></div>
-    <div class="page-spacer"></div>
-    <div>Step|Rep|Bar|Beat|Clock</div>
-  </div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/11-seq-params-locate/06-edit-times-in-song-mode.svg" alt="VFD: EDIT TIMES | AUTOPUNCH=ON | IN=01.01.001.01.01 / SNGS RESET | SET | OUT=05.01.007.04.96">
 </figure>
 <p>Notice that two more parameters are added to the Edit In and Out Times: the Song Step number and the Repetition of that step are added to the Bar, Beat and Clock within the sequence that plays during the step. You can set the <span class="param">IN</span> or <span class="param">OUT</span> time to any point within the song.</p>
 <h3 id="setting-the-edit-times-in-real-time">Setting the Edit Times in Real Time </h3>

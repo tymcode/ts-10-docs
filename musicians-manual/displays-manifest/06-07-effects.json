@@ -1,0 +1,59 @@
+{
+  "outputs": [
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/06-effects-concepts/01-effect-algorithm-select.svg",
+      "name": "01-effect-algorithm-select",
+      "screen": {
+        "rows": [
+          "                    01 DDL+CHORUS+REV   ",
+          "VARIATION=01                            "
+        ],
+        "rowJustify": { "row0": "right", "row1": "left" }
+      },
+      "rowJustify": { "row0": "right", "row1": "left" }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/06-effects-concepts/02-effect-variation.svg",
+      "name": "02-effect-variation",
+      "screen": {
+        "rows": [
+          "                    01 DDL+CHORUS+REV   ",
+          "VARIATION=02                            "
+        ],
+        "rowJustify": { "row0": "right", "row1": "left" },
+        "effects": [
+          { "target": { "type": "range", "row": 1, "start": 11, "length": 2 }, "underline": true }
+        ]
+      },
+      "rowJustify": { "row0": "right", "row1": "left" }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/06-effects-concepts/03-effect-mute-warning.svg",
+      "name": "03-effect-mute-warning",
+      "screen": {
+        "rows": [
+          "01 DDL+CHORUS+REV    DDL MIX=50         ",
+          "MUTE                                    "
+        ],
+        "rowJustify": { "row0": "left", "row1": "left" },
+        "effects": [
+          { "target": { "type": "range", "row": 1, "start": 0, "length": 4 }, "blink": "text" }
+        ]
+      },
+      "rowJustify": { "row0": "left", "row1": "left" },
+      "blinking": true
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/07-effects-00-21/01-ddl-chorus-rev-sends.svg",
+      "name": "01-ddl-chorus-rev-sends",
+      "screen": {
+        "rows": [
+          "SENDS A--B=99    B--REVRB=05            ",
+          "     A--REVRB=00 FX2--REVRB=22 DRY=99   "
+        ],
+        "rowJustify": { "row0": "left", "row1": "left" }
+      },
+      "rowJustify": { "row0": "left", "row1": "left" }
+    }
+  ]
+}

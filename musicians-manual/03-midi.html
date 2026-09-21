@@ -31,35 +31,8 @@
 <ul>
   <li>Press the <kbd class="button">MIDI Control</kbd> button. This takes you to the top level <span class="page-name">MIDI Control</span> page:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIDI</td><td class="cell">BASE-CHAN=01</td><td class="cell">GMIDI=<span class="selected">OFF</span></td><td class="cell">SEND=TRACK</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODE=MULTI</td><td class="cell" >VELS/XPOS=BOTH</td><td class="cell" style="text-align: right;">XCTRL=002</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/03-midi/01-midi-page-1.svg" alt="VFD: MIDI BASE-CHAN=01 GMIDI=OFF  SEND=TRACK      MODE=MULTI VELS/XPOS=BOTH  XCTRL=002">
 </figure>
 <h4 id="base-chan" class="param-name"><span class="param">BASE-CHAN</span><span class="range">Range: 01 to 16</span></h4>
 <p>Selects the Base Channel on which the TS&#8209;10 transmits and receives MIDI messages. System Exclusive messages are always sent and received on the base channel.</p>
@@ -209,35 +182,8 @@
 <ul>
   <li>Press <kbd class="button">MIDI Control</kbd> again. The display shows the second sub-page:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tr" aria-label="Top right soft button" aria-pressed="true"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIDI</td><td class="cell">LOOP=OFF</td><td class="cell">CNTRLS=ON</td><td class="cell ">SONG-SEL=<span class="selected">OFF</span></td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell" style="text-align: left;">ALL-OFF=OFF</td><td class="cell" style="text-align: left;">START/STOP=ON</td><td class="cell" style="text-align: left;">PROG-CHG=ON</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/03-midi/02-midi-page-2.svg" alt="VFD: MIDI  LOOP=OFF    CNTRLS=ON SONG-SEL=OFF     ALL-OFF=OFF START/STOP=ON PROG-CHG=ON">
 </figure>
 <h4 id="loop" class="param-name"><span class="param">LOOP</span><span class="range">Range: OFF or ON</span></h4>
 <p>The MIDI <span class="param">LOOP</span> parameter controls how volume information is handled when a track’s status is set to <span class="value">LOCAL-OFF</span> or <span class="value">MIDI-LOOP</span>. It controls whether or not the Track <span class="param">MIX</span> parameter, as adjusted in the Track Parameter section, will transmit via MIDI. It only affects tracks that have their MIDI status set to <span class="value">LOCAL-OFF</span> or <span class="value">MIDI-LOOP</span>. It is normally <span class="value">OFF</span>, but in a MIDI loop setup, it should be <span class="value">ON</span>.</p>
@@ -332,35 +278,8 @@
 <ul>
   <li>Press <kbd class="button">MIDI Control</kbd> again. The display shows the third sub-page:</li>
 </ul>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIDI</td><td class="cell ">SYS-EX=<span class="selected">OFF</span></td><td class="cell">&nbsp;</td><td class="cell">DEVICE-ID=01</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell" colspan="2" style="text-align: right;">SEND-PARAMS=OFF</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/03-midi/03-midi-page-3.svg" alt="VFD: MIDI SYS-EX=OFF             DEVICE-ID=01                           SEND-PARAMS=OFF">
 </figure>
 <h4 id="sys-ex" class="param-name"><span class="param">SYS-EX</span><span class="range">Range: OFF, ON, or OLD</span></h4>
 <p>This switch determines whether the TS&#8209;10 is able to receive incoming MIDI <span class="message">System Exclusive</span> messages:</p>

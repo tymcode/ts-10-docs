@@ -26,34 +26,8 @@
     </header>
     <p>These parameters control instrument-wide system functions. The settings of these parameters will remain in effect at all times and are preserved while the power is off. You can back-up the settings of the <span class="page-name">System</span> Page parameters for quick recall by saving the System Set-up on the <span class="page-name">Storage</span> page (see <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a> for more information). </p>
       <p>The <span class="page-name">System</span> Page has three subpages. Press the <kbd class="button">System</kbd> button to display the first sub-page:</p>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SYSTEM</td><td class="cell">TUNE=<span class="selected">+00</span></td><td class="cell">&nbsp;</td><td class="cell">PITCH-BEND=02</td></tr>
-      <tr><td class="cell page-label" colspan="2" style="text-align: right;">&nbsp;TOUCH=VELTBL-4</td><td class="cell" style="text-align: right;">VEL-MAX=127</td><td class="cell" style="text-align: right;">PRESS=MED</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/02-system/01-system-page-1.svg" alt="VFD: SYSTEM TUNE=+00            PITCH-BEND=02  TOUCH=VELTBL-4   VEL-MAX=127   PRESS=MED">
   <figcaption><span class="page-name">System</span> page — <span class="param">TUNE</span> selected</figcaption>
 </figure>
 <h4 id="tune" class="param-name"><span class="param">TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
@@ -78,35 +52,8 @@
 <p>Allows you to adjust the pressure threshold of the keyboard to match your playing style and technique. <span class="param">PRESS</span> affects both internal pressure response and the pressure values transmitted via MIDI. When set to <span class="value">SOFT</span>, the least amount of pressure is required to generate channel or Poly-Key (polyphonic aftertouch) pressure. Similarly, <span class="value">HARD</span> requires the greatest amount of pressure to generate channel or Poly-Key pressure.</p>
 <p>Press the <kbd class="button">System</kbd> button again to display the second sub-page:</p>
 <!-- manual is missing these #lookup: Foot Switch 1, Left Pedal, Foot Switch 1, Right Pedal -->
-<figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Foot Switch 1, Left Pedal</div><div>Foot Switch 1, Right Pedal</div><div></div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SYSTEM</td><td class="cell selected">FOOT-SW1-L=*UNUSED*</td><td class="cell">&nbsp;</td><td class="cell">R=SUSTAIN</td></tr>
-      <tr><td class="cell page-label">&nbsp;PEDAL=VOL</td><td class="cell" colspan="2">SW2-L=*UNUSED*</td><td class="cell">R=*UNUSED*</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div></div><div>Foot Switch 2, Left Pedal</div><div>Foot Switch 2, Right Pedal</div></div>
-  
+<figure class="vfd-unit">
+  <img src="images/displays/02-system/02-system-foot-switches.svg" alt="VFD: SYSTEM FOOT-SW1-L=*UNUSED*     R=SUSTAIN  PEDAL=VOL      SW2-L=*UNUSED* R=*UNUSED*">
 </figure>
 <p>When the optional <span class="product-name">SW-10</span> Dual Foot Switch is plugged into either Foot Switch jack, the settings of these parameters will control the function of the pedals. You can even use two <span class="product-name">SW-10</span> Dual Foot Switches plugged into both Foot Switch jacks, and have four completely independent controllers.</p>
 <p>If you are using the single <span class="product-name">SW-2</span> Foot Switch which came with the TS&#8209;10, you should keep both left foot switch parameters set to <span class="value"><span class="star">*</span>UNUSED<span class="star">*</span></span>, and assign the right foot switch parameters to the desired function. The list of available parameters are:</p>
@@ -148,35 +95,8 @@
 </ul>
 <p>Press the <kbd class="button">System</kbd> button again to show the third sub-page:</p>
 <!--manual is missing this. #lookup-->
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SYSTEM</td><td class="cell">SLIDER=NORMAL</td><td class="cell">&nbsp;</td><td class="cell">VOICE-MUTING=ON</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MIDI-TRK-NAMES=OFF</td><td class="cell">&nbsp;</td><td class="cell">KBD-NAMING=OFF</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/02-system/03-system-page-3.svg" alt="VFD: SYSTEM SLIDER=NORMAL     VOICE-MUTING=ON   MIDI-TRK-NAMES=OFF       KBD-NAMING=OFF">
 </figure>
 <h4 id="slider" class="param-name"><span class="param">SLIDER</span><span class="range">Range: NORMAL, TIMBRE, or XCTRL</span></h4>
 <p>Determines whether the <kbd class="button">Data Entry Slider</kbd> will act as the Timbre or <span class="param">XCTRL</span> modulator while on any <span class="page-name">Sounds or Presets bank</span> page. This allows you to vary the Track Timbre or Track <span class="param">XCTRL</span> setting of the primary selected sound without having to switch to the Timbre or <span class="param">XCTRL</span> Track Parameter pages. Refer to <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a> for more information about the</p>
@@ -204,35 +124,8 @@
 <figure class="figure"><img src="images/kbd-naming.png" alt="Keyboard naming map: white keys 0–9 and A–Z; black keys repeat Cursor Left, Cursor Right, Space, Dash, and Plus each octave"><figcaption>White keys enter 0–9 and A–Z. Each octave of black keys is Cursor Left, Cursor Right, Space, Dash, and Plus.</figcaption></figure>
 <p>When <span class="value">KBD-NAMING=OFF</span>, the characters on naming pages will be affected only by the Data Entry Controls and the Cursor Left/Right soft buttons.</p>
 <p>Press the <kbd class="button">System</kbd> button again to show the fourth sub-page:</p>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SYSTEM</td><td class="cell">&nbsp;</td><td class="cell selected" colspan="2">PITCH-TABLE=NORMAL</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell" colspan="2">WAKE-UP-MODE=DEFAULT</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn pressed" data-pos="br" aria-label="Bottom right soft button" aria-pressed="true"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
+<figure class="vfd-unit">
+  <img src="images/displays/02-system/04-system-pitch-table.svg" alt="VFD: SYSTEM                PITCH-TABLE=NORMAL                      WAKE-UP-MODE=DEFAULT">
 </figure>
 <h4 id="pitch-table" class="param-name"><span class="param">PITCH-TABLE</span><span class="range">Range: NORMAL, CUSTOM, U1-PROGRAMS, ROM</span></h4>
 <p>This parameter allows you to set the system pitch-table to either a <span class="value">NORMAL</span> (western 12-tone equal-temperament) or a <span class="value">CUSTOM</span> (user-definable) pitch-table and affects all voices that have been programmed to use the <span class="param">SYSTEM</span> pitch-table. For more information on pitch-tables, please refer to <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>

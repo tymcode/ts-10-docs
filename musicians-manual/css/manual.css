@@ -576,14 +576,7 @@ span.key-group {
   letter-spacing: 0.02em;
 }
 
-span.ocr-suspect {
-  background: #ffe08a;
-  outline: 1px dashed #b8860b;
-}
-
-figure.figure,
-figure.panel-photo,
-figure.vfd-photo {
+figure.figure {
   margin: 1.2rem 0;
   padding: 0.7rem;
   background: var(--panel);
@@ -606,13 +599,19 @@ figcaption {
   text-align: center;
 }
 
-/* VFD unit: callouts outside the bezel; 3 soft buttons above/below the 2×40 */
+/* VFD unit: Organic SVG figures (ensoniq-vfd-display). Preface still uses HTML bezels. */
 figure.vfd-unit {
   margin: 1.25rem 0;
   padding: 0;
   background: transparent;
   box-shadow: none;
   width: min(100%, 40rem);
+}
+
+figure.vfd-unit img {
+  background: transparent;
+  width: 100%;
+  height: auto;
 }
 
 .vfd-bezel {
@@ -650,36 +649,6 @@ figure.vfd-unit {
   box-shadow: 0 1px 0 #000;
 }
 
-figure.vfd-unit table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0.35rem 0.28rem;
-}
-
-figure.vfd-unit col.page-col {
-  width: 22%;
-}
-
-figure.vfd-unit col.param-col {
-  width: 26%;
-}
-
-figure.vfd-unit.has-page col.param-col {
-  width: 26%;
-}
-
-.vfd-callouts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.45rem 0.6rem;
-  margin: 0.35rem 0 0.55rem;
-}
-
-.vfd-callouts.has-page {
-  grid-template-columns: 22% 1fr 1fr 1fr;
-}
-
 .sysex-cmd {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -712,36 +681,6 @@ figure.vfd-unit.has-page col.param-col {
   text-align: center;
   text-transform: none;
   letter-spacing: 0;
-}
-
-.vfd-callouts.bottom {
-  margin: 0.55rem 0 0.2rem;
-}
-
-.vfd-callouts > div {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--ink);
-  background: var(--panel);
-  border: 1px solid var(--ink);
-  padding: 0.28rem 0.4rem;
-  text-align: center;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.vfd-callouts > div.page-spacer,
-.vfd-callouts > div:empty {
-  background: none;
-  border: none;
-  padding: 0;
-  box-shadow: none;
-}
-
-.soft-row .page-tag-slot {
-  width: 22%;
-  padding: 0;
 }
 
 .soft-row button.soft-btn {
@@ -781,12 +720,6 @@ figure.vfd-unit.has-page col.param-col {
   text-shadow: 0 0 6px rgba(125, 255, 176, 0.45);
 }
 
-.vfd-screen td.cell.page-label {
-  font-size: 0.85rem;
-  padding-left: 0.2rem;
-  text-align: left
-}
-
 .vfd-screen td.cell.selected, span.selected,
 .vfd-screen td.cell.selected u {
   text-decoration: underline;
@@ -794,81 +727,20 @@ figure.vfd-unit.has-page col.param-col {
   text-decoration-thickness: 2px;
 }
 
-.vfd-screen td.cell.flash-underline {
-  text-decoration: none;
-}
-
-.vfd-screen td.cell.flash-underline > span {
-  background-image: repeating-linear-gradient(
-    90deg,
-    currentColor 0,
-    currentColor 0.7ch,
-    transparent 0.7ch,
-    transparent calc(1ch + 0.06em)
-  );
-  background-size: auto 2px;
-  background-repeat: repeat-x;
-  background-position: 0 calc(100% - 0.02em);
-  padding-bottom: 3px;
-  animation: underline-flash 1s step-start infinite;
-}
-
-@keyframes underline-flash {
-  50% {
-    background-image: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .classic-blink,
-  .vfd-screen td.cell.flash-underline > span {
+  .classic-blink {
     animation: none;
   }
 }
 
 @media print {
-  .classic-blink,
-  .vfd-screen td.cell.flash-underline > span {
+  .classic-blink {
     animation: none;
   }
 }
 
 .vfd-unit figcaption {
   color: #bbb;
-}
-
-aside.button-float {
-  float: left;
-  width: 6.5rem;
-  margin: 0.2rem 1rem 0.6rem 0;
-  shape-outside: margin-box;
-}
-
-aside.button-float.right {
-  float: right;
-  margin: 0.2rem 0 0.6rem 1rem;
-}
-
-table.button-id {
-  width: 100%;
-  border-collapse: collapse;
-  background: #1c1c1c;
-  color: #eee;
-  font-family: var(--font-ui);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-table.button-id td {
-  padding: 0.45rem;
-  text-align: center;
-  border: 0;
-}
-
-table.button-id img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 table.defn-table {
@@ -934,24 +806,12 @@ table.param-cols td {
   padding: 0.12rem 1.1rem 0.12rem 0;
 }
 
-table.param-cols.cols-2 td {
-  width: 50%;
-}
-
 table.param-cols.cols-3 td {
   width: 33.33%;
 }
 
 table.param-cols.cols-4 td {
   width: 25%;
-}
-
-table.param-cols.cols-5 td {
-  width: 20%;
-}
-
-table.param-cols.cols-6 td {
-  width: 16.66%;
 }
 
 table.wave-catalog {
@@ -1294,14 +1154,6 @@ table.impl-legend td {
   margin: 0.45rem 0 0;
 }
 
-.button-label {
-  margin-top: 0.25rem;
-  font-family: var(--font-panel);
-  font-stretch: 87.5%;
-  font-size: 0.75rem;
-  font-weight: 650;
-}
-
 .double-click-symbol {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -1310,26 +1162,6 @@ table.impl-legend td {
   transform: rotate(90deg);
   /* IE < 10 follows */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
-.keycap-fallback {
-  display: block;
-  margin: 0 auto;
-  width: 3.4rem;
-  height: 2.1rem;
-  border-radius: 4px;
-  background: #2a2a2a;
-  box-shadow: inset 0 1px 0 #666, 0 2px 0 #000;
-}
-
-dl.parameter {
-  margin: 0.85rem 0;
-}
-
-dl.parameter dt {
-  font-family: var(--font-ui);
-  font-weight: 650;
-  color: inherit;
 }
 
 .site-footer {
@@ -1392,10 +1224,6 @@ dl.parameter dt {
 @media (max-width: 720px) {
   .manual {
     padding: 1.25rem 1rem 3rem;
-  }
-  aside.button-float {
-    float: none;
-    width: 7rem;
   }
   .memory-map {
     grid-template-columns: 1fr;
@@ -1568,9 +1396,7 @@ body.print-book > article.manual {
 
   /* Tall figures with break-inside:avoid overflow a letter page and
      Chromium then inserts a blank page. Cap height so image + caption fit. */
-  figure.figure img,
-  figure.panel-photo img,
-  figure.vfd-photo img {
+  figure.figure img {
     max-height: 8.25in;
     width: auto;
     object-fit: contain;
@@ -1584,6 +1410,7 @@ body.print-book > article.manual {
   .vfd-bezel,
   .vfd-screen,
   .soft-row button.soft-btn,
+  figure.vfd-unit img,
   aside {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
@@ -1612,5 +1439,249 @@ body.print-book > article.manual {
 
   .vfd-screen td.cell {
     text-shadow: none;
+  }
+}
+
+/* ==========================================================================
+   Unused — no current HTML/JS references
+   ========================================================================== */
+
+/* Ensoniq VFD SVG exports (ensoniq-vfd-display builder).
+   Manual figures use <img src="…svg">, so blink CSS must be embedded in each SVG
+   (re-export or scripts/patch-exported-svg-blink.mjs in ensoniq-vfd-display).
+   These rules apply when an SVG is inlined in HTML or loaded via <object>. */
+svg[aria-label="VFD layout preview"] {
+  --vfd-blink-period: 800ms;
+}
+
+svg[aria-label="VFD layout preview"] .blink-text,
+svg[aria-label="VFD layout preview"] .blink-underline {
+  opacity: 1;
+}
+
+svg[aria-label="VFD layout preview"][data-blink-clock="live"] .blink-text,
+svg[aria-label="VFD layout preview"][data-blink-clock="live"] .blink-underline {
+  animation: ensoniq-vfd-blink var(--vfd-blink-period, 800ms) linear infinite;
+}
+
+@keyframes ensoniq-vfd-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+svg[aria-label="VFD layout preview"][data-blink-clock="paused"] .blink-text,
+svg[aria-label="VFD layout preview"][data-blink-clock="paused"] .blink-underline {
+  animation: none;
+}
+
+span.ocr-suspect {
+  background: #ffe08a;
+  outline: 1px dashed #b8860b;
+}
+
+figure.panel-photo,
+figure.vfd-photo {
+  margin: 1.2rem 0;
+  padding: 0.7rem;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+}
+
+figure.vfd-unit table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0.35rem 0.28rem;
+}
+
+figure.vfd-unit col.page-col {
+  width: 22%;
+}
+
+figure.vfd-unit col.param-col {
+  width: 26%;
+}
+
+figure.vfd-unit.has-page col.param-col {
+  width: 26%;
+}
+
+.vfd-callouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.45rem 0.6rem;
+  margin: 0.35rem 0 0.55rem;
+}
+
+.vfd-callouts.has-page {
+  grid-template-columns: 22% 1fr 1fr 1fr;
+}
+
+.vfd-callouts.bottom {
+  margin: 0.55rem 0 0.2rem;
+}
+
+.vfd-callouts > div {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  padding: 0.28rem 0.4rem;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.vfd-callouts > div.page-spacer,
+.vfd-callouts > div:empty {
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.soft-row .page-tag-slot {
+  width: 22%;
+  padding: 0;
+}
+
+.vfd-screen td.cell.page-label {
+  font-size: 0.85rem;
+  padding-left: 0.2rem;
+  text-align: left
+}
+
+.vfd-screen td.cell.flash-underline {
+  text-decoration: none;
+}
+
+.vfd-screen td.cell.flash-underline > span {
+  background-image: repeating-linear-gradient(
+    90deg,
+    currentColor 0,
+    currentColor 0.7ch,
+    transparent 0.7ch,
+    transparent calc(1ch + 0.06em)
+  );
+  background-size: auto 2px;
+  background-repeat: repeat-x;
+  background-position: 0 calc(100% - 0.02em);
+  padding-bottom: 3px;
+  animation: underline-flash 1s step-start infinite;
+}
+
+@keyframes underline-flash {
+  50% {
+    background-image: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vfd-screen td.cell.flash-underline > span {
+    animation: none;
+  }
+}
+
+@media print {
+  .vfd-screen td.cell.flash-underline > span {
+    animation: none;
+  }
+}
+
+aside.button-float {
+  float: left;
+  width: 6.5rem;
+  margin: 0.2rem 1rem 0.6rem 0;
+  shape-outside: margin-box;
+}
+
+aside.button-float.right {
+  float: right;
+  margin: 0.2rem 0 0.6rem 1rem;
+}
+
+table.button-id {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1c1c1c;
+  color: #eee;
+  font-family: var(--font-ui);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table.button-id td {
+  padding: 0.45rem;
+  text-align: center;
+  border: 0;
+}
+
+table.button-id img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+table.param-cols.cols-2 td {
+  width: 50%;
+}
+
+table.param-cols.cols-5 td {
+  width: 20%;
+}
+
+table.param-cols.cols-6 td {
+  width: 16.66%;
+}
+
+.button-label {
+  margin-top: 0.25rem;
+  font-family: var(--font-panel);
+  font-stretch: 87.5%;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.keycap-fallback {
+  display: block;
+  margin: 0 auto;
+  width: 3.4rem;
+  height: 2.1rem;
+  border-radius: 4px;
+  background: #2a2a2a;
+  box-shadow: inset 0 1px 0 #666, 0 2px 0 #000;
+}
+
+dl.parameter {
+  margin: 0.85rem 0;
+}
+
+dl.parameter dt {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  color: inherit;
+}
+
+@media (max-width: 720px) {
+  aside.button-float {
+    float: none;
+    width: 7rem;
+  }
+}
+
+@media print {
+  figure.panel-photo img,
+  figure.vfd-photo img {
+    max-height: 8.25in;
+    width: auto;
+    object-fit: contain;
   }
 }

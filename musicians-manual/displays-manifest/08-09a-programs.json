@@ -1,0 +1,1831 @@
+{
+  "outputs": [
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/01-using-the-select-voice-page.svg",
+      "name": "using-the-select-voice-page",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "STRINGS"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "STRINGS"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "FLUGELHRN"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "(SITAR)"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "(PIZZ-SECT)"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "(LOOP-KICK)"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 7
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/02-figure-02.svg",
+      "name": "figure-02",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "*STRINGS*"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "(STRINGS)"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "(FLUGELHRN)"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "(SITAR)"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "(PIZZ-SECT)"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "(LOOP-KICK)"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 9
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/03-write-page-saving-a-new-program-into-memory.svg",
+      "name": "write-page-saving-a-new-program-into-memory",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "NAME=SAMPLED NAME                       ",
+          "LEFT -CURSOR- RIGHT                     "
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "range",
+              "row": 0,
+              "start": 18,
+              "length": 1
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/04-selecting-a-modulator.svg",
+      "name": "selecting-a-modulator",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "PITCH",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "MODSRC=*OFF*"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "MODAMT=+00"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "BEND=SYS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PITCHTBL=SYSTEM"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "ENV1=+00"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "LFO=+04"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 7,
+              "length": 5
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/05-about-the-copy-functions.svg",
+      "name": "about-the-copy-functions",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "COPY",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "<COPY CONTEXT>"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "PARAMETERS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "<SPECIAL>"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "RECALL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MAKE COPY"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/06-special-recall-functions.svg",
+      "name": "special-recall-functions",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "RECALL FROM CENVELOPE-1   *YES*         ",
+          "INTO NEW     ENVELOPE-1   *NO*          "
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "range",
+              "row": 0,
+              "start": 22,
+              "length": 1
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/07-default.svg",
+      "name": "default",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "COPY",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "ALL VOICE PARAMETERS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "DEFAULT"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "RECALL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MAKE COPY"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/08-default.svg",
+      "name": "default",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "RECALL DEFAULT INTO ENVELO              ",
+          "             TYPE=<XXXXXXX*NO*          "
+        ]
+      },
+      "buttonStates": {
+        "bottom-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/09-system.svg",
+      "name": "system",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "COPY",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "PITCHTABLE"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "PARAMETERS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "SYSTEM"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "RECALL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MAKE COPY"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/10-how-to-create-a-custom-pitch-table.svg",
+      "name": "how-to-create-a-custom-pitch-table",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "PROGRAM",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "TYPE=KEYBOARD"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "OPTION=*-NONE-*"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PRESS=KEY"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "PATCH=LIVE"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "RESTRIKE=35"
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/11-how-to-create-a-custom-pitch-table.svg",
+      "name": "how-to-create-a-custom-pitch-table",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "REPLACE VOICE             *EXIT*        ",
+          "PITCH-TABLE  WAVE-LIST    DRUM-MAP      "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/12-figure-12.svg",
+      "name": "figure-12",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "CONGA-MT"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "(CONGA-MT)"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "EDIT PITCH-TABLE"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 8
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/13-editing-a-custom-pitch-table.svg",
+      "name": "editing-a-custom-pitch-table",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "EDIT PITCH-TA*CALCULATOR* *EXIT*        ",
+          "=      C8 AND 00 CENTS                  "
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "range",
+              "row": 1,
+              "start": 4,
+              "length": 2
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "bottom-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/14-editing-a-custom-pitch-table.svg",
+      "name": "editing-a-custom-pitch-table",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "EDIT PITCH-TA*CALCULATOR* *EXIT*        ",
+          "KEY C4       = C4+        AND 50 CENTS  "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/15-figure-15.svg",
+      "name": "figure-15",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "PITCH-TABLE -EXTRAPOLATE  INTERPOLATE   ",
+          "KEY-RANGE STAC4 -C5       *EXIT*        "
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "range",
+              "row": 1,
+              "start": 13,
+              "length": 2
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "bottom-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/16-using-the-copy-page-with-pitch-tables.svg",
+      "name": "using-the-copy-page-with-pitch-tables",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "COPY",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "PITCH-TABLE PARAMETERS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "SYSTEM"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "RECALL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MAKE COPY"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/17-to-install-an-alternate-tuning-into-the-system-p.svg",
+      "name": "to-install-an-alternate-tuning-into-the-system-p",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SYSTEM",
+        "buttonStrings": [
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "PITCH-TABLE=CUSTOM"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-2",
+              "start": 12,
+              "length": 6
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/18-how-to-create-a-wave-list.svg",
+      "name": "how-to-create-a-wave-list",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "PROGRAM TYPE=KEYBOARD                   ",
+          "PRESS=KEY    PATCH=LIVE   RESTRIKE=35   "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/19-how-to-create-a-wave-list.svg",
+      "name": "how-to-create-a-wave-list",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "REPLACE VOICE             *EXIT*        ",
+          "PITCH-TABLE  WAVE-LIST    DRUM-MAP      "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/20-figure-20.svg",
+      "name": "figure-20",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "SAW-WAVE2"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "EDIT WAVE-LIST"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 9
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/21-figure-21.svg",
+      "name": "figure-21",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "WAVE",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "WAVE-LIST"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "WAVE-LIST"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "DELAY=0000"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "START-STEP=01"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "LOOPSTART=01"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "END=16"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-2",
+              "start": 0,
+              "length": 9
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-2": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/22-editing-a-wave-list.svg",
+      "name": "editing-a-wave-list",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "WAVE-LIST"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "(SAW-WAVE2)"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "EDIT WAVE-LIST"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/23-using-the-copy-page-with-wave-lists.svg",
+      "name": "using-the-copy-page-with-wave-lists",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "COPY",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "WAVE-LIST"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "PARAMETERS"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "RECALL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MAKE COPY"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/24-using-the-copy-page-with-wave-lists.svg",
+      "name": "using-the-copy-page-with-wave-lists",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "RECALL FAILED                           ",
+          "CONTEXT INCOMPATIBLE                    "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/25-ensoniq-drum-map.svg",
+      "name": "ensoniq-drum-map",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "PROGRAM",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "TYPE=KEYBOARD"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "OPTION=*-NONE-*"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PRESS=KEY"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "PATCH=LIVE"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "RESTRIKE=35"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-2",
+              "start": 7,
+              "length": 8
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-3": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/26-ensoniq-drum-map.svg",
+      "name": "ensoniq-drum-map",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "REPLACE VOICE             *EXIT*        ",
+          "PITCH-TABLE  WAVE-LIST    DRUM-MAP      "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/27-figure-27.svg",
+      "name": "figure-27",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "EDIT DRUM-MAP"
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/28-figure-28.svg",
+      "name": "figure-28",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "WAVE",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "DELAY=0000"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "DIR=FORWARD"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-2",
+              "start": 0,
+              "length": 8
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {
+        "top-1": "pressed"
+      },
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/29-editing-a-drum-map.svg",
+      "name": "editing-a-drum-map",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "SELV",
+        "pageFooter": "00",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "DRUM-MAP"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "EDIT DRUM-MAP"
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/30-using-the-copy-page-with-drum-map.svg",
+      "name": "using-the-copy-page-with-drum-map",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "DRUM-MAP  PARAMETERS                    ",
+          "                                        "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/31-using-the-copy-page-with-drum-map.svg",
+      "name": "using-the-copy-page-with-drum-map",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "RECALL FAILED                           ",
+          "CONTEXT INCOMPATIBLE                    "
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/08-programs/32-figure-32.svg",
+      "name": "figure-32",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "rows": [
+          "COPY CURRENT DRUM-MAP KEY               ",
+          "KEY-RANGE STAXXX - XXX    *EXIT*        "
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "range",
+              "row": 1,
+              "start": 13,
+              "length": 3
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/01-lfo-page.svg",
+      "name": "lfo-page",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "LFO",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "RATE=60*"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "MODSRC=WHEEL"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "MODAMT=+16"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "DEPTH=35"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "MODSRC=WHEEL"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MODAMT=+99"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 5,
+              "length": 2
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/02-depth-modamt.svg",
+      "name": "depth-modamt",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "LFO",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "WAVESHAPE=TRIANGLE  RESTART-MODE=ON"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PHASE=035"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "DELAY=25"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "NOISE-RATE=70"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 10,
+              "length": 8
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/03-track-release-mod-selector.svg",
+      "name": "track-release-mod-selector",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "ENV3",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "LEVELS"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "PEAK=99"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "BREAK1=92"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "BREAK2=86"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "SUSTAIN=76"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "VEL-LEV=70"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-2",
+              "start": 5,
+              "length": 2
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/04-vel-lev.svg",
+      "name": "vel-lev",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "ENV3",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "MODE=NORMAL"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "VEL-CURVE=CONVEX-2"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "KBDTRK=+00"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "VEL-ATCK=12"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "VEL-RELS=+08"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 5,
+              "length": 6
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/05-vel-rels.svg",
+      "name": "vel-rels",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "PITCH",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "OCTAVE=+0"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "SEMITONE=+00"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "FINE=+00"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "GLIDEMODE=NONE"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "GLIDETIME=12"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 7,
+              "length": 2
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/06-glidetime.svg",
+      "name": "glidetime",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "PITCH",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "MODSRC=LFO"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "MODAMT=+00"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "BEND=SYS"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PITCHTBL=SYSTEM"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "ENV1=+00"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "LFO=+04"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 7,
+              "length": 3
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/07-filter-configurations.svg",
+      "name": "filter-configurations",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "FILTER1",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "LO-PASS/2"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "CUTOFF=003*"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "KBD=+00"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "MODSRC=LFO"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "MODAMT=+29"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "ENV2=+70"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 9
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/08-env2.svg",
+      "name": "env2",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "FILTER2",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "HI-PASS/2"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "CUTOFF=000*"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "KBD=+00"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "MODSRC=LFO"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "MODAMT=+29"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "ENV2=+70"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 0,
+              "length": 9
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/09-output-kbd-scale.svg",
+      "name": "output-kbd-scale",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "OUTPUT",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "KBD-SCALE=+00"
+          },
+          {
+            "id": "top-2",
+            "button": "top-2",
+            "text": "LO/HI-KEY"
+          },
+          {
+            "id": "top-3",
+            "button": "top-3",
+            "text": "A0 -C8"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "VOL=+00DB"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "MODSRC=LFO"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MODAMT=+00"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "bottom-1",
+              "start": 4,
+              "length": 3
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/10-destination-bus.svg",
+      "name": "destination-bus",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "OUTPUT",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "DESTINATION-BUS=DRY"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "PAN=+00"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "MODSRC=KEYBD"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "MODAMT=+25"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 16,
+              "length": 3
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    },
+    {
+      "file": "/Users/mikejennings/dev/ts-10-docs/musicians-manual/images/displays/09-program-params-a/11-voice-priority.svg",
+      "name": "voice-priority",
+      "screen": {
+        "rowJustify": {
+          "row0": "left",
+          "row1": "left"
+        },
+        "pageHeader": "OUTPUT",
+        "buttonStrings": [
+          {
+            "id": "top-1",
+            "button": "top-1",
+            "text": "VOICE-PRIORITY=MED"
+          },
+          {
+            "id": "bottom-1",
+            "button": "bottom-1",
+            "text": "VELOCITY-WINDOW"
+          },
+          {
+            "id": "bottom-2",
+            "button": "bottom-2",
+            "text": "LO=000"
+          },
+          {
+            "id": "bottom-3",
+            "button": "bottom-3",
+            "text": "HI=127"
+          }
+        ],
+        "effects": [
+          {
+            "target": {
+              "type": "string",
+              "id": "top-1",
+              "start": 15,
+              "length": 3
+            },
+            "underline": true
+          },
+          {
+            "target": {
+              "type": "string",
+              "id": "bottom-2",
+              "start": 0,
+              "length": 6
+            },
+            "underline": true
+          }
+        ]
+      },
+      "buttonStates": {},
+      "rowJustify": {
+        "row0": "left",
+        "row1": "left"
+      }
+    }
+  ]
+}

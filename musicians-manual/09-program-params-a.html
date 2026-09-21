@@ -29,35 +29,8 @@
   <p>The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each voice in a program has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo and other effects.</p>
 <p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the <span class="page-name">LFO</span> page:</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>LFO Rate</div><div>Rate Modulator</div><div>Rate Modulation Amount</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">RATE=<span class="selected">60</span>*</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+16</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">DEPTH=35</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+99</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>LFO Depth</div><div>Depth Modulator</div><div>Depth Modulation Amount</div></div>
-  
-</figure>
+      <img src="images/displays/09-program-params-a/01-lfo-page.svg" alt="VFD: LFO RATE=60* MODSRC=WHEEL MODAMT=+16 DEPTH=35 MODSRC=WHEEL MODAMT=+99">
+    </figure>
 <h4 id="lfo-rate" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the speed of the LFO. <a href="#lfo-frequencies">The table below</a> shows the frequency (in hertz) for each value:</p>
 <table class="data-table lookup" id="lfo-frequencies"><caption>LFO FREQUENCIES</caption><thead><tr><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.63</td><td>40</td><td>2.17</td><td>60</td><td>4.77</td><td>80</td><td>7.37</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.67</td><td>41</td><td>2.30</td><td>61</td><td>4.90</td><td>81</td><td>7.50</td></tr><tr><td>2</td><td>.03</td><td>22</td><td>.70</td><td>42</td><td>2.43</td><td>62</td><td>5.03</td><td>82</td><td>7.63</td></tr><tr><td>3</td><td>.07</td><td>23</td><td>.73</td><td>43</td><td>2.56</td><td>63</td><td>5.16</td><td>83</td><td>7.76</td></tr><tr><td>4</td><td>.10</td><td>24</td><td>.77</td><td>44</td><td>2.69</td><td>64</td><td>5.29</td><td>84</td><td>7.89</td></tr><tr><td>5</td><td>.13</td><td>25</td><td>.80</td><td>45</td><td>2.82</td><td>65</td><td>5.42</td><td>85</td><td>8.02</td></tr><tr><td>6</td><td>.17</td><td>26</td><td>.83</td><td>46</td><td>2.95</td><td>66</td><td>5.55</td><td>86</td><td>8.15</td></tr><tr><td>7</td><td>.20</td><td>27</td><td>.87</td><td>47</td><td>3.08</td><td>67</td><td>5.68</td><td>87</td><td>8.28</td></tr><tr><td>8</td><td>.23</td><td>28</td><td>.90</td><td>48</td><td>3.21</td><td>68</td><td>5.81</td><td>88</td><td>9.28</td></tr><tr><td>9</td><td>.27</td><td>29</td><td>.93</td><td>49</td><td>3.34</td><td>69</td><td>5.94</td><td>89</td><td>10.28</td></tr><tr><td>10</td><td>.30</td><td>30</td><td>.97</td><td>50</td><td>3.47</td><td>70</td><td>6.07</td><td>90</td><td>11.28</td></tr><tr><td>11</td><td>.33</td><td>31</td><td>1.00</td><td>51</td><td>3.60</td><td>71</td><td>6.20</td><td>91</td><td>12.28</td></tr><tr><td>12</td><td>.37</td><td>32</td><td>1.13</td><td>52</td><td>3.73</td><td>72</td><td>6.33</td><td>92</td><td>13.28</td></tr><tr><td>13</td><td>.40</td><td>33</td><td>1.26</td><td>53</td><td>3.86</td><td>73</td><td>6.46</td><td>93</td><td>14.28</td></tr><tr><td>14</td><td>.43</td><td>34</td><td>1.39</td><td>54</td><td>3.99</td><td>74</td><td>6.59</td><td>94</td><td>15.28</td></tr><tr><td>15</td><td>.47</td><td>35</td><td>1.52</td><td>55</td><td>4.12</td><td>75</td><td>6.72</td><td>95</td><td>16.28</td></tr><tr><td>16</td><td>.50</td><td>36</td><td>1.65</td><td>56</td><td>4.25</td><td>76</td><td>6.85</td><td>96</td><td>17.28</td></tr><tr><td>17</td><td>.53</td><td>37</td><td>1.78</td><td>57</td><td>4.38</td><td>77</td><td>6.98</td><td>97</td><td>18.28</td></tr><tr><td>18</td><td>.57</td><td>38</td><td>1.91</td><td>58</td><td>4.51</td><td>78</td><td>7.11</td><td>98</td><td>19.28</td></tr><tr><td>19</td><td>.60</td><td>39</td><td>2.04</td><td>59</td><td>4.64</td><td>79</td><td>7.24</td><td>99</td><td>20.28</td></tr></tbody></table>
@@ -77,35 +50,8 @@
 <p>The effect of <span class="param">DEPTH MODAMT</span> is <em>added to</em> the effect of the LFO <span class="param">DEPTH</span> parameter.</p>
 <p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the <span class="page-name">LFO</span> page. The display reads:</p>
 <figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell" colspan="3">WAVESHAPE=<span class="selected">TRIANGLE</span>  RESTART-MODE=ON</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PHASE=035</td><td class="cell">DELAY=25</td><td class="cell">NOISE-RATE=70</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
+      <img src="images/displays/09-program-params-a/02-depth-modamt.svg" alt="VFD: LFO WAVESHAPE=TRIANGLE RESTART-MODE=ON WAVESHAPE=TRIANGLE RESTART-MODE=ON WAVESHAPE=TRIANGLE RESTART-MODE=ON PHASE=035 DELAY=25 NOISE-RATE=70">
+    </figure>
 <h4 id="waveshape" class="param-name"><span class="param">WAVESHAPE</span><span class="range">Range: various (see below)</span></h4>
 <p>The Waveshape determines how the LFO signal will rise and fall. There are seven possible values:</p>
 <ul>
@@ -148,6 +94,10 @@
 <h2 id="env1-env2-and-env3-pages">ENV1, ENV2 and ENV3 Pages</h2>
 <p>The <span class="page-name">ENV1</span>, <span class="page-name">ENV2</span> and <span class="page-name">ENV3</span> Pages, parameters and ranges are all the same except where indicated below. We will use <span class="page-name">ENV3</span> as our example, since its effect on the volume of the voice is immediately apparent.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3</span> sub-page containing the five TIME parameters:</p>
+
+<figure class="vfd-unit has-page">
+      <img src="images/displays/09-program-params-a/03-env3-times-sub-page.svg" alt="VFD: ENV3 ATTACK=12">
+    </figure>
 <p>Note that the numbers shown here represent <em>times</em>, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 00 to 99 (see <a href="#envelope-times">the Envelope Times chart below</a> for a listing of the time values)</span></h4>
 <p>The amount of time it takes for the envelope level to travel from zero (when the key is struck) to the PEAK level. The higher the value, the longer the time.</p>
@@ -166,37 +116,8 @@
 <table class="data-table lookup" id="envelope-times"><caption>ENVELOPE TIMES</caption><thead><tr><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.20</td><td>40</td><td>.82</td><td>60</td><td>3.2</td><td>80</td><td>13</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.22</td><td>41</td><td>.88</td><td>61</td><td>3.5</td><td>81</td><td>14</td></tr><tr><td>2</td><td>.02</td><td>22</td><td>.23</td><td>42</td><td>.94</td><td>62</td><td>3.7</td><td>82</td><td>15</td></tr><tr><td>3</td><td>.03</td><td>23</td><td>.25</td><td>43</td><td>1.0</td><td>63</td><td>4.0</td><td>83</td><td>16</td></tr><tr><td>4</td><td>.04</td><td>24</td><td>.27</td><td>44</td><td>1.0</td><td>64</td><td>4.3</td><td>84</td><td>17</td></tr><tr><td>5</td><td>.06</td><td>25</td><td>.29</td><td>45</td><td>1.1</td><td>65</td><td>4.6</td><td>85</td><td>18</td></tr><tr><td>6</td><td>.07</td><td>26</td><td>.31</td><td>46</td><td>1.2</td><td>66</td><td>4.9</td><td>86</td><td>19</td></tr><tr><td>7</td><td>.08</td><td>27</td><td>.33</td><td>47</td><td>1.3</td><td>67</td><td>5.3</td><td>87</td><td>21</td></tr><tr><td>8</td><td>.08</td><td>28</td><td>.35</td><td>48</td><td>1.4</td><td>68</td><td>5.7</td><td>88</td><td>22</td></tr><tr><td>9</td><td>.09</td><td>29</td><td>.38</td><td>49</td><td>1.5</td><td>69</td><td>6.1</td><td>89</td><td>24</td></tr><tr><td>10</td><td>.10</td><td>30</td><td>.41</td><td>50</td><td>1.6</td><td>70</td><td>6.5</td><td>90</td><td>26</td></tr><tr><td>11</td><td>.11</td><td>31</td><td>.44</td><td>51</td><td>1.7</td><td>71</td><td>7.0</td><td>91</td><td>28</td></tr><tr><td>12</td><td>.11</td><td>32</td><td>.47</td><td>52</td><td>1.8</td><td>72</td><td>7.5</td><td>92</td><td>30</td></tr><tr><td>13</td><td>.12</td><td>33</td><td>.50</td><td>53</td><td>2.0</td><td>73</td><td>8.1</td><td>93</td><td>32</td></tr><tr><td>14</td><td>.13</td><td>34</td><td>.54</td><td>54</td><td>2.1</td><td>74</td><td>8.6</td><td>94</td><td>34</td></tr><tr><td>15</td><td>.14</td><td>35</td><td>.58</td><td>55</td><td>2.3</td><td>75</td><td>9.3</td><td>95</td><td>37</td></tr><tr><td>16</td><td>.15</td><td>36</td><td>.62</td><td>56</td><td>2.4</td><td>76</td><td>9.9</td><td>96</td><td>39</td></tr><tr><td>17</td><td>.16</td><td>37</td><td>.66</td><td>57</td><td>2.6</td><td>77</td><td>10</td><td>97</td><td>42</td></tr><tr><td>18</td><td>.17</td><td>38</td><td>.71</td><td>58</td><td>2.8</td><td>78</td><td>11</td><td>98</td><td>45</td></tr><tr><td>19</td><td>.19</td><td>39</td><td>.76</td><td>59</td><td>3.0</td><td>79</td><td>12</td><td>99</td><td>49</td></tr></tbody></table>
 <p>Press <kbd class="button">Env 3</kbd> again. This takes you to the second <span class="page-name">ENV3</span> sub-page, which shows the five <span class="param">LEVELS</span></p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-bezel">
-    <table>
-      <colgroup>
-        <col class="page-col">
-        <col class="param-col">
-        <col class="param-col"> 
-        <col class="param-col">
-      </colgroup>
-      <thead>
-        <tr class="soft-row top">
-          <th class="page-tag-slot"></th>
-          <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-          <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-          <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-        </tr>
-      </thead>
-      <tbody class="vfd-screen">
-        <tr><td class="cell page-label">ENV3</td><td class="cell">LEVELS</td><td class="cell">PEAK=<span class="selected">99</span></td><td class="cell">BREAK1=92</td></tr>
-        <tr><td class="cell page-label">&nbsp;</td><td class="cell">BREAK2=86</td><td class="cell">SUSTAIN=76</td><td class="cell">VEL-LEV=70</td></tr>
-      </tbody>
-      <tfoot>
-        <tr class="soft-row bottom">
-          <th class="page-tag-slot"></th>
-          <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-          <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-          <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-</figure>
+      <img src="images/displays/09-program-params-a/03-track-release-mod-selector.svg" alt="VFD: ENV3 LEVELS PEAK=99 BREAK1=92 BREAK2=86 SUSTAIN=76 VEL-LEV=70">
+    </figure>
 <h4 id="peak" class="param-name"><span class="param">PEAK</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the level the envelope will reach at the end of the time defined by <span class="param">ATTACK</span>.</p>
 <h4 id="break-1" class="param-name"><span class="param">BREAK 1</span><span class="range">Range: 00 to 99</span></h4>
@@ -214,37 +135,8 @@
   This provides further control over the velocity response of the envelope.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button again. This displays the final sub-page for <span class="param">ENV 3</span>:</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-bezel">
-    <table>
-      <colgroup>
-        <col class="page-col">
-        <col class="param-col">
-        <col class="param-col"> 
-        <col class="param-col">
-      </colgroup>
-      <thead>
-        <tr class="soft-row top">
-          <th class="page-tag-slot"></th>
-          <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-          <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-          <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-        </tr>
-      </thead>
-      <tbody class="vfd-screen">
-        <tr><td class="cell page-label">ENV3</td><td class="cell">MODE=<span class="selected">NORMAL</span></td><td class="cell" colspan="2" style="text-align: right;">VEL-CURVE=CONVEX-2</td></tr>
-        <tr><td class="cell page-label">&nbsp;</td><td class="cell">KBDTRK=+00</td><td class="cell">VEL-ATCK=12</td><td class="cell">VEL-RELS=+08</td></tr>
-      </tbody>
-      <tfoot>
-        <tr class="soft-row bottom">
-          <th class="page-tag-slot"></th>
-          <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-          <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-          <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-</figure>
+      <img src="images/displays/09-program-params-a/04-vel-lev.svg" alt="VFD: ENV3 MODE=NORMAL VEL-CURVE=CONVEX-2 VEL-CURVE=CONVEX-2 KBDTRK=+00 VEL-ATCK=12 VEL-RELS=+08">
+    </figure>
 <h4 id="mode-env-1-and-env-2" class="param-name"><span class="param">MODE (ENV 1 and ENV 2)</span><span class="range">Range: NORMAL, FINISH, or REPEAT</span></h4>
 <ul>
   <li><span class="value">NORMAL</span> — The envelope plays through normally.</li>
@@ -291,32 +183,8 @@
 <aside class="note"><p>When a Program contains a Drum-Map, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the Drum-Map. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the <span class="param">PITCH</span> parameter in the Drum Map Editor.</p></aside>
 <p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH</span> page.</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">PITCH</td><td class="cell">OCTAVE=<span class="selected">+0</span></td><td class="cell" style="text-align: right;">SEMITONE=+00</td><td class="cell">FINE=+00</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">GLIDEMODE=NONE</td><td class="cell" colspan="2" style="text-align: right;">GLIDETIME=12</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-</figure>
+      <img src="images/displays/09-program-params-a/05-vel-rels.svg" alt="VFD: PITCH OCTAVE=+0 SEMITONE=+00 FINE=+00 GLIDEMODE=NONE GLIDETIME=12 GLIDETIME=12">
+    </figure>
 <h4 id="octave" class="param-name"><span class="param">OCTAVE</span><span class="range">Range: -4 to +4 octaves</span></h4>
 <p>Changes the pitch of the voice by octaves.</p>
 <h4 id="semitone" class="param-name"><span class="param">SEMITONE</span><span class="range">Range: -11 to +11</span></h4>
@@ -344,33 +212,8 @@
 <p>The <span class="page-name">Pitch Mods</span> page parameters control pitch modulation for the voice.</p>
 <p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods</span> page.</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">PITCH</td><td class="cell">MODSRC=<span class="selected">LFO</span></td><td class="cell" style="text-align: right;">MODAMT=+00</td><td class="cell">BEND=SYS</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PITCHTBL=SYSTEM</td><td class="cell" style="text-align: right;">ENV1=+00</td><td class="cell">LFO=+04</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-   
-</figure>
+      <img src="images/displays/09-program-params-a/06-glidetime.svg" alt="VFD: PITCH MODSRC=LFO MODAMT=+00 BEND=SYS PITCHTBL=SYSTEM ENV1=+00 LFO=+04">
+    </figure>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the pitch of the voice from among the 15 available modulators.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -410,35 +253,8 @@
 <h2 id="filter-1-page">FILTER 1 Page</h2>
 <p>Press the <kbd class="button">Filters</kbd> button. The display shows the <span class="page-name">FILTER 1</span> page.</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 1 Mode</div><div>Filter 1 Cutoff Frequency</div><div>Filter 1 Keyboard Scaling Amount</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">FILTER1</td><td class="cell selected">LO-PASS/2</td><td class="cell">CUTOFF=003*</td><td class="cell">KBD=+00</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+29</td><td class="cell">ENV2=+70</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Modulation Source</div><div>Modulation Amount</div><div>Env. 2 Modulation Amount</div></div>
-  
-</figure>
+      <img src="images/displays/09-program-params-a/07-filter-configurations.svg" alt="VFD: FILTER1 LO-PASS/2 CUTOFF=003* KBD=+00 MODSRC=LFO MODAMT=+29 ENV2=+70">
+    </figure>
 <h4 id="filter1-mode" class="param-name"><span class="param">FILTER1 Mode</span><span class="range">Range: LO-PASS/2 or LO-PASS/3</span></h4>
 <p>Determines whether Filter 1 will be a 2-pole or a 3-pole low-pass filter.</p>
 <h4 id="cutoff" class="param-name"><span class="param">CUTOFF</span><span class="range">Range: 000 to 127</span></h4>
@@ -462,34 +278,8 @@
 <h2 id="filter-2-page">FILTER 2 Page</h2>
 <p>Press the <kbd class="button">Filters</kbd> button again. The display shows the <span class="page-name">FILTER2</span> page:</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 2 Mode</div><div></div><div></div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">FILTER2</td><td class="cell selected">HI-PASS/2</td><td class="cell">CUTOFF=000*</td><td class="cell">KBD=+00</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+29</td><td class="cell">ENV2=+70</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>ALL other parameters are the same as for Filter 1</div><div></div></div>
-</figure>
+      <img src="images/displays/09-program-params-a/08-env2.svg" alt="VFD: FILTER2 HI-PASS/2 CUTOFF=000* KBD=+00 MODSRC=LFO MODAMT=+29 ENV2=+70">
+    </figure>
 
 <h4 id="filter-2-mode-2" class="param-name"><span class="param">Filter 2 Mode</span><span class="range">Range: HI-PASS/2, 1 or LO-PASS/2, 1</span></h4>
 <p><span class="param">FILTER 2</span> can be configured as a 2-pole or 1-pole high-pass filter, or a 2-pole or 1-pole low-pass filter.</p>
@@ -502,35 +292,8 @@
 <h4 id="output-kbd-scale" class="param-name"><span class="param">OUTPUT KBD-SCALE</span><span class="range">Range: -99 to +99, or ZON</span></h4>
 <p>Press the <kbd class="button">Output</kbd>. button. The first <span class="page-name">OUTPUT</span> sub-page is displayed.</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Keyboard Scale Amt. (or Zone)</div><div></div><div>High and Low keys for Keyboard Scaling or Zone</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">OUTPUT</td><td class="cell">KBD-SCALE=+00</td><td class="cell" style="text-align: right;">LO/HI-KEY</td><td class="cell" style="text-align: center;">A0 -C8</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">VOL=<span class="selected">+00</span>DB</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+00</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Volume</div><div>Volume Modulator</div><div>Volume Mod Amount</div></div>
-  
-</figure>
+      <img src="images/displays/09-program-params-a/09-output-kbd-scale.svg" alt="VFD: OUTPUT KBD-SCALE=+00 LO/HI-KEY A0 -C8 VOL=+00DB MODSRC=LFO MODAMT=+00">
+    </figure>
 <p>Can be used to fade the voice in or out between the two keys specified to the right (see below).</p>
 <p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of <span class="value"><span class="plus">+</span>99</span> will fade the voice <em>in</em> from silence to full level from the low keys to the high keys. A value of <span class="value">-99</span> will fade the voice <em>out</em> from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
 <figure class="figure"><img src="images/output-kbd-scale.png" alt="OUTPUT KBD-SCALE at +99 and −99 across MIDI keys 0–127, with the TS&#8209;10 keyboard range marked"><figcaption>Keyboard scaling of voice volume.</figcaption></figure>
@@ -551,35 +314,8 @@
 <h4 id="destination-bus" class="param-name"><span class="param">DESTINATION-BUS</span><span class="range">Range: FX1, FX2, DRY, or AUX</span></h4>
 <p>Press the <kbd class="button">Output</kbd> button again. The display shows the second <span class="page-name">OUTPUT</span> sub-page:</p>
 <figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">OUTPUT</td><td class="cell" colspan="3" style="text-align: right;">DESTINATION-BUS=<span class="selected">DRY</span></td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PAN=+00</td><td class="cell" style="text-align: right;">MODSRC=KEYBD</td><td class="cell" style="text-align: center;">MODAMT=+25</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
+      <img src="images/displays/09-program-params-a/10-destination-bus.svg" alt="VFD: OUTPUT DESTINATION-BUS=DRY DESTINATION-BUS=DRY DESTINATION-BUS=DRY PAN=+00 MODSRC=KEYBD MODAMT=+25">
+    </figure>
 <p>Each voice within a sound can be routed to one of four stereo “busses:”</p>
 <ul>
   <li><span class="value">FX1</span>, <span class="value">FX2</span>, and <span class="value">DRY</span> feed the <kbd class="button">Main</kbd> stereo outputs of the TS&#8209;10.</li>
@@ -596,32 +332,8 @@
 <h4 id="voice-priority" class="param-name"><span class="param">VOICE-PRIORITY</span><span class="range">Range: LO, MED, or HI</span></h4>
 <p>Press the <kbd class="button">Output</kbd> button a third time. The final sub-page contains three parameters:</p>
 <figure class="vfd-unit has-page">
-   <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">OUTPUT</td><td class="cell" colspan="3" style="text-align: right;">VOICE-PRIORITY=<span class="selected">MED</span></td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">VELOCITY-WINDOW</td><td class="cell" style="text-align: right;"><span class="selected">LO=000</span></td><td class="cell" style="text-align: center;">HI=127</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  </figure>
+      <img src="images/displays/09-program-params-a/11-voice-priority.svg" alt="VFD: OUTPUT VOICE-PRIORITY=MED VOICE-PRIORITY=MED VOICE-PRIORITY=MED VELOCITY-WINDOW LO=000 HI=127">
+    </figure>
 <p>This parameter gives you some control over how voices will be reassigned, or “stolen,” to play new notes when all of the TS&#8209;10’s voices are already playing. A voice can be assigned <span class="value">LO</span>, <span class="value">MED</span>, or <span class="value">HI</span> priority. The rule is that a given voice will only be allowed to steal from voices with the same or lower priority.</p>
 <p><span class="value">MED</span> is the usual state and should be used for most voices. <span class="value">LO</span> can be used for voices within a sound which would be missed the least if stolen (such as a voice playing the same wave as another voice but detuned a bit). <span class="value">HI</span> is best used only for specific applications in which you want to protect a voice or voices from being stolen — such as cymbals or a sustaining “pad” sound in a sequencer track.</p>
 <h4 id="velocity-window-lo-hi" class="param-name"><span class="param">VELOCITY-WINDOW LO &amp; HI</span><span class="range">Range: 000 to 127</span></h4>
