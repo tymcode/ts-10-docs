@@ -439,11 +439,20 @@ span.param,
   font-weight: 650;
 }
 
-span.value,
-.value {
+span.value {
   font-family: var(--font-panel);
   font-stretch: 87.5%;
   text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--ink);
+  letter-spacing: 0em;
+}
+
+td.value {
+  font-family: var(--font-panel);
+  font-stretch: 87.5%;
+  text-transform: none;
   font-weight: 500;
   white-space: nowrap;
   color: var(--ink);
@@ -690,7 +699,7 @@ figure.vfd-unit img {
   margin: 0.55rem 0 0.2rem;
 }
 
-.defn-table>tbody>tr>td.sysex-byte, .sysex-byte {
+.defn-table>.sysex-byte, .sysex-byte {
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   color: var(--ink);
