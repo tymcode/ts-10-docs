@@ -15,7 +15,7 @@ HTML transcriptions of the original ENSONIQ TS-10 (and TS-12) printed documents.
 | Document | Status |
 | --- | --- |
 | [Musician’s Manual](musicians-manual/) | Version 3.0 transcription |
-| [MIDI Specification](midi-specification/) | Forthcoming |
+| [MIDI Specification](midi-specification/) | SysEx Implementation V.2.0 |
 | [Service Manual](service-manual/) | Forthcoming |
 
 Add later documents as sibling folders and list them on `index.html` and in this table.

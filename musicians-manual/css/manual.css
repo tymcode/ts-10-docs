@@ -345,6 +345,7 @@ body.cover-page .manual.cover {
 .manual h5 + ul:not(.tips),
 .manual h5 + ol,
 .manual h5 + figure,
+.manual h5 + br,
 .manual h5 + aside {
   margin-top: 0;
 }
@@ -366,6 +367,7 @@ aside.note,
 aside.tip,
 aside.model-note,
 aside.edition-note,
+aside.example,
 aside.warning {
   margin: 1.15rem 0;
   padding: 0.8rem 1rem;
@@ -385,6 +387,11 @@ aside.model-note {
   border-left-color: #6b3fa0;
 }
 
+aside.example {
+  background: var(--example-bg);
+  border-left-color: #a8aaaa;
+}
+
 aside.warning {
   background: #fdecea;
   border-left-color: #b42318;
@@ -399,6 +406,7 @@ aside.tip::before,
 aside.model-note::before,
 aside.note::before,
 aside.reminder::before,
+aside.example::before,
 aside.warning::before {
   display: block;
   font-weight: 700;
@@ -411,6 +419,7 @@ aside.warning::before {
 aside.tip::before { content: "Tip"; color: #8a6d10; }
 aside.model-note::before { content: "TS-10 / TS-12"; color: #6b3fa0; }
 aside.note::before { content: "Note"; color: var(--ensoniq); }
+aside.example::before { content: "Example"; color: #a8aaaa; }
 aside.warning::before { content: "Warning"; color: #b42318; }
 aside.reminder::before { content: "Remember"; color: var(--ensoniq); }
 
@@ -494,13 +503,21 @@ span.mode {
   letter-spacing: 0.03em;
 }
 
-.message {
+.message,
+p.byte-length {
   font-family: var(--font-ui);
   font-style: normal;
   font-weight: 450;
-  white-space: nowrap;
   font-size: 0.92em;
   letter-spacing: 0.02em;
+}
+
+span.message {
+  white-space: nowrap;
+}
+
+p.byte-length {
+  margin: 1.1rem 0 0;
 }
 
 span.page-name {

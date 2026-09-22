@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parameter block layouts — TS-10/TS-12 MIDI SysEx Specification</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+  <link rel="stylesheet" href="css/sysex.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 MIDI SysEx Specification</span></a>
+    </div>
+  </header>
+<nav class="section-nav">
+  <div><a href="02-commands.html">← Commands, errors, and bulk dumps</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="04-parameters.html">Parameter definitions →</a></div>
+</nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
+      <h1>Parameter block layouts</h1>
+    </header>
+    <p class="suspect-legend">Amber marks a value the scan left in doubt. Hover
+    it, or read its <code>data-note</code>, to see what was read and why it was
+    changed.</p>
+<section class="spec-page" id="pdf-11" data-pdf-page="11" data-printed-page="10">
+<h2 id="s-4">4 Parameter Block Data Descriptions</h2>
+<p>This is a description of the parameter blocks transmitted using the bulk dump messages described in section 3.3. The names and byte offsets of each block parameter are given. The parameter value ranges are included in section 5. The following byte layout is the internal representation and not the MIDI byte format which is described in section 2.3.</p>
+<h3 id="s-4-1">4.1 Program Parameters</h3>
+<p>The first group of parameters through byte offset 92 describe one of the six possible voices in a program. This same structure is repeated with an additional offset of 92 for each of the other five voices. When the program has an option enabled (Pitch Table, Wave List or Drum Map), voices 5 and 6 are replaced with the option data. All of the global program parameters are at the bottom of this list. These parameter descriptions do not reflect the literal names shown on the TS display. Refer to the parameter definitions in section 5 for that information.</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="term"><strong>Byte</strong></td><td class="desc">Parameter Description</td></tr>
+</tbody></table></div>
+<p>Offset</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>0</strong></td><td class="desc"><span class="suspect" data-conf="82">Envl1 Release Mod Amount</span></td></tr>
+</tbody></table></div>
+<p class="suspect-para">] Env1 Attack Time</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>2</strong></td><td class="desc"><span class="suspect" data-conf="88">Env1 Peak Level</span></td></tr>
+<tr><td class="term"><strong>3</strong></td><td class="desc"><span class="suspect" data-conf="93">Env1 Decay Time 1</span></td></tr>
+<tr><td class="term"><strong>4</strong></td><td class="desc"><span class="suspect" data-conf="84">Env1 Breakpoint 1</span></td></tr>
+<tr><td class="term"><strong>5</strong></td><td class="desc"><span class="suspect" data-conf="89">Env1 Decay Time 2</span></td></tr>
+<tr><td class="term"><strong>6</strong></td><td class="desc"><span class="suspect" data-conf="90">Env1 Breakpoint 2</span></td></tr>
+<tr><td class="term"><strong>7</strong></td><td class="desc"><span class="suspect" data-conf="94">Envl Decay Time 3</span></td></tr>
+<tr><td class="term"><strong>8</strong></td><td class="desc"><span class="suspect" data-conf="84">Env1 Sustain Level</span></td></tr>
+<tr><td class="term"><strong>9</strong></td><td class="desc"><span class="suspect" data-conf="79">Env1 Release Time</span></td></tr>
+<tr><td class="term"><strong>10</strong></td><td class="desc"><span class="suspect" data-conf="92">Env1 Level Velocity Sensitivity</span></td></tr>
+<tr><td class="term"><span class="suspect" data-conf="82" data-note="restored from column order; read as &#x27;1&#x27;"><strong>11</strong></span></td><td class="desc"><span class="suspect" data-conf="94">Envi Attack Time Velocity Sensitivity</span></td></tr>
+<tr><td class="term"><strong>12</strong></td><td class="desc"><span class="suspect" data-conf="91">Envl Keyboard Tracking</span></td></tr>
+<tr><td class="term"><strong>13</strong></td><td class="desc"><span class="suspect" data-conf="93">Envl Mode (hi nybble) and Velocity Curve (lo nybble)</span></td></tr>
+<tr><td class="term"><strong>14</strong></td><td class="desc"><span class="suspect" data-conf="94">Env2 (same structure as Envelope 1)</span></td></tr>
+<tr><td class="term"><strong>28</strong></td><td class="desc"><span class="suspect" data-conf="76">Env3 (same structure as Envelope 1) |</span></td></tr>
+<tr><td class="term"><strong>42</strong></td><td class="desc">Pitch Root Key</td></tr>
+<tr><td class="term"><strong>43</strong></td><td class="desc">Pitch Fine Tune</td></tr>
+<tr><td class="term"><strong>44</strong></td><td class="desc">Pitch Table</td></tr>
+<tr><td class="term"><strong>45</strong></td><td class="desc"><span class="suspect" data-conf="94">Pitch Env1 Modulation Amount</span></td></tr>
+<tr><td class="term"><strong>46</strong></td><td class="desc">Pitch LFO Modulation Amount</td></tr>
+<tr><td class="term"><strong>47</strong></td><td class="desc">Pitch Glide (hi nybble) and Pitch Modulation Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>48</strong></td><td class="desc">Pitch Modulation Amount</td></tr>
+<tr><td class="term"><strong>49</strong></td><td class="desc">Glide Time</td></tr>
+<tr><td class="term"><strong>50</strong></td><td class="desc">Bend Range</td></tr>
+</tbody></table></div>
+</section>
+<section class="spec-page" id="pdf-12" data-pdf-page="12" data-printed-page="11">
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="term"><strong>Byte</strong></td><td class="desc">Parameter Description</td></tr>
+</tbody></table></div>
+<p>Offset</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>51</strong></td><td class="desc">Filter 1 Cutoff</td></tr>
+<tr><td class="term"><span class="suspect" data-conf="48" data-note="restored from column order; read as &#x27;32&#x27;"><strong>52</strong></span></td><td class="desc">Filter 1 Keyboard Modulation Amount</td></tr>
+<tr><td class="term"><strong>53</strong></td><td class="desc"><span class="suspect" data-conf="94">Filter 1 Env2 Modulation Amount</span></td></tr>
+<tr><td class="term"><strong>54</strong></td><td class="desc">Filter 1/2 Mode (hi nybble) and Filter 1 Modulation Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>55</strong></td><td class="desc">Filter 1 Modulation Amount</td></tr>
+<tr><td class="term"><strong>56</strong></td><td class="desc">Filter 2 Cutoff</td></tr>
+<tr><td class="term"><span class="suspect" data-conf="52" data-note="restored from column order; read as &#x27;5&#x27;"><strong>57</strong></span></td><td class="desc">Filter 2 Keyboard Modulation Amount</td></tr>
+<tr><td class="term"><strong>58</strong></td><td class="desc"><span class="suspect" data-conf="93">Filter 2 Env2 Modulation Amount</span></td></tr>
+<tr><td class="term"><strong>59</strong></td><td class="desc">Filter 2 Modulation Source</td></tr>
+<tr><td class="term"><strong>60</strong></td><td class="desc">Filter 2 Modulation Amount</td></tr>
+<tr><td class="term"><strong>61</strong></td><td class="desc">Volume Keyboard Scaling</td></tr>
+<tr><td class="term"><strong>62</strong></td><td class="desc">Volume Fade Key Zone Low</td></tr>
+<tr><td class="term"><strong>63</strong></td><td class="desc">Volume Fade Key Zone High</td></tr>
+<tr><td class="term"><strong>64</strong></td><td class="desc">Volume</td></tr>
+<tr><td class="term"><strong>65</strong></td><td class="desc">Pan Mod Source (hi nybble) and Volume Mod Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>66</strong></td><td class="desc">Volume Modulation Amount</td></tr>
+<tr><td class="term"><strong>67</strong></td><td class="desc">Volume Timbre Modulation Offset</td></tr>
+<tr><td class="term"><strong>68</strong></td><td class="desc">Pan</td></tr>
+<tr><td class="term"><strong>69</strong></td><td class="desc">Pan Modulation Amount</td></tr>
+<tr><td class="term"><strong>70</strong></td><td class="desc">Voice Priority (hi nybble) and Output Routing (lo nybble)</td></tr>
+<tr><td class="term"><strong>71</strong></td><td class="desc">LFO Waveshape (hi nybble) and LFO Mod Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>72</strong></td><td class="desc">LFO Depth Mod Amount</td></tr>
+<tr><td class="term"><strong>73</strong></td><td class="desc">LFO Depth</td></tr>
+<tr><td class="term"><strong>74</strong></td><td class="desc">LFO Restart Mode (hi nybble) and LFO Speed Mod Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>75</strong></td><td class="desc">LFO Speed Modulation Amount</td></tr>
+<tr><td class="term"><strong>76</strong></td><td class="desc">LFO Speed</td></tr>
+<tr><td class="term"><strong>77</strong></td><td class="desc">LFO Delay Time</td></tr>
+<tr><td class="term"><strong>78</strong></td><td class="desc">LFO Phase</td></tr>
+<tr><td class="term"><strong>79</strong></td><td class="desc">Waveform (WaveList Start)</td></tr>
+<tr><td class="term"><strong>80</strong></td><td class="desc">Wave Class</td></tr>
+<tr><td class="term"><strong>81</strong></td><td class="desc">Wave Direction (hi nybble) and Wave Mod Source (lo nybble)</td></tr>
+<tr><td class="term"><strong>82</strong></td><td class="desc">Wave Mod Amount</td></tr>
+<tr><td class="term"><strong>83</strong></td><td class="desc">Wave Start/Index (WaveList Loop Start)</td></tr>
+<tr><td class="term"><strong>84</strong></td><td class="desc">Wave Shift ( (WaveList Loop End)</td></tr>
+<tr><td class="term"><strong>85</strong></td><td class="desc">Wave Delay Time (word = 2 bytes)</td></tr>
+<tr><td class="term"><strong>87</strong></td><td class="desc">Noise Source Rate</td></tr>
+<tr><td class="term"><strong>88</strong></td><td class="desc">Mixer Curve (hi nybble) and Mixer Mod Source | (lo nybble)</td></tr>
+<tr><td class="term"><strong>89</strong></td><td class="desc">Mixer Scaler (hi nybble) and Mixer Mod Source 2 (lo nybble)</td></tr>
+<tr><td class="term"><strong>90</strong></td><td class="desc">Lo Velocity Threshold</td></tr>
+<tr><td class="term"><strong>91</strong></td><td class="desc">Hi Velocity Threshold</td></tr>
+</tbody></table></div>
+<p>(end of Voice | structure)</p>
+</section>
+<section class="spec-page" id="pdf-13" data-pdf-page="13" data-printed-page="12">
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="term"><strong>Byte</strong></td><td class="desc">Parameter Description</td></tr>
+</tbody></table></div>
+<p>Offset</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>92</strong></td><td class="desc">Voice 2 (same structure as Voice 1)</td></tr>
+<tr><td class="term"><strong>184</strong></td><td class="desc">Voice 3 (Same structure as Voice 1)</td></tr>
+<tr><td class="term"><strong>276</strong></td><td class="desc"><span class="suspect" data-conf="91">Voice4 (same structure as Voice 1)</span></td></tr>
+<tr><td class="term"><strong>368</strong></td><td class="desc"><span class="suspect" data-conf="90">Voice5 (same as Voice 1 or program option data, if enabled)</span></td></tr>
+<tr><td class="term"><strong>460</strong></td><td class="desc"><span class="suspect" data-conf="91">Voice6 (same as Voice | or program option data, if enabled)</span></td></tr>
+<tr><td class="term"><strong>552</strong></td><td class="desc">Program Name - (11 bytes or characters)</td></tr>
+<tr><td class="term"><strong>563</strong></td><td class="desc">Program Patch 1 (lo 6 bits)</td></tr>
+<tr><td class="term"><strong>564</strong></td><td class="desc">Program Patch 2 (lo 6 bits)</td></tr>
+<tr><td class="term"><strong>565</strong></td><td class="desc">Program Patch 3 (lo 6 bits)</td></tr>
+<tr><td class="term"><strong>566</strong></td><td class="desc">Program Patch 4 (lo 6 bits)</td></tr>
+<tr><td class="term"><strong>567</strong></td><td class="desc">Pressure Mode ! (hi nybble) and Program Option (lo nybble)</td></tr>
+<tr><td class="term"><strong>568</strong></td><td class="desc">Program Category</td></tr>
+<tr><td class="term"><strong>569</strong></td><td class="desc">Program Patch Select Mode ! (hi nybble) and Restrike (lo nybble)</td></tr>
+<tr><td class="term"><strong>570</strong></td><td class="desc">Program Timbre !</td></tr>
+<tr><td class="term"><strong>571</strong></td><td class="desc">Program Release !</td></tr>
+<tr><td class="term"><strong>572</strong></td><td class="desc">Program Attack !</td></tr>
+<tr><td class="term"><strong>573</strong></td><td class="desc">Program Brightness !</td></tr>
+<tr><td class="term"><strong>574</strong></td><td class="desc">Program Rate !</td></tr>
+<tr><td class="term"><strong>575</strong></td><td class="desc">Program External Controller (XCTRL) !</td></tr>
+<tr><td class="term"><strong>576</strong></td><td class="desc">Program Effect Parameters 2</td></tr>
+</tbody></table></div>
+<h4 class="minor">Total size: 616 bytes |</h4>
+<p>Notes: 1. These parameters are edited and stored with the program to serve as default values to be installed on the track along with the program, but actually function on the corresponding Preset Track pages. : 2. The effect parameter block is 40 bytes long and the first byte is always the algorithm index. Refer to the Effect Parameter Definitions section for more details.</p>
+</section>
+<section class="spec-page" id="pdf-14" data-pdf-page="14" data-printed-page="13">
+<h3 id="s-4-2">4.2 Preset Parameters</h3>
+<h4 id="s-4-2-1">4.2.1 Preset Track Parameter Structure</h4>
+<p>The parameters from each of the three individual tracks of a Preset are stored as an array of variable size bit fields packed into 21 consecutive bytes.</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="term"><strong>Byte</strong></td><td class="desc">Bit Mask Parameter Name</td></tr>
+</tbody></table></div>
+<p>Offset</p>
+<p class="suspect-para">QO <code class="ph">dddddddd</code> Detune (8 bits) l tettetreet Transpose (8 bits)</p>
+<ul class="numbered"><li><span class="item-number">2</span> Fmmmmmmm Mix (7 bits); F =FX-CNTRL switch</li></ul>
+<p class="suspect-para">3 AMXXXxXxXX XCNTRL (7 bits); A = All Notes Off switch</p>
+<p>4 Rkkkkkkk Key Zone Low Key (7 bits); R = Reset Controllers switch 5 Skkkkkkk Key Zone High Key (7 bits); S = Sustain switch 6 Mvvvvvvv Vel.Range Low Key (7 bits); M= Mod Wheel switch 7 Pvvvvvvv Vel.Range High Key (7 bits); P = Pitch Wheel switch 8 Pppppppp MIDI Program number (7 bits); P = Prog Change! switch. 9 Bbbbbbbb MIDI Bank number (7 bits); B = Bank MSB switch</p>
+<ul class="numbered"><li><span class="item-number">10</span> Pppppppp Pan (7 bits); P = Pan Mode switch</li></ul>
+<p class="suspect-para">1l Oaaaaaaa Attack (7 bits); 0 = Sampled Sound number? bit 0. 12 irrrrrrr_. Release (7 bits); 1 = Sampled Sound number? bit 1. 13 2bbbbbbb Brightness (7 bits); 2 = Sampled Sound number? bit 2. 14 3ttttttt Timbre (7 bits); 3 = Sampled Sound number? bit 3. 15 4aaaaaaa Rate (7 bits); 4 = Sampled Sound number? bit 4. 16 vvvvcccc v = Vel. Sensitivity (4 bits); C = MIDI Channel (4 bits) 17 eeeeSsss e = Effect Bus (4 bits); $s = MIDI Status (4 bits) 18 ppppPPPP p = Pressure mode (4 bits); P = Patch Select (4 bits)</p>
+<ul class="numbered"><li><span class="item-number">19</span> Sbbbbbbb Track BankSet (7 bits); S = Sostenuto switch</li></ul>
+<p>20 <code class="ph">pppppppp</code> Track Program (8 bits)</p>
+<p class="suspect-para">Notes: 1. The Track program Change switch bit was not implemented as of version 1.00. 2. The 5 bit number (0..31) defined by the 5 Sampled Sound number bits indicates that a sampled sound is active on the track if the number is in the range 0..19, reflecting the 20 total locations available in a fully-loaded system. Otherwise, the value 31 (<code class="lit">$1F</code>) indicates that no sampled sound is active and is the only other value that should be used. 3. In Track status arrays, Preset tracks are 13..15 and Sequence tracks are 1..12.</p>
+<h4 id="s-4-2-2">4.2.2 Preset Dump Structure</h4>
+<p>A complete preset dump is composed of three sets of packed track parameters (63 bytes), followed by a 3 byte track status array containing information about layering, an effect parameter block (40 bytes), a name (11 characters), and a spare byte for a total of 118 bytes.</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"></td><td class="desc">Size Parameter Name</td></tr>
+<tr><td class="term"><strong>0</strong></td><td class="desc">2] Preset Track 0 parameters (see 4.2.1 above)</td></tr>
+<tr><td class="term"><strong>21</strong></td><td class="desc">21 Preset Track 1 parameters (see 4.2.1 above)</td></tr>
+<tr><td class="term"><strong>42</strong></td><td class="desc">21 Preset Track 2 parameters (see 4.2.1 above)</td></tr>
+<tr><td class="term"><strong>63</strong></td><td class="desc">3 Preset Track status array (see note 3 in 4.2.1 above)</td></tr>
+<tr><td class="term"><strong>66</strong></td><td class="desc">40 Preset Effect parameters</td></tr>
+<tr><td class="term"><strong>106</strong></td><td class="desc">11 Preset Name</td></tr>
+<tr><td class="term"><strong>117</strong></td><td class="desc">I spare (reserved for future use)</td></tr>
+</tbody></table></div>
+</section>
+<section class="spec-page" id="pdf-15" data-pdf-page="15" data-printed-page="14">
+<h3 id="s-4-3">4.3 Track Parameters</h3>
+<p>This message consists of specific track parameters from the 12 tracks, the track status array, and an effect definition.</p>
+<h4 class="minor">Byte Offset Parameter Name</h4>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>0</strong></td><td class="desc">Track 1 Bank Set number</td></tr>
+<tr><td class="term"><span class="suspect" data-conf="68" data-note="restored from column order; read as &#x27;&#x27;"><strong>1</strong></span></td><td class="desc">Track 1 Program number</td></tr>
+<tr><td class="term"><strong>2</strong></td><td class="desc">Track 1 Surrogate Bank Set number</td></tr>
+<tr><td class="term"><strong>3</strong></td><td class="desc">Track 1 Surrogate Program number</td></tr>
+<tr><td class="term"><strong>4</strong></td><td class="desc">Track 1 XCTRL</td></tr>
+<tr><td class="term"><strong>6</strong></td><td class="desc">Track 1 Timbre</td></tr>
+<tr><td class="term"><strong>8</strong></td><td class="desc">Track | Brightness</td></tr>
+<tr><td class="term"><strong>10</strong></td><td class="desc">Track 1 Release</td></tr>
+<tr><td class="term"><strong>12</strong></td><td class="desc">Track 1 Attack</td></tr>
+<tr><td class="term"><strong>14</strong></td><td class="desc">Track 1 Rate (LFO/Wave-List)</td></tr>
+<tr><td class="term"><strong>16</strong></td><td class="desc">Track 1 (Reserved)</td></tr>
+<tr><td class="term"><strong>18</strong></td><td class="desc">Track 1 Mix</td></tr>
+<tr><td class="term"><strong>20</strong></td><td class="desc">Track 1 Pan</td></tr>
+<tr><td class="term"><strong>22</strong></td><td class="desc">Track 1 Effect Bus override</td></tr>
+<tr><td class="term"><strong>23</strong></td><td class="desc">Track 1 Patch Select override</td></tr>
+<tr><td class="term"><strong>24</strong></td><td class="desc">Track 1 Enables (byte 1)</td></tr>
+<tr><td class="term"><strong>25</strong></td><td class="desc">Track 1 Enables (byte 2)</td></tr>
+<tr><td class="term"><strong>26</strong></td><td class="desc">Track 1 MIDI Bank Select</td></tr>
+<tr><td class="term"><span class="suspect" data-conf="56" data-note="restored from column order; read as &#x27;21&#x27;"><strong>27</strong></span></td><td class="desc">Track 1 MIDI Program number</td></tr>
+<tr><td class="term"><strong>28</strong></td><td class="desc">Track 1 MIDI Channel</td></tr>
+<tr><td class="term"><strong>29</strong></td><td class="desc">Track 1 MIDI Pressure type (off,mono,poly)</td></tr>
+<tr><td class="term"><strong>30</strong></td><td class="desc">Track 1 MIDI Status - - - -</td></tr>
+<tr><td class="term"><span class="suspect" data-conf="91" data-note="restored from column order; read as &#x27;3&#x27;"><strong>31</strong></span></td><td class="desc">Track 1 MIDI Status bit array</td></tr>
+<tr><td class="term"><strong>32</strong></td><td class="desc">Track 1 Key Zone low key</td></tr>
+<tr><td class="term"><strong>33</strong></td><td class="desc">Track 1 Transpose</td></tr>
+<tr><td class="term"><strong>34</strong></td><td class="desc">Track 1 Key Zone high key</td></tr>
+<tr><td class="term"><strong>35</strong></td><td class="desc">Track 1 Velocity Range lower limit</td></tr>
+<tr><td class="term"><strong>36</strong></td><td class="desc">Track 1 Velocity Range upper limit</td></tr>
+<tr><td class="term"><strong>37</strong></td><td class="desc">Track 1 Velocity Sensitivity</td></tr>
+<tr><td class="term"><strong>38</strong></td><td class="desc">Track 1 Detune</td></tr>
+<tr><td class="term"><strong>39</strong></td><td class="desc">Track 1 Pedal Mode</td></tr>
+<tr><td class="term"><strong>40</strong></td><td class="desc">Track 1 Sampled Sound number</td></tr>
+</tbody></table></div>
+<p>(end of Track 1 structure)</p>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>41</strong></td><td class="desc">Track 2 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>82</strong></td><td class="desc">Track 3 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>123</strong></td><td class="desc">Track 4 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>164</strong></td><td class="desc">Track 5 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>205</strong></td><td class="desc">Track 6 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>246</strong></td><td class="desc">Track 7 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>287</strong></td><td class="desc">Track 8 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>328</strong></td><td class="desc">Track 9 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>369</strong></td><td class="desc">Track 10 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>410</strong></td><td class="desc">Track 11 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>451</strong></td><td class="desc">Track 12 parameters (same structure as Track 1)</td></tr>
+<tr><td class="term"><strong>492</strong></td><td class="desc">Seq/Song Track status array (see note 3 in 4.2.1 above)</td></tr>
+<tr><td class="term"><strong>504</strong></td><td class="desc">Tracks Effect Parameters</td></tr>
+</tbody></table></div>
+</section>
+<section class="spec-page" id="pdf-16" data-pdf-page="16" data-printed-page="15">
+<p class="note">Note: The sequencer data format is not currently documented, so these blocks are only</p>
+<p>described in general terms.</p>
+<h3 id="s-4-4">4.4 Single Sequence Dump Parameters</h3>
+<p>This message consists of the data from one sequence and the sequence header.</p>
+<h4 class="minor">Byte Offset Parameter Name</h4>
+<div class="table-scroll"><table class="sysex plain">
+<tbody>
+<tr><td class="desc">0</td><td class="desc">Sequence Data</td></tr>
+<tr><td class="desc">n</td><td class="desc">Sequence Header</td></tr>
+</tbody></table></div>
+<h3 id="s-4-5">4.5 All Sequence Dump Parameters</h3>
+<p>This message consists of the data for all of the defined sequences and songs, 60 sequence and song headers, and the global sequencer parameters.</p>
+<h4 class="minor">Byte Offset Parameter Name</h4>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Offset</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="term"><strong>0</strong></td><td class="desc">Sequence Data Offsets - A table of 60 long word offsets (one for</td></tr>
+</tbody></table></div>
+<p>each sequence/song), with each entry containing the relative offset of the corresponding sequence/song data block from the beginning of the sequencer data block. :</p>
+<div class="table-scroll"><table class="sysex plain">
+<tbody>
+<tr><td class="desc">239</td><td class="desc">Sequence Data</td></tr>
+<tr><td class="desc">n</td><td class="desc">Sequence Header Segment</td></tr>
+</tbody></table></div>
+<p>n+header_size Global Parameters</p>
+<p class="suspect-para">In an unexpanded system, the Sequence Data segment can contain a maximum of 131,072 bytes. In an expanded system (with SQX-70), the maximum is 393,216 bytes. The individual Sequence Header size is 338 bytes. The complete Sequence Header Segment is 20,408 bytes, which includes 60 headers, a table of pointers and some additional overhead. The Global Parameters segment is 38 bytes. Remember that all of this data is transmitted via MIDI as nybblized bytes, so the actual number of bytes transmitted 1s twice as large for each component of the dump. The size of the largest dump for an unexpanded TS in actual transmitted MIDI bytes may be calculated as follows:</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="term"><strong>component</strong></td><td class="desc">actual size in bytes</td></tr>
+</tbody></table></div>
+<p>SysEx Header 6</p>
+<div class="table-scroll"><table class="sysex plain">
+<tbody>
+<tr><td class="desc">Data Pointer Table</td><td class="hex"></td><td class="desc">480</td><td class="hex"></td><td class="desc">240 nybblized</td></tr>
+<tr><td class="desc">Sequence Data</td><td class="desc">262,144</td><td class="hex"></td><td class="desc">131,072 nybblized</td><td class="hex"></td></tr>
+<tr><td class="desc">Sequence Headers</td><td class="desc">40,816</td><td class="hex"></td><td class="desc">20,408 nybblized</td><td class="hex"></td></tr>
+<tr><td class="desc">Global Parameters</td><td class="hex"></td><td class="desc">76</td><td class="hex"></td><td class="desc">38 nybblized</td></tr>
+</tbody></table></div>
+<p>End of Exclusive l</p>
+<h4 class="minor">Total Number of bytes sent: 303,543</h4>
+<p class="suspect-para">This implies that an expanded system would have a maximum dump size that was larger by twice the difference in the Sequence Data segment size (i.e. two times 393,216 - 131,072 or 524,288 bytes). Therefore, the largest dump size for a fully expanded system would be a total of 827,811 MIDI bytes (or 1617 blocks).</p>
+</section>
+  </article>
+<nav class="section-nav">
+  <div><a href="02-commands.html">← Commands, errors, and bulk dumps</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="04-parameters.html">Parameter definitions →</a></div>
+</nav>
+  <footer class="site-footer">
+    <p>Transcribed from the Ensoniq TS-10/TS-12 MIDI System Exclusive
+    Implementation Specification, version 2.0.</p>
+  </footer>
+</body>
+</html>

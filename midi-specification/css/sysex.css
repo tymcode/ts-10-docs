@@ -1,0 +1,334 @@
+/* TS-10/TS-12 SysEx specification.
+   Loaded after musicians-manual/css/manual.css.
+   Monospace is a system face, never the Ensoniq VFD / .lcd font. */
+
+:root {
+  --max: 76rem;
+  --font-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+.chrome,
+.manual {
+  max-width: calc(var(--max) + 4rem);
+}
+
+.manual h2,
+.manual h3,
+.manual h4 {
+  font-family: var(--font-ui);
+}
+
+.toc-sections {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.toc-sections li {
+  margin: 0.35rem 0;
+  font-family: var(--font-ui);
+}
+
+.toc-sections a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.suspect-legend {
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+}
+
+/* Protocol tables and byte maps. Scroll wide sheets; do not wrap values. */
+.table-scroll {
+  overflow-x: auto;
+  margin: 0.85rem 0 1.2rem;
+  max-width: 100%;
+}
+
+table.sysex {
+  width: max-content;
+  min-width: min(100%, 36rem);
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+table.sysex th,
+table.sysex td {
+  vertical-align: top;
+  text-align: left;
+  padding: 0.18rem 0.7rem 0.18rem 0;
+  border-bottom: 1px solid #ece8e2;
+}
+
+table.sysex th {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 0.82rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+
+table.sysex td.num,
+table.sysex td.bits,
+table.sysex td.hex,
+table.sysex td.mask,
+table.sysex td.str {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  white-space: nowrap;
+  font-variant-ligatures: none;
+}
+
+table.sysex td.desc {
+  font-family: var(--font-body);
+  white-space: normal;
+  min-width: 16rem;
+}
+
+table.sysex.sheets {
+  font-size: 0.82rem;
+}
+
+table.sysex.sheets td,
+table.sysex.sheets th {
+  padding-right: 0.55rem;
+}
+
+/* Side-by-side lookup tables stay in columns on a normal laptop and stack below that. */
+.table-pair,
+.table-trio {
+  display: grid;
+  gap: 1rem 1.5rem;
+  align-items: start;
+  margin: 0.85rem 0 1.3rem;
+}
+
+.table-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.table-trio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.table-pair table.sysex,
+.table-trio table.sysex {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .table-pair,
+  .table-trio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* One font and size. Color distinguishes placeholders from literals.
+   No italic: an 8-bit mask must occupy the same width as 11110000. */
+code.lit,
+code.ph,
+code.str,
+code.bits,
+.sysex code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-weight: 450;
+  font-style: normal;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+}
+
+code.lit {
+  color: var(--ink);
+}
+
+code.ph {
+  color: var(--ensoniq);
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+code.str {
+  color: var(--ink);
+}
+
+code.bits .lit,
+code.bits .ph {
+  font-size: inherit;
+}
+
+/* Transmitted example. The text node is the copy source. */
+pre.sysex {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+  white-space: pre-wrap;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.7rem 0.85rem;
+  margin: 0.7rem 0 0.4rem;
+  overflow-x: auto;
+}
+
+pre.sysex code {
+  font-size: inherit;
+  color: var(--ink);
+}
+
+/* Text tables: small lookups set side by side, as the scan has them. */
+table.sysex.lookup {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 1.1rem;
+  font-size: 0.86rem;
+}
+
+table.sysex.lookup caption {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 0.86rem;
+  text-align: left;
+  color: var(--accent);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.2rem;
+}
+
+table.sysex.lookup td {
+  border-bottom: none;
+  padding: 0.05rem 0.5rem 0.05rem 0;
+}
+
+table.sysex.lookup td.num {
+  width: 3.2rem;
+}
+
+.band > p.band-note {
+  font-size: 0.86rem;
+  margin: 0.3rem 0;
+}
+
+/* Structure carried over from the scan: minor headings, glossaries, notes. */
+.manual h4.minor {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  margin: 1.5rem 0 0.4rem;
+}
+
+table.sysex td.term {
+  font-family: var(--font-ui);
+  white-space: nowrap;
+  padding-right: 1.4rem;
+}
+
+table.sysex td.term strong {
+  font-weight: 650;
+}
+
+table.sysex.terms,
+table.sysex.offsets {
+  width: 100%;
+}
+
+table.sysex.terms td,
+table.sysex.offsets td {
+  border-bottom: none;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+table.sysex.offsets td:first-child {
+  font-family: var(--font-mono);
+  text-align: right;
+  width: 4rem;
+  padding-right: 1.4rem;
+  white-space: nowrap;
+}
+
+tr.row-note td {
+  font-family: var(--font-body);
+  white-space: normal;
+  padding-top: 0.3rem;
+  color: var(--muted, #5b5550);
+}
+
+tr.row-head td {
+  font-family: var(--font-ui);
+  font-weight: 650;
+}
+
+p.note {
+  font-size: 0.95rem;
+  border-left: 2px solid var(--rule);
+  padding-left: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+ul.numbered {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.numbered li {
+  display: flex;
+  gap: 0.8rem;
+  margin: 0.2rem 0;
+}
+
+ul.numbered .item-number {
+  font-family: var(--font-mono);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+pre.sysex.grid {
+  line-height: 1.45;
+}
+
+.spec-page {
+  position: relative;
+}
+
+.toc-sub {
+  padding-left: 1.4rem;
+}
+
+.pages {
+  font-size: 0.85rem;
+  color: var(--muted, #6b6560);
+}
+
+/* OCR values that still need a manual check. */
+.suspect {
+  background: #ffe08a;
+  outline: 1px dashed #b8860b;
+  outline-offset: 1px;
+}
+
+code.ph.suspect {
+  background: #ffe08a;
+}
+
+@media print {
+  .suspect {
+    background: #ffe08a;
+    outline: 1px dashed #b8860b;
+  }
+
+  .table-scroll {
+    overflow: visible;
+  }
+}

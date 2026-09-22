@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commands, errors, and bulk dumps — TS-10/TS-12 MIDI SysEx Specification</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+  <link rel="stylesheet" href="css/sysex.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 MIDI SysEx Specification</span></a>
+    </div>
+  </header>
+<nav class="section-nav">
+  <div><a href="01-overview.html">← Introduction and packet format</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="03-structures.html">Parameter block layouts →</a></div>
+</nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
+      <h1>Commands, errors, and bulk dumps</h1>
+    </header>
+    <p class="suspect-legend">Amber marks a value the scan left in doubt. Hover
+    it, or read its <code>data-note</code>, to see what was read and why it was
+    changed.</p>
+<section class="spec-page" id="pdf-4" data-pdf-page="4" data-printed-page="3">
+<h2 id="s-3">3 Message Type List</h2>
+<p>The next few sections describe the messages to be used between EXT and TS. The message type corresponds to the last byte of the system exclusive packet head described in section 2.1.</p>
+<aside class="note"><p>The SysEx messages outlined below appear as an ordered description of bytes which
+do not necessarily represent the MIDI format described in section 2.3. Remember, full 8—bit data bytes are always sent as two &quot;nybble-ized&quot; bytes. Message types are part of the head and are sent as bytes, but Command types are considered data and are sent as two nybbles.</p></aside>
+<h3 id="s-3-1">3.1 Command Messages (Message Type = 00)</h3>
+<p>Messages which need some interpretation by the receiver are called command messages. Every command message Is transmitted using the message format described in section 2.3. The first byte of each command message is the command type, which follows the message type byte in the packet head. The command type is shown in the section headings.</p>
+<h4 id="s-3-1-1">3.1.1 Virtual Buttons (Command Type = 00)</h4>
+<p>EXT can simulate button presses from the front panel of the TS by sending this command. Sending the listed button numbers in a command will simulate a single button down being held <em>down</em>. Button <em>up</em> commands add an offset of 96 to the the button down numbers. The button number follows the command type byte in the message. Remember to send a button up command for every button down command that is sent.</p>
+  <aside class="note"><p>A delay of 2-300 msecs between button commands, or at least pairs of button commands, is recommended.</p></aside>
+  <h4 id="s-3-1-1-1">3.1.1.1 &nbsp;&nbsp;Button Numbers</h4>
+<div class="table-scroll">
+  <table class="sysex terms">
+    <thead>
+      <tr>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+      </tr>
+    </thead>
+<tbody>
+<tr><td class="term"><strong>0</strong></td><td class="desc">bank 0</td><td class="term"><strong>26</strong></td><td class="desc">Wave</td></tr>
+<tr><td class="term"><strong>1</strong></td><td class="desc">bank 1</td><td class="term"><strong>27</strong></td><td class="desc">Pitch</td></tr>
+<tr><td class="term"><strong>2</strong></td><td class="desc">bank 2</td><td class="term"><strong>28</strong></td><td class="desc">Pitch Mod</td></tr>
+<tr><td class="term"><strong>3</strong></td><td class="desc">bank 3</td><td class="term"><strong>29</strong></td><td class="desc">Filters</td></tr>
+<tr><td class="term"><strong>4</strong></td><td class="desc">bank 4</td><td class="term"><strong>30</strong></td><td class="desc">Output</td></tr>
+<tr><td class="term"><strong>5</strong></td><td class="desc">bank 5</td><td class="term"><strong>31</strong></td><td class="desc">LF eee</td></tr>
+<tr><td class="term"><strong>6</strong></td><td class="desc">bank 6</td><td class="term"><strong>32</strong></td><td class="desc">Envl</span></td></tr>
+<tr><td class="term"><strong>7</strong></td><td class="desc">bank 7</td><td class="term"><strong>33</strong></td><td class="desc">Env2</span></td></tr>
+<tr><td class="term"><strong>8</strong></td><td class="desc">bank 8</td><td class="term"><strong>34</strong></td><td class="desc">Env3</span></td></tr>
+<tr><td class="term"><strong>9</strong></td><td class="desc">bank 9</td><td class="term"><strong>35</strong></td><td class="desc">Effects (Programming)</td></tr>
+<tr><td class="term"><strong>10</strong></td><td class="desc">BankSet</td><td class="term"><strong>39</strong></td><td class="desc">Select Voice</td></tr>
+<tr><td class="term"><strong>11</strong></td><td class="desc">Sounds</td><td class="term"><strong>40</strong></td><td class="desc">Copy</td></tr>
+<tr><td class="term"><strong>12</strong></td><td class="desc">Presets</td><td class="term"><strong>41</strong></td><td class="desc">Write</td></tr>
+<tr><td class="term"><strong>13</strong></td><td class="desc">Storage</td><td class="term"><strong>42</strong></td><td class="desc">Compare</td></tr>
+<tr><td class="term"><strong>14</strong></td><td class="desc">up arrow, INC 2</td><td class="term"><strong>43</strong></td><td class="desc">Mix/Pan</td></tr>
+<tr><td class="term"><strong>15</strong></td><td class="desc">down arrow, DEC 44 Attack/Release</td><td class="term"><strong>44</strong></td><td class="desc">Attack/Release</td></tr>
+<tr><td class="term"><strong>16</strong></td><td class="desc">soft key 0, top left</td><td class="term"><strong>45</strong></td><td class="desc">Brightness/Timbre</td></tr>
+<tr><td class="term"><strong>17</strong></td><td class="desc">soft key 1, top middle</td><td class="term"><strong>46</strong></td><td class="desc">Key Zone</td></tr>
+<tr><td class="term"><strong>18</strong></td><td class="desc">soft key 2, top right</td><td class="term"><strong>47</strong></td><td class="desc">Tuning</td></tr>
+<tr><td class="term"><strong>19</strong></td><td class="desc">soft key 3, bottom left</td><td class="term"><strong>48</strong></td><td class="desc">Controller Enables</td></tr>
+<tr><td class="term"><strong>20</strong></td><td class="desc">soft key 4, bottom middle</td><td class="term"><strong>49</strong></td><td class="desc">Performance Options</td></tr>
+<tr><td class="term"><strong>21</strong></td><td class="desc">soft key 5, bottom right</td><td class="term"><strong>50</strong></td><td class="desc">Track MIDI</td></tr>
+<tr><td class="term"><strong>22</strong></td><td class="desc">System</td><td class="term"><strong>31</strong></td><td class="desc">Track Effects</td></tr>
+<tr><td class="term"><strong>23</strong></td><td class="desc">MIDI Control</td><td class="term"><strong>52</strong></td><td class="desc">Tracks 1..6</td></tr>
+<tr><td class="term"><strong>24</strong></td><td class="desc">Program Control</td><td class="term"><strong>53</strong></td><td class="desc">Tracks 7..12</td></tr>
+<tr><td class="term"><strong>25</strong></td><td class="desc">Mod Mixer</td><td class="term"><strong>55</strong></td><td class="desc">Replace Track Program</td></tr>
+</tbody></table></div>
+
+</section>
+<section class="spec-page" id="pdf-5" data-pdf-page="5" data-printed-page="4">
+  <table class="sysex terms">
+    <thead>
+      <tr>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+      </tr>
+    
+    </thead>
+    <h4 id="s-3-1-1-2">TS — sequencer specific button numbers:</h4>
+    <tbody>
+      <tr><td class="term"><strong>36</strong></td><td class="desc">Seq Control</td><td class="term"><strong>57</strong></td><td class="desc">Edit Seq</td></tr>
+    <tr><td class="term"><strong>37</strong></td><td class="desc">Click</td><td class="term"><strong>58</strong></td><td class="desc">Edit Track</td></tr>
+    <tr><td class="term"><strong>38</strong></td><td class="desc">Locate</td><td class="term"><strong>61</strong></td><td class="desc">Record</td></tr>
+    <tr><td class="term"><strong>54</strong></td><td class="desc">Sequence Bank Select</td><td class="term"><strong>62</strong></td><td class="desc">Play</td></tr>
+    <tr><td class="term"><strong>56</strong></td><td class="desc">Edit Song</td><td class="term"><strong>63</strong></td><td class="desc">Stop</td></tr>
+  </tbody>
+  </table>
+  <table class="sysex terms">
+    <thead>
+      <tr>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+        <th>Logical<br>Number</th>
+        <th>Front Panel<br>Button Name</th>
+      </tr>
+    
+    </thead>
+    <h4 id="s-3-1-1-3">TS – Footswitch simulation button numbers:</h4>
+    <tbody>
+      <tr><td class="term"><strong>59</strong></td><td class="desc">Footswitch 1</td><td class="term"><strong>60</strong></td><td class="desc">Footswitch 2</td></tr>
+    </tbody>
+  </table>
+  
+
+<aside class="example">
+  <p>(in hexadecimal notation, assuming Device ID = <code class="lit">01</code>, transmitted as <code class="lit">00</code>)</em></p>
+
+<div class="table-scroll">
+  <table class="sysex terms">
+    <thead>
+      <tr>
+        <th>Header</th>
+        <th>Msg</th>
+        <th>Cmd</th>
+        <th>Button</th>
+        <th>EOX</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+<tbody>
+  <tr><td class="hex"><code class="lit">F0 0F  07 00 00</code></td><td class="hex"><code class="lit">00</code></td><td class="hex"><code class="lit">00</code></td><td class="hex"><code class="lit">00 0E</code></td><td class="hex"><code class="lit">F7</code></td><td class="desc">Up Arrow button down</td></tr>
+  <tr><td class="hex"><code class="lit">F0 0F  07 00 00</code></td><td class="hex"><code class="lit">00</code></td><td class="hex"><code class="lit">00</code></td><td class="hex"><code class="lit">06 0E</code></td><td class="hex"><code class="lit">F7</code></td><td class="desc">Up Arrow button up</td></tr>
+</tbody></table></div>
+</aside>
+<h4 id="s-3-1-2">3.1.2 Parameter Change (Command Type = 01)</h4>
+<p>Single parameters can be edited on the TS by EXT using this command. Since this is a short message relative to the much longer bulk dump of a complete program, program editors running on EXT can change single parameters by using this command faster than by sending a complete program dump when only one or a few parameters change.</p>
+
+<p>This message is transmitted by the TS when parameters are edited if <span class="value">SYS-EX=ON</span> and <span class="value">SEND-PARAMS=ON</span> on the <span class="page-name">MIDI Control</span> page.</p>
+<p>Absolute parameter values depend on the parameter page and slot numbers which uniquely define each parameter. Slot numbers are equivalent to soft button numbers numbered clockwise from upper left 0 to 5. See section 5 of this document for the parameter definitions. Most parameter values are contained in the low byte of the absolute value word, but some parameter types, including key range and word types, use the whole word. <em>Remember — these bytes are transmitted as nybbles.</em></p>
+<div class="table-scroll"><table class="sysex bytes">
+  <tbody>
+  <tr><td class="bits"><code class="lit">00000001</code></td><td class="bits"><code class="lit">01</code></td><td class="desc">Command Type</td></tr>
+  <tr><td class="bits"><code class="lit">00000vvv</code></td><td class="bits"><code class="lit">0v</code></td><td class="desc">Voice Number, [0..5]</td></tr>
+  <tr><td class="bits"><code class="lit">Oppppppp</code></td><td class="bits"><code class="lit">0p</code></td><td class="desc">Parameter Page Number, [0..127]</td></tr>
+  <tr><td class="bits"><code class="lit">00000sss</code></td><td class="bits"><code class="lit">0s</code></td><td class="desc">Parameter Slot Number, [0..5]</td></tr>
+  <tr><td class="bits"><code class="lit">iiiiiiii</code></td><td class="bits"><code class="lit">ii</code></td><td class="desc">Multi Param Index, [0..n or 255 if void]</td></tr>
+  <tr><td class="bits"><code class="lit">HHHHLLLL</code></td><td class="bits"><code class="lit">HL</code></td><td class="desc">Absolute Value Hi Byte, [0..255]</td></tr>
+  <tr><td class="bits"><code class="lit">hhhhllll</code></td><td class="bits"><code class="lit">hl</code></td><td class="desc">Absolute Value Lo Byte, [0..255]</td></tr>
+</tbody></table>
+</div>
+
+
+<p id="s-3-1-2-1">Parameter Page Numbers are as follows:</p>
+  <div class="table-scroll"><table class="sysex terms">
+    <tbody>
+  <tr><td class="term"><strong>0..3</strong></td><td class="desc">System pages</td></tr>
+  <tr><td class="term"><strong>4..6</strong></td><td class="desc">MIDI Control pages</td></tr>
+  <tr><td class="term"><strong>7..9</strong></td><td class="desc">Program Control pages</td></tr>
+  <tr><td class="term"><strong>10..35</strong></td><td class="desc">Program Voice parameter pages</td></tr>
+  <tr><td class="term"><strong>36..45</strong></td><td class="desc">Program Effect parameter pages</td></tr>
+  <tr><td class="term"><strong>46..99</strong></td><td class="desc">undefined</td></tr>
+  <tr><td class="term"><strong>100..109</strong></td><td class="desc">Select Voice and Option Edit pages</td></tr>
+  <tr><td class="term"><strong>110..255</strong></td><td class="desc">undefined</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section class="spec-page" id="pdf-6" data-pdf-page="6" data-printed-page="5">
+<p>Parameter Page Numbers 100..109 are used for the Select Voice page and all of its related pages. For each of the program options there is a variant of the select voice page and one or more edit pages. Page number values above 109 will cause an error message to be returned and will be ignored by the TS.</p>
+<div class="table-scroll"><table class="sysex offsets">
+<tbody>
+<tr><td class="term"><strong>100</strong></td><td class="desc">Select Voice page</td></tr>
+<tr><td class="term"><strong>101</strong></td><td class="desc">Select Voice page with Pitch-Table program option active</td></tr>
+<tr><td class="term"><strong>102</strong></td><td class="desc">Select Voice page with Wave-List program option active</td></tr>
+<tr><td class="term"><strong>103</strong></td><td class="desc">Select Voice page with Drum-Map program option active</td></tr>
+<tr><td class="term"><strong>104</strong></td><td class="desc">Pitch-Table Editor page - -</td></tr>
+<tr><td class="term"><strong>105</strong></td><td class="desc">Pitch-Table Calculator page</td></tr>
+<tr><td class="term"><strong>106</strong></td><td class="desc">Wave-List Editor page</td></tr>
+<tr><td class="term"><strong>107</strong></td><td class="desc">Wave-List Pitch editor page</td></tr>
+<tr><td class="term"><strong>108</strong></td><td class="desc">Wave-List Time editor page</td></tr>
+<tr><td class="term"><strong>109</strong></td><td class="desc">Drum-Map Editor page</td></tr>
+</tbody></table></div>
+<p>Refer to Section 5 for parameter definitions.</p>
+<aside class="example">
+<p>This example sets <span class="value">SEND-PARAMS=ON</span> on the <span class="page-name">MIDI Control</span> page.</p>
+<div class="table-scroll"><table class="sysex plain">
+  <thead>
+    <tr>
+      <th>Transmitted Hex</th>
+      <th>Meaning</th>
+      <th>Decimal Value</th>
+    </tr>
+  </thead>
+<tbody>
+<tr><td class="hex"><code class="lit">F0 0F 07 00</code></td><td class="desc">Header</td><td><span class="value">&nbsp;</span></td></tr>
+<tr><td class="hex"><code class="lit">00</code></td><td class="desc">Device ID</td><td><span class="value">01</span></td></tr>
+<tr><td class="hex"><code class="lit">00</code></td><td class="desc">Message Type</td><td><span class="value">&nbsp;</span></td></tr>
+<tr><td class="hex"><code class="lit">00</code></td><td class="desc">Command</td><td><span class="value">01</span></td></tr>
+<tr><td class="hex"><code class="lit">00 01</code></td><td class="desc">Voice</td><td><span class="value">00</span></td></tr>
+<tr><td class="hex"><code class="lit">00 00</code></td><td class="desc">Page</td><td><span class="value">06</span></td></tr>
+<tr><td class="hex"><code class="lit">00 06</code></td><td class="desc">Slot</td><td><span class="value">05</span></td></tr>
+<tr><td class="hex"><code class="lit">00 00</code></td><td class="desc">Multi Param Index</td><td><span class="value">255</span></td></tr>
+<tr><td class="hex"><code class="lit">00 00</code></td><td class="desc">Value Hi Byte</td><td><span class="value">00</span></td></tr>
+<tr><td class="hex"><code class="lit">00 01</code></td><td class="desc">Value Lo Byte</td><td><span class="value">01</span></td></tr>
+<tr><td class="hex"><code class="lit">F7</code></td><td class="desc">EOX</td><td><span class="value">&nbsp;</span></td></tr>
+</tbody></table></div>
+</aside>
+
+<h4 id="s-3-1-3">3.1.3 Edit Change Status (Command Type = 02)</h4>
+<p class="suspect-para">This command is only <em>transmitted</em> by the TS; it is not received. It allows the external editor to retain synchronization with the compare buffer in the TS. The edit change status command is sent whenever an edit operation initiated from the front panel of the TS causes more than one parameter to change. The edit change status command will always be preceded by at least one parameter change message. Although the TS will send parameter change messages, it may not be able to send the new value of every parameter that changed, due to the complexities of internal editing. When EXT receives this message, it should request a complete program dump to re-establish editing sync. The command type is the only byte in this command. </p>
+</section>
+<section class="spec-page" id="pdf-7" data-pdf-page="7" data-printed-page="6">
+<aside class="note"><p>The TS does not transmit the following Dump Request commands (command types <span class="value">05</span> to <span class="value">0A</span>). The command type is the only byte in these commands.</p></aside>
+<h4 id="s-3-1-4">3.1.4 Single Program Dump Request (Command Type = 03)</h4>
+<p>The TS will dump the current program using the bulk dump message described in section 3.3.1 when it receives this command. If the current program is being edited, the edited version of the program will be transmitted.</p>
+<h4 id="s-3-1-5">3.1.5 Single Preset Dump Request (Command Type = 04)</h4>
+<p>The TS will dump the current preset using the bulk dump message described in section 3.3.3 when it receives this command. If the current preset is being edited, the edited version of the preset will be transmitted.</p>
+<h4 id="s-3-1-6">3.1.6 Track Parameter Dump Request (Command Type = 05)</h4>
+<p>The TS will dump the track parameters using the bulk dump message described in section 3.3.7 when it receives this command.</p>
+<h4 id="s-3-1-7">3.1.7 Dump Everything Request (Command Type = 06)</h4>
+<p>The TS will dump the internal RAM program banks, the internal RAM preset banks, and the track parameters using the bulk dump messages described in section 3.3 when it receives this command. Each dump 1s a separate message, 1.e. the messages are not combined into one.</p>
+<h4 id="s-3-1-8">3.1.8 Internal Program Bank Dump Request (Command Type = 07)</h4>
+<p>The TS will dump the internal RAM program banks using the bulk dump message described in section 3.3.2 when it receives this command.</p>
+<h4 id="s-3-1-9">3.1.9 Internal Preset Bank Dump Request (Command Type = 08)</h4>
+<p>The TS will dump the internal RAM preset banks using the bulk dump message described in section 3.3.4 when it receives this command.</p>
+</section>
+<section class="spec-page" id="pdf-8" data-pdf-page="8" data-printed-page="7">
+<p ><dfn class="term">Sequence Dump Protocol</dfn>: <em>Since the receiver of a sequence dump message must be prepared to store the sequence data, sequence dumps are performed using two messages from the transmitter and a handshaking message from the receiver. The transmitter sends the dump command which informs the receiver of the next message. The receiver should respond with an error message containing an ACK or NAK error code (see section 3.2.1). If the receiver does not respond within one second, the transmitter will send the dump message anyway. This timeout feature allows &quot;dumb&quot; System Exclusive recorders to store TS sequence data. If the receiver responds with a NAK error code, the transmitter should not send the dump message.</em></p>
+<aside class="note"><p>If the TS sequencer software is not loaded, the receiving TS will respond with a NAK error message to any sequence dump command.</p></aside>
+<h4 id="s-3-1-10">3.1.10 Single Sequence Dump (Command Type = 09)</h4>
+<p>This message is the first message of a sequence dump. The message contains the size of the sequence data which will follow in the single sequence dump message.</p>
+<div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits"><code class="lit">00001011</code></td><td class="hex"><code class="lit">0B</code></td><td class="desc">Command Type</td></tr>
+<tr><td class="bits"><code class="lit">HHHHHHHH</code></td><td class="hex"><code class="lit">HH</code></td><td class="desc">Sequence Data Size in bytes Hi Byte Hi Word</td></tr>
+<tr><td class="bits"><code class="lit">hhhhhhhh</code></td><td class="hex"><code class="lit">hh</code></td><td class="desc">Sequence Data Size in bytes Lo Byte Hi Word</td></tr>
+<tr><td class="bits"><code class="lit">LLLLLLLL</code></td><td class="hex"><code class="lit">LL</code></td><td class="desc">Sequence Data Size in bytes Hi Byte Lo Word</td></tr>
+<tr><td class="bits"><code class="lit">llllllll</code></td><td class="hex"><code class="lit">ll</code></td><td class="desc">Sequence Data Size in bytes Lo Byte Lo Word</td></tr>
+</tbody></table></div>
+<aside class="note"><p>A Track Parameter bulk dump message will be transmitted after the completion of the single sequence dump. This will allow a receiving TS to be configured for sound expansion, i.e. any sequence track in the TS can have a MIDI status which will allow the receiving TS to respond properly.</p></aside>
+<h4 id="s-3-1-11">3.1.11 All Sequence Memory Dump (Command Type = 10)</h4>
+<p>This message is the first message of a complete sequence memory dump. The message contains the size of the sequence data which will follow in the all sequence dump message.</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="bits"><code class="lit">00001100</code></td><td class="hex"><code class="lit">0C</code></td><td class="desc">Command Type</td></tr>
+<tr><td class="bits"><code class="lit">HHHHHHHH</code></td><td class="hex"><code class="lit">HH</code></td><td class="desc">Sequence Data Size in bytes Hi Byte Hi Word</td></tr>
+<tr><td class="bits"><code class="lit">hhhhhhhh</code></td><td class="hex"><code class="lit">hh</code></td><td class="desc">Sequence Data Size in bytes Lo Byte Hi Word</td></tr>
+<tr><td class="bits"><code class="lit">LLLLLLLL</code></td><td class="hex"><code class="lit">LL</code></td><td class="desc">Sequence Data Size in bytes Hi Byte Lo Word</td></tr>
+<tr><td class="bits"><code class="lit">llllllll</code></td><td class="hex"><code class="lit">ll</code></td><td class="desc">Sequence Data Size in bytes Lo Byte Lo Word</td></tr>
+</tbody></table></div>
+<h4 id="s-3-1-12">3.1.12 Single Sequence Dump Request (Command Type = 11)</h4>
+<p>The TS will dump the currently selected sequence using the bulk dump message described in section 3.1.10 when it receives this command, The command type is the only byte in this command.</p>
+<h4 id="s-3-1-13">3.1.13 All Sequence Dump Request (Command Type = 12)</h4>
+<p>The TS will dump all sequence memory using the bulk dump message described in section 3.1.11 when it receives this command. The command type is the only byte in this command.</p>
+</section>
+<section class="spec-page" id="pdf-9" data-pdf-page="9" data-printed-page="8">
+<h3 id="s-3-2">3.2 Error Messages (Message Type = 01)</h3>
+<p>Error messages are transmitted by the TS when an error occurs while processing any of the command messages described in section 3.1. The TS ignores error messages unless a - sequence dump is being processed.</p>
+<h4 id="s-3-2-1">3.2.1 Command Message Error Codes</h4>
+<p>These codes are the data byte of error messages.</p>
+<h4 class="minor">Code Name Meaning</h4>
+<div class="table-scroll"><table class="sysex offsets">
+<thead><tr><th>Code</th><th>Name</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td class="hex"><code class="lit">00</code></td><td class="desc">NAK</td><td class="desc">The preceding command message could not be processed. The receiver is busy or the message is unintelligible. The preceding dump command is not acceptable.</td></tr>
+<tr><td class="hex"><code class="lit">01</code></td><td class="desc">INVALID PARAMETER NUMBER</td><td class="desc">The parameter voice, page, or slot in the preceding</td></tr>
+<tr><td class="hex"><code class="lit">02</code></td><td class="desc">INVALID PARAMETER VALUE</td><td class="desc">The parameter value in the preceding parameter</td></tr>
+<tr><td class="hex"><code class="lit">03</code></td><td class="desc">INVALID BUTTON NUMBER</td><td class="desc">The button number in the preceding virtual button message doesn't correspond to any real button</td></tr>
+<tr><td class="hex"><code class="lit">04</code></td><td class="desc">ACK</td><td class="desc">The preceding dump command is acceptable.</td></tr>
+</tbody></table></div>
+
+<h3 id="s-3-3">3.3 Bulk Dumps of Programs, Presets, Track Parameters, and Sequences</h3>
+<p>Bulk dump data messages are transmitted using the message format described in section 2.3. The message type byte, which is part of the system exclusive header, is given in hexadecimal with the name of the dump message. The actual data bytes for programs, presets, and sequences are described in section 4. The MIDI data byte lengths are listed in decimal for each message type, and represent the actual byte length doubled (to account for nybblization) plus the header, tail and any other message overhead.</p>
+<h4 id="s-3-3-1">3.3.1 One Program (Message Type = 03)</h4>
+<p class="byte-length">Number of actual data bytes: <span class="value">616</span> <br>
+MIDI message length: <span class="value">1232</span> + head and tail = <span class="value">1239</span></p>
+<p> In response to a request, the current selected program is transmitted. If the compare buffer is active (the Compare LED is on), then the program in the compare buffer will be transmitted. If this message is received, the new program will be put into the compare buffer so it can be subsequently written to a User RAM program location. Remember that the compare buffer is over-written by the incoming data and its previous contents are lost. The parameter block structure is described in section 4.1.</p>
+<h4 id="s-3-3-2">3.3.2 Program BankSet (Message Type = 04)</h4>
+<p class="byte-length">Number of actual data bytes: 616*60 = <span class="value">36960</span> <br>
+  MIDI message length = <span class="value">73920</span> + BankSet number + head and tail = <span class="value">73928</span> </p>
+  <p>All 60 programs in the 10 program banks from either one of the 2 User RAM BankSets are contained in this message. The BankSet number which follows the header identifies the source/destination User RAM Bankset.</p>
+</section>
+<section class="spec-page" id="pdf-10" data-pdf-page="10" data-printed-page="9">
+<h4 id="s-3-3-3">3.3.3 One Preset (Message Type = 05)</h4>
+<p class="byte-length">Number of actual data bytes: <span class="value">118</span> <br>
+  MIDI message length: 236 + head and tail = <span class="value">233</span> </p>
+  <p>In response to a request, the currently selected preset is transmitted. If the preset edit buffer is active (<span class="lcd">*EDITED*</span>), then the edited preset will be transmitted. If this message is received, the new preset will be put in the preset edit buffer so it can be subsequently written to any User RAM preset location. The parameter block structure is described in section 4.2.</p>
+<h4 id="s-3-3-4">3.3.4 Preset BankSet (Message Type = 06)</h4>
+<p class="byte-length">Number of actual data bytes = 118*60 = <span class="value">7080</span> <br>
+  MIDI message length = 14160 + BankSet number + head and tail = <span class="value">14168</span> </p>
+  <p>All 60 presets in the 10 presets banks from either one of the 2 User RAM BankSets are contained in this message. The BankSet number which follows the header identifies the source/destination User RAM Bankset.</p>
+<h4 id="s-3-3-5">3.3.5 Single Sequence Dump (Message Type = 07)</h4>
+<p class="byte-length">MIDI message length = variable depending on amount of sequence data</p>
+<p>This message is transmitted according to the sequence dump protocol described before section 3.1.12. It contains sequence data and track parameters.</p>
+<h4 id="s-3-3-6">3.3.6 All Sequence Dump (Message Type = 08)</h4>
+<p class="byte-length">MIDI message length = variable depending on amount of sequence data</p>
+<p>This message is transmitted according to the sequence dump protocol described before section 3.1.12. It contains global sequence parameters, sequence data, and sequence track parameters.</p>
+<h4 id="s-3-3-7">3.3.7 Track Parameters (Message Type = 09)</h4>
+<p class="byte-length">Number of actual data bytes: <span class="value">492</span> (41*12) + 12+40=<span class="value">544</span> <br>
+  MIDI message length: <span class="value">1088</span> + head and tail = <span class="value">1095</span></p>
+  <p>Track parameter data for 12 tracks (41 bytes each), the track status array (12 bytes), and the sequence/song effect parameters (40 bytes) are transmitted. The parameter block structure is described in section 4.3.</p>
+</section>
+  </article>
+<nav class="section-nav">
+  <div><a href="01-overview.html">← Introduction and packet format</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="03-structures.html">Parameter block layouts →</a></div>
+</nav>
+  <footer class="site-footer">
+    <p>Transcribed from the Ensoniq TS-10/TS-12 MIDI System Exclusive
+    Implementation Specification, version 2.0.</p>
+  </footer>
+</body>
+</html>

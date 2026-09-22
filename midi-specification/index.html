@@ -3,34 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MIDI Specification — ENSONIQ TS-10 Documentation</title>
-  <link rel="stylesheet" href="../css/site.css">
+  <title>Contents — TS-10/TS-12 MIDI SysEx Specification</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+  <link rel="stylesheet" href="css/sysex.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="chrome">
-      <a href="../index.html"><span class="brand">ENSONIQ</span>
-      <span class="product">TS-10 / TS-12 Documentation</span></a>
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 MIDI SysEx Specification</span></a>
     </div>
   </header>
-  <main class="paper placeholder" id="main">
-    <div class="hub-marks">
-      <img class="ensoniq-mark" src="../images/Ensoniq_Logotype.svg" alt="ENSONIQ">
-      <img
-        class="ts-logotype"
-        src="../images/TS-10_Logotype_large.png"
-        srcset="../images/TS-10_Logotype.png 363w, ../images/TS-10_Logotype_large.png 1009w"
-        sizes="(max-width: 600px) 70vw, 22rem"
-        alt="TS-10">
-    </div>
-    <h1>MIDI Specification</h1>
-    <p>This transcription is not online yet. It will live in this folder alongside the <a href="../musicians-manual/">Musician’s Manual</a>.</p>
-    <p><a href="../index.html">← All TS-10 documents</a></p>
-  </main>
+<nav class="section-nav"><div><a href="../index.html">← Library</a></div><div>Contents</div><div><a href="01-overview.html">Introduction and packet format →</a></div></nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
+      <h1>Contents</h1>
+    </header>
+    <p class="suspect-legend">Amber marks a value the scan left in doubt. Hover
+    it, or read its <code>data-note</code>, to see what was read and why it was
+    changed.</p>
+<section class="spec-page">
+<h2>Contents</h2>
+<ul class="toc-sections">
+<li><a href="01-overview.html#s-1">1 Introduction and Overview</a></li>
+<li class="toc-sub"><a href="01-overview.html#s-1-1">1.1 Universal System Exclusive Device Inquiry Message</a></li>
+<li class="toc-sub"><a href="01-overview.html#s-1-2">1.2 System Exclusive Device Identity Reply Message</a></li>
+<li><a href="01-overview.html#s-2">2 MIDI System Exclusive Packet Pieces</a></li>
+<li class="toc-sub"><a href="01-overview.html#s-2-1">2.1 MIDI System Exclusive Packet Head</a></li>
+<li class="toc-sub"><a href="01-overview.html#s-2-2">2.2 MIDI System Exclusive Packet Tail</a></li>
+<li class="toc-sub"><a href="01-overview.html#s-2-4">2.4 Receiver Errors</a></li>
+<li><a href="02-commands.html#s-3">3 Message Type List</a></li>
+<li class="toc-sub"><a href="02-commands.html#s-3-1">3.1 Command Messages (Message Type = 00)</a></li>
+<li class="toc-sub"><a href="02-commands.html#s-3-2">3.2 Error Messages (Message Type = 01)</a></li>
+<li class="toc-sub"><a href="02-commands.html#s-3-3">3.3 Bulk Dumps of Programs, Presets, Track Parameters, and Sequences</a></li>
+<li><a href="03-structures.html#s-4">4 Parameter Block Data Descriptions</a></li>
+<li class="toc-sub"><a href="03-structures.html#s-4-1">4.1 Program Parameters</a></li>
+<li class="toc-sub"><a href="03-structures.html#s-4-2">4.2 Preset Parameters</a></li>
+<li class="toc-sub"><a href="03-structures.html#s-4-3">4.3 Track Parameters</a></li>
+<li class="toc-sub"><a href="03-structures.html#s-4-4">4.4 Single Sequence Dump Parameters</a></li>
+<li class="toc-sub"><a href="03-structures.html#s-4-5">4.5 All Sequence Dump Parameters</a></li>
+<li><a href="04-parameters.html#s-5">5 Parameter Definitions</a></li>
+<li class="toc-sub"><a href="04-parameters.html#s-5-1">5.1 System Parameters</a></li>
+<li class="toc-sub"><a href="04-parameters.html#s-5-2">5.2 MIDI Control Parameters</a></li>
+<li class="toc-sub"><a href="04-parameters.html#s-5-3">5.3 Program Parameters</a></li>
+<li class="toc-sub"><a href="05-effects.html#s-5-4">5.4 Effect Parameter Definitions</a></li>
+</ul>
+<h3>By file</h3><ul class="toc-sections">
+<li><a href="01-overview.html">Introduction and packet format</a> <span class="pages">PDF pages 2–3</span></li>
+<li><a href="02-commands.html">Commands, errors, and bulk dumps</a> <span class="pages">PDF pages 4–10</span></li>
+<li><a href="03-structures.html">Parameter block layouts</a> <span class="pages">PDF pages 11–16</span></li>
+<li><a href="04-parameters.html">Parameter definitions</a> <span class="pages">PDF pages 17–22</span></li>
+<li><a href="05-effects.html">Effect parameter definitions</a> <span class="pages">PDF pages 29–63</span></li>
+<li><a href="06-tables.html">Lookup tables</a> <span class="pages">PDF pages 23–69</span></li>
+</ul></section>
+  </article>
+<nav class="section-nav"><div><a href="../index.html">← Library</a></div><div>Contents</div><div><a href="01-overview.html">Introduction and packet format →</a></div></nav>
   <footer class="site-footer">
-    Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
-    These are working HTML transcriptions; original pagination and printed indexes are omitted.
+    <p>Transcribed from the Ensoniq TS-10/TS-12 MIDI System Exclusive
+    Implementation Specification, version 2.0.</p>
   </footer>
 </body>
 </html>

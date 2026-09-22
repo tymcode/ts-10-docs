@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introduction and packet format — TS-10/TS-12 MIDI SysEx Specification</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+  <link rel="stylesheet" href="css/sysex.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 MIDI SysEx Specification</span></a>
+    </div>
+  </header>
+<nav class="section-nav">
+  <div><a href="index.html">← Contents</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="02-commands.html">Commands, errors, and bulk dumps →</a></div>
+</nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
+      <h1>Introduction and packet format</h1>
+    </header>
+    <p class="suspect-legend">Amber marks a value the scan left in doubt. Hover
+    it, or read its <code>data-note</code>, to see what was read and why it was
+    changed.</p>
+<section class="spec-page" id="pdf-2" data-pdf-page="2" data-printed-page="1">
+<h2 id="s-1">1 Introduction and Overview</h2>
+<p class="suspect-para">This section describes the MIDI System Exclusive (SysEx) communication protocol used when the TS is communicating with an external computer (EXT). The protocol is designed to aid the implementation of editing programs running on EXT. The commands described here allow editor/librarian programs to collect and alter information about presets, programs, and the tracks within the TS. The TS-12 is identical to the TS—10 with respect to the SysEx implementation except as noted.</p>
+<h3 id="s-1-1">1.1 Universal System Exclusive Device Inquiry Message</h3>
+<p>The TS supports the MIDI Device Inquiry message which allows instruments and computers to ascertain the identity of the unit(s) to which they are connected via MIDI. The TS responds to the following Identity Request message by sending an Identity Reply message. The TS will respond to the inquiry if the channel information in the message contains either the base MIDI channel of the TS or the all channel broadcast code (<code class="lit">$7F</code>) but not both.</p>
+<div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits"><code class="lit">11110000</code></td><td class="hex"><code class="lit">F0</code></td><td class="desc">System Exclusive status byte</td></tr>
+<tr><td class="bits"><code class="lit">01111110</code></td><td class="hex"><code class="lit">7E</code></td><td class="desc">Non Real Time message code</td></tr>
+<tr><td class="bits"><span data-conf="33"><code class="lit">0000nnnn</code></span></td><td class="hex"><code >Ox</code></td><td class="desc">Base MIDI channel number</td></tr>
+</tbody></table></div>
+<p><em>or</em></p>
+<div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits">01111111</td><td class="hex"><code class="lit">7F</code></td><td class="desc">All Channel Broadcast code</td></tr>
+<tr><td class="bits">00000110</td><td class="hex"><code class="lit">06</code></td><td class="desc">General Information message code</td></tr>
+<tr><td class="bits">00000001</td><td class="hex"><code class="lit">01</code></td><td class="desc">Identity Reply message code</td></tr>
+<tr><td class="bits">11110111</td><td class="hex"><code class="lit">F7</code></td><td class="desc">End of System Exclusive</td></tr>
+</tbody></table></div>
+<h3 id="s-1-2">1.2 System Exclusive Device Identity Reply Message</h3>
+<p>The following Identity Reply message contains information about the TS, and is transmitted in response to an Identity Request.</p>
+<div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits"><code class="lit">11110000</code></td><td class="hex"><code class="lit">F0</code></td><td class="desc">FO System Exclusive status byte</td></tr>
+<tr><td class="bits"><code class="lit">01111110</code></td><td class="hex"><code class="lit">7E</code></td><td class="desc">Non Real Time message code</td></tr>
+<tr><td class="bits"><code class="lit">0000nnnn</code></td><td class="hex"><code class="lit">Ox</code></td><td class="desc">Base MIDI channel number</td></tr>
+<tr><td class="bits"><code class="lit">00000110</code></td><td class="hex"><code class="lit">06</code></td><td class="desc">General Information message code</td></tr>
+<tr><td class="bits"><code class="lit">00000010</code></td><td class="hex"><code class="lit">02</code></td><td class="desc">Identity Reply message code</td></tr>
+<tr><td class="bits"><code class="lit">00001111</code></td><td class="hex"><code class="lit">0F</code></td><td class="desc">ENSONIQ manufacturer&#x27;s code</td></tr>
+<tr><td class="bits"><code class="lit">00000101</code>[/0111]<td class="hex"><code class="lit">07[05]</code></td><td class="desc">TS Product Family code - LSByte</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">TS Product Family code - MSByte</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">mm</code></td><td class="desc">TS Family Member (Model ID) code LSByte</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">TS Family Member (Model ID) code MSByte</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">Software revision information</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">(not used)</td></tr>
+<tr><td class="bits"><code class="lit">0nnnnnnn</code></td><td class="hex">NN</td><td class="desc">Major Version Number (integer portion)</td></tr>
+<tr><td class="bits"><code class="lit">0nnnnnnn</code></td><td class="hex">NN</td><td class="desc">Minor Version Number (decimal fraction portion)</td></tr>
+<tr><td class="bits"><code class="lit">11110111</code></td><td class="hex"><code class="lit">F7</code></td><td class="desc">End of System Exclusive</td></tr>
+</tbody></table></div>
+<aside class="note">
+  <p>The TS Family Member (Model ID) code LSByte is set to <em>mm</em> to identify the model. This difference appears only in this Identity Reply message; all other messages have the standard TS Product Family header information. Here are the Family Member information.</p>
+  <div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">TS-10 Family Member (Model ID) code LSByte</td></tr>
+<tr><td class="bits"><code class="lit">00000001</code></td><td class="hex"><code class="lit">01</code></td><td class="desc">TS-12 Family Member (Model ID) code LSByte</td></tr>
+</tbody></table></div></aside>
+</section>
+<section class="spec-page" id="pdf-3" data-pdf-page="3" data-printed-page="2">
+<h2 id="s-2">2 MIDI System Exclusive Packet Pieces</h2>
+<p>A <dfn class="term">packet</dfn> is a message in the form of a MIDI data stream. Each packet can be divided into three sections or pieces. The first and last packet pieces form the <dfn class="term">frame</dfn> for a message. The message contains the commands described in section 3. Every message must be preceded with a SysEx head and followed with a SysEx tail. A complete packet looks like this:</p>
+<code class="lit">SysEx Head. . . . . . Message . . . . . SysEx Tail</code></p>
+</tbody></table></div>
+<h3 id="s-2-1">2.1 MIDI System Exclusive Packet Head</h3>
+<p>This is the common MIDI system exclusive header which must be used on all system exclusive messages to and from the TS. These six bytes are always sent preceding the message portion of the packet. The General TS Family Member Code in this header may be different from the TS Family Member code in the Device Identity Reply message in order to allow transfer of common messages between other TS Product Family members and the original TS—10. The SysEx Device ID number in the message must match the current system setting or the message will be ignored.</p>
+<div class="table-scroll"><table class="sysex bytes">
+<tbody>
+<tr><td class="bits"><code class="lit">11110000</code></td><td class="hex"><code class="lit">F0</code></td><td class="desc">FO System Exclusive status byte</td></tr>
+<tr><td class="bits"><code class="lit">00001111</code></td><td class="hex"><code class="lit">0F</code></td><td class="desc">ENSONIQ Code</td></tr>
+<tr><td class="bits"><code class="lit">00000101</code>[/0111]</td><td class="hex"><code class="lit">07[05]</code></td><td class="desc">TS Family ID Code</td></tr>
+<tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">General TS Family Member (Model ID) Code</td></tr>
+<tr><td class="bits"><code class="lit">0000nnnn</code></td><td class="hex"><code class="lit">Ox</code></td><td class="desc">SysEx Device ID number (0.,.15)</td></tr>
+<tr><td class="bits"><code class="lit">00000nnn</code></td><td class="hex"><code class="lit">Ox</code></td><td class="desc">Message Type (see section 3)</td></tr>
+</tbody></table>
+<h3 id="s-2-2">2.2 MIDI System Exclusive Packet Tail</h3>
+<p>For every head there is a tail. The tail follows the message portion, and is the last byte of every complete SysEx packet.</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="bits"><code class="lit">11110111</code></td><td class="hex"><code class="lit">F7</code></td><td class="desc">End of System Exclusive</td></tr>
+</tbody></table></div>
+<h3 id="s-2-3">2.3 Message Format</h3>
+<p>The TS message format within the packet frame allows 8 bit data bytes to be transmitted and received using the 7 bit data of MIDI. The MSB of the data bytes must always be a zero, so the bytes are converted to two 4 bit nybbles. These nybbles are converted to bytes whose upper four bits are all zero for transmission. Note that bytes whose value is zero must still be nybblized and sent as two bytes to preserve the expected MIDI byte counts. This is a description of the format of all data bytes within the packet frame as they are transmitted or received via MIDI. The details of each message are given in section 3.</p>
+<div class="table-scroll"><table class="sysex terms">
+<tbody>
+<tr><td class="bits"><code class="lit">0000HHHH</code></td><td class="desc"><code class="lit">H</code> = Hi 4 bits of data byte - transmitted first</td></tr>
+<tr><td class="bits"><code class="lit">OOOOLLLL</code></td><td class="desc"><code class="lit">L</code> = Lo 4 bits of data byte</td></tr>
+</tbody></table></div>
+<p>This represents how the 8 bit byte <code class="lit">HHHHLLLL</code> would be transmitted.</p>
+<h3 id="s-2-4">2.4 Receiver Errors</h3>
+<p class="suspect-para">If the message received by the TS is not understood, then an error message may be displayed and an error message will be sent as described in section 3.2. Errors typically occur when the MIDI cable is accidentally unplugged during a long dump message such as an All Programs Dump message. If EXT cannot handle the error message, then the displayed message will prompt the user to retransmit the original message after re-connecting the MIDI cable or otherwise correcting the cause of the error.</p>
+</section>
+  </article>
+<nav class="section-nav">
+  <div><a href="index.html">← Contents</a></div>
+  <div><a href="index.html">Contents</a></div>
+  <div><a href="02-commands.html">Commands, errors, and bulk dumps →</a></div>
+</nav>
+  <footer class="site-footer">
+    <p>Transcribed from the Ensoniq TS-10/TS-12 MIDI System Exclusive
+    Implementation Specification, version 2.0.</p>
+  </footer>
+</body>
+</html>

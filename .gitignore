@@ -1,1 +1,12 @@
 .DS_Store
+midi-specification/ocr/images/
+midi-specification/ocr/sysex-ocr.pdf
+midi-specification/ocr/sidecar.txt
+midi-specification/ocr/tmp/
+Ensoniq TS series MIDI SysEx specification.pdf
+midi-specification/ocr/*
+midi-specification/build/*
+midi-specification/scripts/*
+midi-specification/TRANSCRIPTION.md
+
+
