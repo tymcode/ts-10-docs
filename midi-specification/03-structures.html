@@ -288,7 +288,7 @@
 <tr><td class="value">n+header_size</td><td class="desc">Global Parameters</td></tr>
 </tbody></table></div>
 
-<p>In an unexpanded system, the Sequence Data segment can contain a maximum of 131,072 bytes. In an expanded system (with SQX-70), the maximum is 393,216 bytes. The individual Sequence Header size is 338 bytes. The complete Sequence Header Segment is <span class="value">20,408</span> bytes, which includes 60 headers, a table of pointers and some additional overhead. The Global Parameters segment is <span class="value">38</span> bytes. Remember that all of this data is transmitted via MIDI as nybblized bytes, so the actual number of bytes transmitted 1s twice as large for each component of the dump. The size of the largest dump for an unexpanded TS in actual transmitted MIDI bytes may be calculated as follows:</p>
+<p>In an unexpanded system, the Sequence Data segment can contain a maximum of 131,072 bytes. In an expanded system (with SQX-70), the maximum is 393,216 bytes. The individual Sequence Header size is 338 bytes. The complete Sequence Header Segment is <span class="value">20,408</span> bytes, which includes 60 headers, a table of pointers and some additional overhead. The Global Parameters segment is <span class="value">38</span> bytes. Remember that all of this data is transmitted via MIDI as nybblized bytes, so the actual number of bytes transmitted is twice as large for each component of the dump. The size of the largest dump for an unexpanded TS in actual transmitted MIDI bytes may be calculated as follows:</p>
 <div class="table-scroll"><table class="sysex terms">
   <thead><tr><th>Component</th><th>Actual Size (bytes)</th><th>Nybblized Size</th></tr></thead>
 <tbody>
