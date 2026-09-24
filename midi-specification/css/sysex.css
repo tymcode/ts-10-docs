@@ -76,7 +76,8 @@ table.sysex td.num,
 table.sysex td.bits,
 table.sysex td.hex,
 table.sysex td.mask,
-table.sysex td.str {
+table.sysex td.str,
+.manual td.hex {
   font-family: var(--font-mono);
   font-size: 0.86rem;
   font-weight: 400;
@@ -84,6 +85,7 @@ table.sysex td.str {
   letter-spacing: 0;
   white-space: nowrap;
   font-variant-ligatures: none;
+  font-synthesis: none;
 }
 
 table.sysex td.desc {
@@ -133,6 +135,8 @@ table.sysex.sheets th {
 
 /* One font and size. Color distinguishes placeholders from literals.
    No italic: an 8-bit mask must occupy the same width as 11110000. */
+.manual code.lit,
+table.sysex code.lit,
 code.lit,
 code.ph,
 code.str,
@@ -144,6 +148,17 @@ code.bits,
   font-style: normal;
   letter-spacing: 0;
   font-variant-ligatures: none;
+  font-synthesis: none;
+}
+
+table.sysex td.hex code,
+table.sysex td.hex code.lit,
+.manual td.hex code,
+.manual td.hex code.lit {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
 }
 
 code.lit {
