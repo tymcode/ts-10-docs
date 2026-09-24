@@ -138,6 +138,9 @@ table.sysex.sheets th {
 .manual code.lit,
 table.sysex code.lit,
 code.lit,
+.manual pre.lit,
+table.sysex pre.lit,
+pre.lit,
 code.ph,
 code.str,
 code.bits,
@@ -151,6 +154,16 @@ code.bits,
   font-synthesis: none;
 }
 
+table.sysex td.str pre.lit {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  /* pre must not inherit td.str nowrap — that collapses padding spaces */
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
 table.sysex td.hex code,
 table.sysex td.hex code.lit,
 .manual td.hex code,
@@ -161,7 +174,8 @@ table.sysex td.hex code.lit,
   letter-spacing: inherit;
 }
 
-code.lit {
+code.lit,
+pre.lit {
   color: var(--ink);
 }
 
