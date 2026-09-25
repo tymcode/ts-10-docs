@@ -459,6 +459,17 @@ td.value {
   letter-spacing: 0em;
 }
 
+span.table-name,
+.table-name {
+  font-family: var(--font-panel);
+  font-stretch: 87.5%;
+  text-transform: none;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--ink);
+  letter-spacing: 0em;
+}
+
 span.star,
 span.plus {
   font-family: "Anybody Star", var(--font-panel);
