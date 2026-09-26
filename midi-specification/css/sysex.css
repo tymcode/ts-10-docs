@@ -164,7 +164,8 @@ table.sysex td.str pre.lit {
   border: 0;
 }
 
-table.sysex td.str pre.lit a {
+table.sysex td.str pre.lit a,
+table.sysex td.str a {
   font: inherit;
   letter-spacing: inherit;
   color: var(--accent);
