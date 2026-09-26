@@ -15,7 +15,7 @@
     <div class="chrome">
       <a href="../index.html"><span class="brand">ENSONIQ</span></a>
       <a href="index.html"><span class="product">TS-10 / TS-12 MIDI SysEx Specification</span></a>
-    </div>
+    </div>  
   </header>
   <nav class="section-nav">
     <div><a href="05-tables.html">← Lookup tables</a></div>
@@ -970,7 +970,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -1178,7 +1178,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -1383,10 +1383,10 @@
               <td class="num">014</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">PAN</td>
-              <td class="num">-127,127</td>
+            <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">39 to +99</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -1412,7 +1412,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -1880,7 +1880,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -1932,7 +1932,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 toa 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -2072,7 +2072,7 @@
               <td class="num">021</td>
               <td class="mask">Unsigned Int</td>
               <td class="mask lit">LFO SPREAD</td>
-              <td class="num">0128</td>
+              <td class="num">0,128</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">000 to 128</pre>
@@ -2137,7 +2137,7 @@
               <td class="num">028</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">BANDWIDTH</td>
-              <td class="num">0</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -2166,7 +2166,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 99 -</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -2452,7 +2452,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -2800,7 +2800,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">A--REVRB</td>
-              <td class="num">0,1127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -2839,7 +2839,7 @@
               <td class="num">006</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">EQ INPUT</td>
-              <td class="num">027</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -3281,7 +3281,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">A--REVRB</td>
-              <td class="num">C, kbd</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -3375,7 +3375,7 @@
               <td class="num">0,15</td>
               <td class="num">Size: 2</td>
               <td class="str">
-                <pre class="lit">[00 to 1]</pre>
+                <pre class="lit">[00 to 15]</pre>
               </td>
             </tr>
             <tr>
@@ -3388,7 +3388,7 @@
               <td class="num">0,15</td>
               <td class="num">Size: 2</td>
               <td class="str">
-                <pre class="lit">[90 to 15]</pre>
+                <pre class="lit">[00 to 15]</pre>
               </td>
             </tr>
             <tr>
@@ -4477,7 +4477,7 @@
               <td class="num">019</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">REGEN</td>
-              <td class="num">-127.127</td>
+              <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -4493,7 +4493,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">127 to +127</pre>
+                <pre class="lit">-127 to +127</pre>
               </td>
             </tr>
             <tr>
@@ -4737,10 +4737,10 @@
               <td class="num">001</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">SENDS A--B</td>
-              <td class="num">0,1</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 99 .</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -4753,7 +4753,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -4776,7 +4776,7 @@
               <td class="num">004</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX2--REVRB</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -4987,7 +4987,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">127 to +127</pre>
+                <pre class="lit">-127 to +127</pre>
               </td>
             </tr>
             <tr>
@@ -5374,7 +5374,7 @@
               <td class="num">012</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FAST</td>
-              <td class="num">2</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -5504,10 +5504,10 @@
               <td class="num">023</td>
               <td class="mask">Pos Int</td>
               <td class="mask lit">FLANGE CENTER</td>
-              <td class="num">01297</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">000 to 127 .</pre>
+                <pre class="lit">000 to 127</pre>
               </td>
             </tr>
             <tr>
@@ -5728,7 +5728,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 499</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -5962,7 +5962,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">127 to +127</pre>
+                <pre class="lit">-127 to +127</pre>
               </td>
             </tr>
             <tr>
@@ -6050,7 +6050,7 @@
               <td class="num">028</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">BANDWIDTH</td>
-              <td class="num">6</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -6401,7 +6401,7 @@
               <td class="num">017</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">PAN</td>
-              <td class="num">-127.127</td>
+              <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -7834,7 +7834,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">39 to +99</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -7886,7 +7886,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 toa 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -7896,7 +7896,7 @@
               <td class="num">017</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">PAN</td>
-              <td class="num">27</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -7951,7 +7951,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 toa 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -8195,7 +8195,7 @@
               <td class="num">003</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">B--REVRB</td>
-              <td class="num">5</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -8208,7 +8208,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">A--REVRB</td>
-              <td class="num">0</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -8406,7 +8406,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">06 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -8926,7 +8926,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 949</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -9794,7 +9794,7 @@
               <td class="num">009</td>
               <td class="mask">Signed Int</td>
               <td class="mask lit">BASS LEVEL</td>
-              <td class="num">99,48</td>
+              <td class="num">-99,48</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +48 dB</pre>
@@ -10808,10 +10808,10 @@
               <td class="num">011</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">DIFFUSION .2</td>
-              <td class="num">06127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 349</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -11766,7 +11766,7 @@
               <td class="num">001</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX1 REVERB</td>
-              <td class="num">1</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -11818,7 +11818,7 @@
               <td class="num">006</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">HF - DAMPING</td>
-              <td class="num">8</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -11915,7 +11915,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -12836,7 +12836,7 @@
               <td class="num">009</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">BANDWIDTH</td>
-              <td class="num">21</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">01 to 99</pre>
@@ -13407,7 +13407,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">05  to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -14471,10 +14471,10 @@
               <td class="num">005</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">HF - DAMPING</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 toa 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -14591,7 +14591,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 95</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -14669,7 +14669,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">006 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -15091,7 +15091,7 @@
               <td class="num">015</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">PRIMARY SEND</td>
-              <td class="num">-125,127</td>
+              <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -15777,7 +15777,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 949</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -16267,7 +16267,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">06 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -16715,7 +16715,7 @@
               <td class="num">008</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">ENVELOPE LEVEL .6</td>
-              <td class="num">1</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -17917,7 +17917,7 @@
               <td class="num">-96,0</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-56 to +00 dB</pre>
+                <pre class="lit">-96 to +00 dB</pre>
               </td>
             </tr>
             <tr>
@@ -18108,7 +18108,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">09 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -18348,7 +18348,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">MIX FX-2 DDL</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -18387,7 +18387,7 @@
               <td class="num">006</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">REGEN</td>
-              <td class="num">0</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -18559,7 +18559,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -18906,7 +18906,7 @@
               <td class="num">0,1000</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">o000 to 1000 Hz</pre>
+                <pre class="lit">0000 to 1000 Hz</pre>
               </td>
             </tr>
             <tr>
@@ -19159,7 +19159,7 @@
               <td class="num">006</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">REGEN</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -19782,7 +19782,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 fo +99</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -19912,7 +19912,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 89</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -20087,7 +20087,7 @@
               <td class="num">003</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">B--REVRB</td>
-              <td class="num">07</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -20230,7 +20230,7 @@
               <td class="num">016</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">CHORUS MIX</td>
-              <td class="num">5</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -20259,7 +20259,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to +89</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -20334,7 +20334,7 @@
               <td class="num">019</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">REGEN</td>
-              <td class="num">-127.127</td>
+              <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -20389,7 +20389,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">O00 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -20584,7 +20584,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">09 to 99</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -20727,7 +20727,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -20740,7 +20740,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -21182,7 +21182,7 @@
               <td class="num">-99,48</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to +49 dB</pre>
+                <pre class="lit">-99 to +48 dB</pre>
               </td>
             </tr>
             <tr>
@@ -21634,7 +21634,7 @@
               <td class="num">018</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">ECHO - LEVEL</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -21958,7 +21958,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -22461,7 +22461,7 @@
               <td class="num">-48,24</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-468 to +24 dB</pre>
+                <pre class="lit">-48 to +24 dB</pre>
               </td>
             </tr>
             <tr>
@@ -22474,7 +22474,7 @@
               <td class="num">1,15</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">0012 to 152</pre>
+                <pre class="lit">01KHz to 15KHz</pre>
               </td>
             </tr>
             <tr>
@@ -22646,10 +22646,10 @@
               <td class="num">37</td>
               <td class="num">02</td>
               <td class="num">--</td>
-              <td class="num"></td>
+              <td class="num">001</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX-1 REVERB AFTER PHASE</td>
-              <td class="num">0</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -23494,15 +23494,15 @@
             </tr>
             <tr>
               <td class="num">40</td>
-              <td class="num">03</td>
+              <td class="num">04</td>
               <td class="num">--</td>
               <td class="num">023</td>
               <td class="mask">Pos Int</td>
               <td class="mask lit">TREBLE FC</td>
-              <td class="num">86</td>
+              <td class="num">1,15</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">012 to 152</pre>
+                <pre class="lit">01KHz to 15KHz</pre>
               </td>
             </tr>
             <tr>
@@ -23716,7 +23716,7 @@
               <td class="num">004</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">WIDTH</td>
-              <td class="num">58</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -23755,7 +23755,7 @@
               <td class="num">012</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">DELAY — REGEN</td>
-              <td class="num">-129,127</td>
+              <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-99 to +99</pre>
@@ -23823,7 +23823,7 @@
               <td class="num">0,1500</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">006 to 1500 msec</pre>
+                <pre class="lit">0000 to 1500 msec</pre>
               </td>
             </tr>
             <tr>
@@ -23859,7 +23859,7 @@
               <td class="num">022</td>
               <td class="mask">Signed Int</td>
               <td class="mask lit">LEVEL</td>
-              <td class="num">-45,24</td>
+              <td class="num">-48,24</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-48 to +24 dB</pre>
@@ -23875,7 +23875,7 @@
               <td class="num">1,15</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">O1KHz to 15KHz</pre>
+                <pre class="lit">01KHz to 15KHz</pre>
               </td>
             </tr>
             <tr>
@@ -24117,10 +24117,10 @@
               <td class="num">006</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">PAN</td>
-              <td class="num">-129,127</td>
+              <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -24130,10 +24130,10 @@
               <td class="num">007</td>
               <td class="mask">Signed Int</td>
               <td class="mask lit">VOICE-2 SEMI</td>
-              <td class="num">-2,12</td>
+              <td class="num">-12,12</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-127 to 412</pre>
+                <pre class="lit">-12 to +12</pre>
               </td>
             </tr>
             <tr>
@@ -24143,10 +24143,10 @@
               <td class="num">008</td>
               <td class="mask">Signed Frac</td>
               <td class="mask lit">FINE</td>
-              <td class="num">-127.127</td>
+              <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-9 to +99</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -24156,7 +24156,7 @@
               <td class="num">009</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">LEVEL</td>
-              <td class="num">46</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -24172,7 +24172,7 @@
               <td class="num">-128,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-59 to +99</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -25106,7 +25106,7 @@
               <td class="num">008</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">INERTIA</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -25145,7 +25145,7 @@
               <td class="num">004</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">HF - DAMPING</td>
-              <td class="num">tt</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -25161,7 +25161,7 @@
               <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">00 to 9</pre>
+                <pre class="lit">00 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -25336,7 +25336,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX-2 SPKR</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -25349,7 +25349,7 @@
               <td class="num">003</td>
               <td class="mask">Signed Int</td>
               <td class="mask lit">OUTPUT GAIN</td>
-              <td class="num">-4824</td>
+              <td class="num">-48,24</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-48 to +24 dB</pre>
@@ -25582,7 +25582,7 @@
               <td class="num">0,9999</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">0000 to 9959 Hz</pre>
+                <pre class="lit">0000 to 9999 Hz</pre>
               </td>
             </tr>
             <tr>
@@ -26260,7 +26260,7 @@
               <td class="num">001</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX-1 GUITAMP</td>
-              <td class="num">0727</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -26380,7 +26380,7 @@
               <td class="num">-48,24</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-468 to +24 dB</pre>
+                <pre class="lit">-48 to +24 dB</pre>
               </td>
             </tr>
             <tr>
@@ -26724,7 +26724,7 @@
               <td class="num">004</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">MAIN LEVEL</td>
-              <td class="num">0,227</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -26828,7 +26828,7 @@
               <td class="num">013</td>
               <td class="mask">Signed Int</td>
               <td class="mask lit">ON</td>
-              <td class="num">-96,0</td>
+              <td class="num">-36,0</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">-36 to +00 dB</pre>
@@ -26922,7 +26922,7 @@
               <td class="num">0,9999</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">0000 to 3999 Hz</pre>
+                <pre class="lit">0000 to 9999 Hz</pre>
               </td>
             </tr>
             <tr>
@@ -27123,7 +27123,7 @@
               <td class="num">002</td>
               <td class="mask">Pos Frac</td>
               <td class="mask lit">FX-2 VCFDIST</td>
-              <td class="num">0127</td>
+              <td class="num">0,127</td>
               <td class="num"></td>
               <td class="str">
                 <pre class="lit">00 to 99</pre>
@@ -27191,7 +27191,7 @@
               <td class="num">1,99</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">001 to 343</pre>
+                <pre class="lit">01 to 99</pre>
               </td>
             </tr>
             <tr>
@@ -27203,9 +27203,7 @@
               <td class="mask lit">Q</td>
               <td class="num">1,25</td>
               <td class="num"></td>
-              <td class="str">
-                <pre class="lit">001 to 25</pre>
-              </td>
+              <td class="str">01 to 25</td>
             </tr>
             <tr>
               <td class="num">39</td>
@@ -27859,7 +27857,7 @@
               <td class="num">-127,127</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">-99 to 499</pre>
+                <pre class="lit">-99 to +99</pre>
               </td>
             </tr>
             <tr>
@@ -28835,7 +28833,7 @@
               <td class="num">1,15</td>
               <td class="num"></td>
               <td class="str">
-                <pre class="lit">012 to 152</pre>
+                <pre class="lit">01KHz to 15KHz</pre>
               </td>
             </tr>
             <tr>
