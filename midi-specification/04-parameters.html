@@ -20,15 +20,14 @@
   <nav class="section-nav">
     <div><a href="03-structures.html">← Parameter block layouts</a></div>
     <div><a href="index.html">Contents</a></div>
-    <div><a href="05-effects.html">Effect parameter definitions →</a></div>
+    <div><a href="05-tables.html">Lookup tables →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
       <h1>Parameter definitions</h1>
     </header>
-    <section class="spec-page" id="pdf-17" data-pdf-page="17" data-printed-page="16">
-      <h2 id="s-5">5 Parameter Definitions</h2>
+<h2 id="s-5">5 Parameter Definitions</h2>
       <h4 class="minor">General Notes</h4>
       <p>At the top of every parameter listing page there are some column labels which describe the meaning of the
         parameter description fields. These are defined as follows:</p>
@@ -167,9 +166,7 @@
         . digit (e.g. .2) in the parameter Name field. This decimal fraction digit does not appear on the actual TS
         display page. The value <span class="value">255</span> (<code class="lit">$FF</code>) is sent in this field if
         the parameter is not a multi param type.</p>
-    </section>
-    <section class="spec-page" id="pdf-18" data-pdf-page="18" data-printed-page="17">
-      <h4 class="minor">Display Value Conversion</h4>
+<h4 class="minor">Display Value Conversion</h4>
       <p>For “Pos Int” and “Signed Int” type parameters which are displayed as [0..99] or [-99..99] but stored
         internally as [<code class="lit">0</code>..<code class="lit">127</code>] or [<code
           class="lit">-128</code>..<code class="lit">127</code>], the following conversion table of 128 bytes is used to
@@ -586,9 +583,7 @@
           </tbody>
         </table>
       </div>
-    </section>
-    <section class="spec-page" id="pdf-19" data-pdf-page="19" data-printed-page="18">
-      <h3 id="s-5-3">5.3 Program Parameters</h3>
+<h3 id="s-5-3">5.3 Program Parameters</h3>
       <aside class="note">
         <p>The next group of pages (<code>07..10</code>) are used for the program control parameters within a program.
           These</p>
@@ -2352,9 +2347,7 @@
         <p>Pages 36..45 are used for Effect parameters and are described in the next section.</p>
         <p>Pages 46,.99 are not defined, and the Select Voice and program option editor pages start at 100.</p>
       </aside>
-    </section>
-    <section class="spec-page" id="pdf-22" data-pdf-page="22" data-printed-page="21">
-        <h4 class="minor">Select Voice (pages 100..103)</h4>
+<h4 class="minor">Select Voice (pages 100..103)</h4>
       <aside class="note">
         <p>Voices 5 and 6 are not available when a program option is active (PitchTable, WaveList, or DrumMap).</p>
         <p>This condition eliminates slots 04 &amp; 05 on pages 101..103. The status information 1s displayed using the
@@ -2772,12 +2765,11 @@
           </tbody>
         </table>
       </div>
-    </section>
-  </article>
+</article>
   <nav class="section-nav">
     <div><a href="03-structures.html">← Parameter block layouts</a></div>
     <div><a href="index.html">Contents</a></div>
-    <div><a href="05-effects.html">Effect parameter definitions →</a></div>
+    <div><a href="05-tables.html">Lookup tables →</a></div>
   </nav>
   <footer class="site-footer">
     <p>Transcribed from the Ensoniq TS-10/TS-12 MIDI System Exclusive

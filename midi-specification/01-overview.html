@@ -25,8 +25,6 @@
       <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
       <h1>Introduction and packet format</h1>
     </header>
-
-<section class="spec-page" id="pdf-2" data-pdf-page="2" data-printed-page="1">
 <h2 id="s-1">1 Introduction and Overview</h2>
 <p class="suspect-para">This section describes the MIDI System Exclusive (SysEx) communication protocol used when the TS is communicating with an external computer (EXT). The protocol is designed to aid the implementation of editing programs running on EXT. The commands described here allow editor/librarian programs to collect and alter information about presets, programs, and the tracks within the TS. The TS-12 is identical to the TS—10 with respect to the SysEx implementation except as noted.</p>
 <h3 id="s-1-1">1.1 Universal System Exclusive Device Inquiry Message</h3>
@@ -72,8 +70,6 @@
 <tr><td class="bits"><code class="lit">00000000</code></td><td class="hex"><code class="lit">00</code></td><td class="desc">TS-10 Family Member (Model ID) code LSByte</td></tr>
 <tr><td class="bits"><code class="lit">00000001</code></td><td class="hex"><code class="lit">01</code></td><td class="desc">TS-12 Family Member (Model ID) code LSByte</td></tr>
 </tbody></table></div></aside>
-</section>
-<section class="spec-page" id="pdf-3" data-pdf-page="3" data-printed-page="2">
 <h2 id="s-2">2 MIDI System Exclusive Packet Pieces</h2>
 <p>A <dfn class="term">packet</dfn> is a message in the form of a MIDI data stream. Each packet can be divided into three sections or pieces. The first and last packet pieces form the <dfn class="term">frame</dfn> for a message. The message contains the commands described in section 3. Every message must be preceded with a SysEx head and followed with a SysEx tail. A complete packet looks like this:</p>
 <code class="lit">SysEx Head. . . . . . Message . . . . . SysEx Tail</code></p>
@@ -105,8 +101,7 @@
 <p>This represents how the 8 bit byte <code class="lit">HHHHLLLL</code> would be transmitted.</p>
 <h3 id="s-2-4">2.4 Receiver Errors</h3>
 <p class="suspect-para">If the message received by the TS is not understood, then an error message may be displayed and an error message will be sent as described in section 3.2. Errors typically occur when the MIDI cable is accidentally unplugged during a long dump message such as an All Programs Dump message. If EXT cannot handle the error message, then the displayed message will prompt the user to retransmit the original message after re-connecting the MIDI cable or otherwise correcting the cause of the error.</p>
-</section>
-  </article>
+</article>
 <nav class="section-nav">
   <div><a href="index.html">← Contents</a></div>
   <div><a href="index.html">Contents</a></div>

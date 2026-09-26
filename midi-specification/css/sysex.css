@@ -164,6 +164,14 @@ table.sysex td.str pre.lit {
   border: 0;
 }
 
+table.sysex td.str pre.lit a {
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
 table.sysex td.hex code,
 table.sysex td.hex code.lit,
 .manual td.hex code,

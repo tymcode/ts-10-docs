@@ -25,8 +25,6 @@
       <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
       <h1>Commands, errors, and bulk dumps</h1>
     </header>
-
-<section class="spec-page" id="pdf-4" data-pdf-page="4" data-printed-page="3">
 <h2 id="s-3">3 Message Type List</h2>
 <p>The next few sections describe the messages to be used between EXT and TS. The message type corresponds to the last byte of the system exclusive packet head described in section 2.1.</p>
 <aside class="note"><p>The SysEx messages outlined below appear as an ordered description of bytes which
@@ -75,10 +73,7 @@ do not necessarily represent the MIDI format described in section 2.3. Remember,
 <tr><td class="term"><strong>24</strong></td><td class="desc">Program Control</td><td class="term"><strong>53</strong></td><td class="desc">Tracks 7..12</td></tr>
 <tr><td class="term"><strong>25</strong></td><td class="desc">Mod Mixer</td><td class="term"><strong>55</strong></td><td class="desc">Replace Track Program</td></tr>
 </tbody></table></div>
-
-</section>
-<section class="spec-page" id="pdf-5" data-pdf-page="5" data-printed-page="4">
-  <table class="sysex terms">
+<table class="sysex terms">
     <thead>
       <tr>
         <th>Logical<br>Number</th>
@@ -165,9 +160,6 @@ do not necessarily represent the MIDI format described in section 2.3. Remember,
   <tr><td class="term"><strong>110..255</strong></td><td class="desc">undefined</td></tr>
 </tbody>
 </table></div>
-</section>
-
-<section class="spec-page" id="pdf-6" data-pdf-page="6" data-printed-page="5">
 <p>Parameter Page Numbers 100..109 are used for the Select Voice page and all of its related pages. For each of the program options there is a variant of the select voice page and one or more edit pages. Page number values above 109 will cause an error message to be returned and will be ignored by the TS.</p>
 <div class="table-scroll"><table class="sysex offsets">
 <tbody>
@@ -210,8 +202,6 @@ do not necessarily represent the MIDI format described in section 2.3. Remember,
 
 <h4 id="s-3-1-3">3.1.3 Edit Change Status (Command Type = 02)</h4>
 <p class="suspect-para">This command is only <em>transmitted</em> by the TS; it is not received. It allows the external editor to retain synchronization with the compare buffer in the TS. The edit change status command is sent whenever an edit operation initiated from the front panel of the TS causes more than one parameter to change. The edit change status command will always be preceded by at least one parameter change message. Although the TS will send parameter change messages, it may not be able to send the new value of every parameter that changed, due to the complexities of internal editing. When EXT receives this message, it should request a complete program dump to re-establish editing sync. The command type is the only byte in this command. </p>
-</section>
-<section class="spec-page" id="pdf-7" data-pdf-page="7" data-printed-page="6">
 <aside class="note"><p>The TS does not transmit the following Dump Request commands (command types <span class="value">05</span> to <span class="value">0A</span>). The command type is the only byte in these commands.</p></aside>
 <h4 id="s-3-1-4">3.1.4 Single Program Dump Request (Command Type = 03)</h4>
 <p>The TS will dump the current program using the bulk dump message described in section 3.3.1 when it receives this command. If the current program is being edited, the edited version of the program will be transmitted.</p>
@@ -225,8 +215,6 @@ do not necessarily represent the MIDI format described in section 2.3. Remember,
 <p>The TS will dump the internal RAM program banks using the bulk dump message described in section 3.3.2 when it receives this command.</p>
 <h4 id="s-3-1-9">3.1.9 Internal Preset Bank Dump Request (Command Type = 08)</h4>
 <p>The TS will dump the internal RAM preset banks using the bulk dump message described in section 3.3.4 when it receives this command.</p>
-</section>
-<section class="spec-page" id="pdf-8" data-pdf-page="8" data-printed-page="7">
 <p ><dfn class="term">Sequence Dump Protocol</dfn>: <em>Since the receiver of a sequence dump message must be prepared to store the sequence data, sequence dumps are performed using two messages from the transmitter and a handshaking message from the receiver. The transmitter sends the dump command which informs the receiver of the next message. The receiver should respond with an error message containing an ACK or NAK error code (see section 3.2.1). If the receiver does not respond within one second, the transmitter will send the dump message anyway. This timeout feature allows &quot;dumb&quot; System Exclusive recorders to store TS sequence data. If the receiver responds with a NAK error code, the transmitter should not send the dump message.</em></p>
 <aside class="note"><p>If the TS sequencer software is not loaded, the receiving TS will respond with a NAK error message to any sequence dump command.</p></aside>
 <h4 id="s-3-1-10">3.1.10 Single Sequence Dump (Command Type = 09)</h4>
@@ -254,8 +242,6 @@ do not necessarily represent the MIDI format described in section 2.3. Remember,
 <p>The TS will dump the currently selected sequence using the bulk dump message described in section 3.1.10 when it receives this command, The command type is the only byte in this command.</p>
 <h4 id="s-3-1-13">3.1.13 All Sequence Dump Request (Command Type = 12)</h4>
 <p>The TS will dump all sequence memory using the bulk dump message described in section 3.1.11 when it receives this command. The command type is the only byte in this command.</p>
-</section>
-<section class="spec-page" id="pdf-9" data-pdf-page="9" data-printed-page="8">
 <h3 id="s-3-2">3.2 Error Messages (Message Type = 01)</h3>
 <p>Error messages are transmitted by the TS when an error occurs while processing any of the command messages described in section 3.1. The TS ignores error messages unless a - sequence dump is being processed.</p>
 <h4 id="s-3-2-1">3.2.1 Command Message Error Codes</h4>
@@ -281,8 +267,6 @@ MIDI message length: <span class="value">1232</span> + head and tail = <span cla
 <p class="byte-length">Number of actual data bytes: 616*60 = <span class="value">36960</span> <br>
   MIDI message length = <span class="value">73920</span> + BankSet number + head and tail = <span class="value">73928</span> </p>
   <p>All 60 programs in the 10 program banks from either one of the 2 User RAM BankSets are contained in this message. The BankSet number which follows the header identifies the source/destination User RAM Bankset.</p>
-</section>
-<section class="spec-page" id="pdf-10" data-pdf-page="10" data-printed-page="9">
 <h4 id="s-3-3-3">3.3.3 One Preset (Message Type = 05)</h4>
 <p class="byte-length">Number of actual data bytes: <span class="value">118</span> <br>
   MIDI message length: 236 + head and tail = <span class="value">233</span> </p>
@@ -301,8 +285,7 @@ MIDI message length: <span class="value">1232</span> + head and tail = <span cla
 <p class="byte-length">Number of actual data bytes: <span class="value">492</span> (41*12) + 12+40=<span class="value">544</span> <br>
   MIDI message length: <span class="value">1088</span> + head and tail = <span class="value">1095</span></p>
   <p>Track parameter data for 12 tracks (41 bytes each), the track status array (12 bytes), and the sequence/song effect parameters (40 bytes) are transmitted. The parameter block structure is described in section 4.3.</p>
-</section>
-  </article>
+</article>
 <nav class="section-nav">
   <div><a href="01-overview.html">← Introduction and packet format</a></div>
   <div><a href="index.html">Contents</a></div>

@@ -25,8 +25,6 @@
       <p class="brand-line">TS-10 | TS-12 · MIDI SysEx Implementation Specification V.2.0</p>
       <h1>Parameter block layouts</h1>
     </header>
-
-<section class="spec-page" id="pdf-11" data-pdf-page="11" data-printed-page="10">
 <h2 id="s-4">4 Parameter Block Data Descriptions</h2>
 <p>This is a description of the parameter blocks transmitted using the bulk dump messages described in section 3.3. The names and byte offsets of each block parameter are given. The parameter value ranges are included in section 5. The following byte layout is the internal representation and not the MIDI byte format which is described in section 2.3.</p>
 <h3 id="s-4-1">4.1 Program Parameters</h3>
@@ -106,8 +104,6 @@
 <tr><td class="value"><code class="lit">91</code></td><td class="desc">Hi Velocity Threshold</td></tr>
 </tbody></table></div>
 <h5>(end of Voice 1 structure)</h5>
-</section>
-<section class="spec-page" id="pdf-13" data-pdf-page="13" data-printed-page="12">
 <div class="table-scroll"><table class="sysex terms">
   <thead>
     <tr>
@@ -144,8 +140,6 @@
 <aside class="note">
 <p>The effect parameter block is 40 bytes long and the first byte is always the algorithm index. Refer to the Effect Parameter Definitions section for more details.</p>
 </aside>
-</section>
-<section class="spec-page" id="pdf-14" data-pdf-page="14" data-printed-page="13">
 <h3 id="s-4-2">4.2 Preset Parameters</h3>
 <h4 id="s-4-2-1">4.2.1 Preset Track Parameter Structure</h4>
 <p>The parameters from each of the three individual tracks of a Preset are stored as an array of variable size bit fields packed into 21 consecutive bytes.</p>
@@ -203,10 +197,7 @@
 <tr><td class="value">106</td><td class="value">11</td><td class="desc">Preset Name</td></tr>
 <tr><td class="value">117</td><td class="value">1</td><td class="desc">spare (reserved for future use)</td></tr>
 </tbody></table></div>
-</section>
-
-<section class="spec-page" id="pdf-15" data-pdf-page="15" data-printed-page="14">
-  <h3 id="s-4-3">4.3 Track Parameters</h3>
+<h3 id="s-4-3">4.3 Track Parameters</h3>
   <p>This message consists of specific track parameters from the 12 tracks, the track status array, and an effect definition.</p>
 
   <div class="table-scroll"><table class="sysex offsets">
@@ -263,8 +254,6 @@
 <tr><td class="value">492</td><td class="desc">Seq/Song Track status array (see note 3 in 4.2.1 above)</td></tr>
 <tr><td class="value">504</td><td class="desc">Tracks Effect Parameters</td></tr>
 </tbody></table></div>
-</section>
-<section class="spec-page" id="pdf-16" data-pdf-page="16" data-printed-page="15">
 <aside class="note"><p>The sequencer data format is not currently documented, so these blocks are only described in general terms.</p>
 </aside>
 
@@ -301,8 +290,7 @@
 </tbody></table></div>
 <h5 class="minor">Total Number of bytes sent: <span class="value">303,543</span></h5>
 <p class="suspect-para">This implies that an expanded system would have a maximum dump size that was larger by twice the difference in the Sequence Data segment size (i.e. <span class="value">two</span> times <span class="value">393,216 - 131,072</span> or <span class="value">524,288</span> bytes). Therefore, the largest dump size for a fully expanded system would be a total of <span class="value">827,811</span> MIDI bytes (or <span class="value">1617</span> blocks).</p>
-</section>
-  </article>
+</article>
 <nav class="section-nav">
   <div><a href="02-commands.html">← Commands, errors, and bulk dumps</a></div>
   <div><a href="index.html">Contents</a></div>
