@@ -183,7 +183,8 @@ table.sysex td.hex code.lit,
 }
 
 code.lit,
-pre.lit {
+pre.lit,
+table.sysex td.mask.lit {
   color: var(--ink);
 }
 
