@@ -200,6 +200,23 @@ code.str {
   color: var(--ink);
 }
 
+/* A parameter type name in running text. Monospace and a quiet chip,
+   distinct from a screen value and from a page name. */
+span.type {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  border-radius: 0.2em;
+  padding: 0.02em 0.32em 0.06em;
+  white-space: nowrap;
+}
+
 code.bits .lit,
 code.bits .ph {
   font-size: inherit;

@@ -26,9 +26,9 @@
       <h1>Parameter block layouts</h1>
     </header>
 <h2 id="s-4">4 Parameter Block Data Descriptions</h2>
-<p>This is a description of the parameter blocks transmitted using the bulk dump messages described in section 3.3. The names and byte offsets of each block parameter are given. The parameter value ranges are included in section 5. The following byte layout is the internal representation and not the MIDI byte format which is described in section 2.3.</p>
+<p>This is a description of the parameter blocks transmitted using the bulk dump messages described in <a href="02-commands.html#s-3-3">section 3.3</a>. The names and byte offsets of each block parameter are given. The parameter value ranges are included in <a href="04-parameters.html">section 5</a>. The following byte layout is the internal representation and not the MIDI byte format which is described in <a href="01-overview.html#s-2-3">section 2.3</a>.</p>
 <h3 id="s-4-1">4.1 Program Parameters</h3>
-<p>The first group of parameters through byte offset 92 describe one of the six possible voices in a program. This same structure is repeated with an additional offset of 92 for each of the other five voices. When the program has an option enabled (Pitch Table, Wave List or Drum Map), voices 5 and 6 are replaced with the option data. All of the global program parameters are at the bottom of this list. These parameter descriptions do not reflect the literal names shown on the TS display. Refer to the parameter definitions in section 5 for that information.</p>
+<p>The first group of parameters through byte offset <span class="value">92</span> describe one of the six possible voices in a program. This same structure is repeated with an additional offset of <span class="value">92</span> for each of the other five voices. When the program has an option enabled (<span class="option">Pitch Table</span>, <span class="option">Wave List</span> or <span class="option">Drum Map</span>), voices <span class="value">5</span> and <span class="value">6</span> are replaced with the option data. All of the global program parameters are at the bottom of this list. These parameter descriptions do not reflect the literal names shown on the TS display. Refer to the parameter definitions in <a href="04-parameters.html">section 5</a> for that information.</p>
 <div class="table-scroll"><table class="sysex terms">
   <thead>
     <tr>
@@ -138,11 +138,11 @@
 <aside class="note">
 <p>These parameters are edited and stored with the program to serve as default values to be installed on the track along with the program, but actually function on the corresponding Preset Track pages.</p></aside>
 <aside class="note">
-<p>The effect parameter block is 40 bytes long and the first byte is always the algorithm index. Refer to the Effect Parameter Definitions section for more details.</p>
+<p>The effect parameter block is <span class="value">40</span> bytes long and the first byte is always the algorithm index. Refer to the <a href="06-effects.html">Effect Parameter Definitions</a> section for more details.</p>
 </aside>
 <h3 id="s-4-2">4.2 Preset Parameters</h3>
 <h4 id="s-4-2-1">4.2.1 Preset Track Parameter Structure</h4>
-<p>The parameters from each of the three individual tracks of a Preset are stored as an array of variable size bit fields packed into 21 consecutive bytes.</p>
+<p>The parameters from each of the three individual tracks of a Preset are stored as an array of variable size bit fields packed into <span class="value">21</span> consecutive bytes.</p>
 <div class="table-scroll"><table class="sysex terms">
   <thead>
     <tr>
@@ -178,14 +178,14 @@
 <p>The Track program Change switch bit was not implemented as of version 1.00. </p>
 </aside>
 <aside class="note">
-<p>The 5 bit number (0..31) defined by the 5 Sampled Sound number bits indicates that a sampled sound is active on the track if the number is in the range 0..19, reflecting the 20 total locations available in a fully-loaded system. Otherwise, the value 31 (<code class="lit">$1F</code>) indicates that no sampled sound is active and is the only other value that should be used.</p>
+<p>The 5 bit number (<span class="value">0</span>..<span class="value">31</span>) defined by the 5 Sampled Sound number bits indicates that a sampled sound is active on the track if the number is in the range <span class="value">0</span>..<span class="value">19</span>, reflecting the <span class="value">20</span> total locations available in a fully-loaded system. Otherwise, the value <span class="value">31</span> (<code class="lit">$1F</code>) indicates that no sampled sound is active and is the only other value that should be used.</p>
 </aside>
 <aside class="note">
 <p>In Track status arrays, Preset tracks are 13..15 and Sequence tracks are 1..12.</p>
 </aside>
 
 <h4 id="s-4-2-2">4.2.2 Preset Dump Structure</h4>
-<p>A complete preset dump is composed of three sets of packed track parameters (63 bytes), followed by a 3 byte track status array containing information about layering, an effect parameter block (40 bytes), a name (11 characters), and a spare byte for a total of 118 bytes.</p>
+<p>A complete preset dump is composed of three sets of packed track parameters (<span class="value">63</span> bytes), followed by a <span class="value">3</span> byte track status array containing information about layering, an effect parameter block (<span class="value">40</span> bytes), a name (<span class="value">11</span> characters), and a spare byte for a total of <span class="value">118</span> bytes.</p>
 <div class="table-scroll"><table class="sysex offsets">
 <thead><tr><th>Byte Offset</th><th>Size</th><th>Description</th></tr></thead>
 <tbody>
@@ -277,7 +277,7 @@
 <tr><td class="value">n+header_size</td><td class="desc">Global Parameters</td></tr>
 </tbody></table></div>
 
-<p>In an unexpanded system, the Sequence Data segment can contain a maximum of 131,072 bytes. In an expanded system (with SQX-70), the maximum is 393,216 bytes. The individual Sequence Header size is 338 bytes. The complete Sequence Header Segment is <span class="value">20,408</span> bytes, which includes 60 headers, a table of pointers and some additional overhead. The Global Parameters segment is <span class="value">38</span> bytes. Remember that all of this data is transmitted via MIDI as nybblized bytes, so the actual number of bytes transmitted is twice as large for each component of the dump. The size of the largest dump for an unexpanded TS in actual transmitted MIDI bytes may be calculated as follows:</p>
+<p>In an unexpanded system, the Sequence Data segment can contain a maximum of <span class="value">131,072</span> bytes. In an expanded system (with SQX-70), the maximum is <span class="value">393,216</span> bytes. The individual Sequence Header size is <span class="value">338</span> bytes. The complete Sequence Header Segment is <span class="value">20,408</span> bytes, which includes <span class="value">60</span> headers, a table of pointers and some additional overhead. The Global Parameters segment is <span class="value">38</span> bytes. Remember that all of this data is transmitted via MIDI as nybblized bytes, so the actual number of bytes transmitted is twice as large for each component of the dump. The size of the largest dump for an unexpanded TS in actual transmitted MIDI bytes may be calculated as follows:</p>
 <div class="table-scroll"><table class="sysex terms">
   <thead><tr><th>Component</th><th>Actual Size (bytes)</th><th>Nybblized Size</th></tr></thead>
 <tbody>
