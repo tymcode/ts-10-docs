@@ -77,73 +77,73 @@
         <table class="sysex plain">
           <tbody>
             <tr>
-              <td class="desc">Unsigned Int</td>
+              <td class="term"><strong>Unsigned Int</strong></td>
               <td class="value">8 bits</td>
               <td class="value">0..255</td>
               <td class="hex"></td>
             </tr>
             <tr>
-              <td class="desc">Pos Int</td>
+              <td class="term"><strong>Pos Int</strong></td>
               <td class="value">8 bits</td>
               <td class="value">0,.127</td>
               <td class="hex"></td>
             </tr>
             <tr>
-              <td class="desc">Signed Int</td>
+              <td class="term"><strong>Signed Int</strong></td>
               <td class="value">8 bits</td>
               <td class="value">-128..127</td>
               <td class="desc">Two&#x27;s complement</td>
             </tr>
             <tr>
-              <td class="desc">Offset Int</td>
+              <td class="term"><strong>Offset Int</strong></td>
               <td class="value">8 bits</td>
               <td class="value">0..255</td>
               <td class="desc">Displayed with +1 offset (i.e. 1..256)</td>
             </tr>
             <tr>
-              <td class="desc">Pos Frac</td>
+              <td class="term"><strong>Pos Frac</strong></td>
               <td class="value">7 bits</td>
               <td class="value">0..127</td>
               <td class="desc">Displayed as 00..99 using Fraction Table lookup</td>
             </tr>
             <tr>
-              <td class="desc">Signed Frac</td>
+              <td class="term"><strong>Signed Frac</strong></td>
               <td class="value">8 bits</td>
               <td class="value">-128..127</td>
               <td class="desc">Two&#x27;s complement; displayed as -99..+99 using Fraction Table</td>
             </tr>
             <tr>
-              <td class="desc">Word</td>
+              <td class="term"><strong>Word</strong></td>
               <td class="value">16 bits</td>
               <td class="value">0..65535</td>
               <td class="hex"></td>
             </tr>
             <tr>
-              <td class="desc">Table</td>
+              <td class="term"><strong>Table</strong></td>
               <td class="value">8 bits</td>
               <td></td>
               <td>Index to table of text entries</td>
             </tr>
             <tr>
-              <td class="desc">Table Lo</td>
+              <td class="term"><strong>Table Lo</strong></td>
               <td class="value">4 bits</td>
               <td class="value">0..15</td>
               <td class="desc">Low nybble text table index</td>
             </tr>
             <tr>
-              <td class="desc">Table Hi</td>
+              <td class="term"><strong>Table Hi</strong></td>
               <td class="value">4 bits</td>
               <td class="value">0..15</td>
               <td class="desc">High nybble text table index</td>
             </tr>
             <tr>
-              <td class="desc">Bit Table (#)</td>
+              <td class="term"><strong>Bit Table (#)</strong></td>
               <td class="value">1 bit</td>
               <td class="value">0,1</td>
               <td class="desc">Text table index; # is bit number in byte (switch)</td>
             </tr>
             <tr>
-              <td class="desc">Table Ptr</td>
+              <td class="term"><strong>Table Ptr</strong></td>
               <td class="value">8 bits</td>
               <td class="value">0..255</td>
               <td class="desc">Index to table of pointers to variable length text strings</td>
@@ -799,7 +799,7 @@
         <p>The next group of pages (<code>10..35</code>) are used for the voice parameters within a program. There are
           actually six sets of these parameters (one set for each voice) which share these parameter definitions. The
           parameter offsets are listed for Voice 1 and an additional voice offset should be added to get the effective
-          offset for voices 2..6. This voice offset = 92 (voice size) * voice number - 1.</p>
+          offset for voices 2..6. This voice offset = <span class="value">92</span> (voice size) * <span class="value">{voice number}</span> - <span class="value">1</span>.</p>
       </aside>
       <div class="table-scroll">
         <table class="sysex plain">
@@ -860,8 +860,8 @@
           and share offsets in the program data structure. When changing wave page parameters, be sure that the wave
           class is set first, otherwise subsequent parameter values may be invalid. When the wave class is changed, the
           other wave parameters are reset to default values. The Wave Name parameter range depends on the Wave Class
-          parameter setting. Each class has a fixed number of waves (see Wave Class Table below). The WAVE-LIST and
-          DRUM-MAP classes are special in that they allow only one value (0) for the Wave Number parameter which is
+          parameter setting. Each class has a fixed number of waves (see Wave Class Table below). The <code class="lit">WAVE-LIST</code> and
+          <code class="lit">DRUM-MAP</code> classes are special in that they allow only one value (<span class="value">0</span>) for the Wave Number parameter which is
           read-only (i.e. not editable).</p>
       </aside>
       <div class="table-scroll">
@@ -2349,8 +2349,8 @@
       </aside>
 <h4 class="minor">Select Voice (pages 100..103)</h4>
       <aside class="note">
-        <p>Voices 5 and 6 are not available when a program option is active (PitchTable, WaveList, or DrumMap).</p>
-        <p>This condition eliminates slots 04 &amp; 05 on pages 101..103. The status information 1s displayed using the
+        <p>Voices 5 and 6 are not available when a program option is active (<code class="lit">PitchTable</code>, <code class="lit">WaveList</code>, or <code class="lit">DrumMap</code>).</p>
+        <p>This condition eliminates slots 04 &amp; 05 on pages 101..103. The status information is displayed using the
           mute and solo indicators around the wave name associated with the voice.</p>
       </aside>
       <div class="table-scroll">

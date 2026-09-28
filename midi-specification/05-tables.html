@@ -29,8 +29,8 @@
     </header>
 
     <h3>Pitch Tables</h3>
-    <p>The pitch table is a set of 88 concatenated 16 bit records for the keyrange
-      A0 to C8. The upper 8 bits of each record is the semitone value (<code>s</code>) and the lower 8 bits is the
+    <p>The pitch table is a set of <span class="value">88</span> concatenated 16 bit records for the keyrange
+      <kbd class="key">A0</kbd> to <kbd class="key">C8</kbd>. The upper 8 bits of each record is the semitone value (<code class="lit">s</code>) and the lower 8 bits is the
       cents value (<code>c</code>)</p>
     <code>| -- one word --|-- one word --|-- one word -- |</code><br>
     <code>ssssssssccccccccssssssssccccccccsssssssscccccccc</code><br>
@@ -38,8 +38,8 @@
 
 
     <h3 class="minor">Drum Maps</h3>
-    <p>The drum map is a set of 61 concatenated 24 bit records, covering the 61 note keyboard
-      starting at key B1 for compatibility with GM/GS drum mapping.</p>
+    <p>The drum map is a set of <span class="value">61</span> concatenated 24 bit records, covering the 61 note keyboard
+      starting at key <kbd class="key">B1</kbd> for compatibility with GM/GS drum mapping.</p>
     <h4 class="minor">Bit packing scheme</h4>
     <p>This is the bit packing scheme starting from the MSBit of each 24 bit record: </p>
     <div class="table-scroll">
@@ -90,7 +90,7 @@
         Drum-Map Editor sub-pages (see <a href="#table-19">#19 — Drum Wave Name Table</a>).</p>
     </aside>
     <h3>Wave-Lists</h3>
-    <p>The wave-list is made of 16 steps of 11 bytes each (176 bytes) which leaves 8 bytes unused at the end of "voice
+    <p>The wave-list is made of <span class="value">16</span> steps of <span class="value">11</span> bytes each (<span class="value">176</span> bytes) which leaves <span class="value">8</span> bytes unused at the end of "voice
       6". The wave-list replaces voice 5 and 6 in the program.</p>
     <h5>Data structure for each step of the wave-list:</h5>
     <div class="table-scroll">
@@ -408,7 +408,7 @@
             <td class="str">
               <pre class="lit">'ACPIANOS '</pre>
             </td>
-            <td class="desc">acoustic pianos and piano forte</td>
+            <td class="desc">acoustic pianos and pianoforte</td>
           </tr>
           <tr>
             <td class="num">01</td>
@@ -429,7 +429,7 @@
             <td class="str">
               <pre class="lit">'ALTKEYS '</pre>
             </td>
-            <td class="desc">other keyboard sounds: harsichord, accordion</td>
+            <td class="desc">other keyboard sounds: harpsichord, accordion</td>
           </tr>
           <tr>
             <td class="num">04</td>

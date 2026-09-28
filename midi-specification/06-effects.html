@@ -39,7 +39,7 @@
       Select parameter (page 36, slot 0), which reflects the order of the list shown by the system. The actual
       algorithm index value is also listed for each algorithm. This index is the actual value saved in the Algo Index
       (offset 0) in the 40 byte effect data structure, and does not correspond to the Algorithm Number used to
-      logically group the algorithms for display. Algorithms should be referenced by this index value when imbedded in
+      logically group the algorithms for display. Algorithms should be referenced by this index value when embedded in
       program, preset or sequence data structures.</p>
     <p>At the top of every parameter listing page there are some column labels which describe the meaning of the
       parameter description fields. These are defined as follows:</p>
@@ -60,7 +60,7 @@
           </tr>
           <tr>
             <td class="term"><strong>Off</strong></td>
-            <td class="desc">parameter Offset in 40 byte effect data structure</td>
+            <td class="desc">parameter Offset in <span class="value">40</span> byte effect data structure</td>
           </tr>
           <tr>
             <td class="term"><strong>Name</strong></td>
@@ -82,9 +82,9 @@
     <h4 class="minor">For effect modulation parameters</h4>
     <p><strong class="lit">Type: ?</strong> indicates that the liteter type is variable and dependent on the destination
       parameter selected.
-      [Param Names] indicates that the displayed text is a variable length parameter name description which may differ
+      <code class="lit">[Param Names]</code> indicates that the displayed text is a variable length parameter name description which may differ
       from the parameter name which appears on the page where it is located.</p>
-    <p><strong class="lit">Size: ?</strong> indicates variable size table text fields used for Effect Modulation
+    <p><span class="term"><strong>Size: ?</strong></span> indicates variable size table text fields used for Effect Modulation
       Destination parameters which
       display a variable length text string to describe the parameter selected for modulation. These text strings are
       not included in this document.</p>
