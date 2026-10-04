@@ -122,23 +122,23 @@
 <tr><td class="value"><code class="lit">564</code></td><td class="desc">Program Patch 2 (lo 6 bits)</td></tr>
 <tr><td class="value"><code class="lit">565</code></td><td class="desc">Program Patch 3 (lo 6 bits)</td></tr>
 <tr><td class="value"><code class="lit">566</code></td><td class="desc">Program Patch 4 (lo 6 bits)</td></tr>
-<tr><td class="value"><code class="lit">567</code></td><td class="desc">Pressure Mode ! (hi nybble) and Program Option (lo nybble)</td></tr>
+<tr><td class="value"><code class="lit">567</code></td><td class="desc">Pressure Mode<sup><a href="#note-1">1</a></sup> (hi nybble) and Program Option (lo nybble)</td></tr>
 <tr><td class="value"><code class="lit">568</code></td><td class="desc">Program Category</td></tr>
-<tr><td class="value"><code class="lit">569</code></td><td class="desc">Program Patch Select Mode ! (hi nybble) and Restrike (lo nybble)</td></tr>
-<tr><td class="value"><code class="lit">570</code></td><td class="desc">Program Timbre !</td></tr>
-<tr><td class="value"><code class="lit">571</code></td><td class="desc">Program Release !</td></tr>
-<tr><td class="value"><code class="lit">572</code></td><td class="desc">Program Attack !</td></tr>
-<tr><td class="value"><code class="lit">573</code></td><td class="desc">Program Brightness !</td></tr>
-<tr><td class="value"><code class="lit">574</code></td><td class="desc">Program Rate !</td></tr>
-<tr><td class="value"><code class="lit">575</code></td><td class="desc">Program External Controller (XCTRL) !</td></tr>
-<tr><td class="value"><code class="lit">576</code></td><td class="desc">Program Effect Parameters 2</td></tr>
+<tr><td class="value"><code class="lit">569</code></td><td class="desc">Program Patch Select Mode<sup><a href="#note-1">1</a></sup> (hi nybble) and Restrike (lo nybble)</td></tr>
+<tr><td class="value"><code class="lit">570</code></td><td class="desc">Program Timbre<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">571</code></td><td class="desc">Program Release<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">572</code></td><td class="desc">Program Attack<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">573</code></td><td class="desc">Program Brightness<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">574</code></td><td class="desc">Program Rate<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">575</code></td><td class="desc">Program External Controller (XCTRL)<sup><a href="#note-1">1</a></sup></td></tr>
+<tr><td class="value"><code class="lit">576</code></td><td class="desc">Program Effect Parameters <sup><a href="#note-2">2</a></sup></td></tr>
 </tbody></table></div>
 <h5>(end of Program structure)</h5>
 <p class="byte-length">Total size: 616 bytes</p>
-<aside class="note">
-<p>These parameters are edited and stored with the program to serve as default values to be installed on the track along with the program, but actually function on the corresponding Preset Track pages.</p></aside>
-<aside class="note">
-<p>The effect parameter block is <span class="value">40</span> bytes long and the first byte is always the algorithm index. Refer to the <a href="06-effects.html">Effect Parameter Definitions</a> section for more details.</p>
+<aside class="note" id="note-1">
+<p>Note 1: These parameters are edited and stored with the program to serve as default values to be installed on the track along with the program, but actually function on the corresponding Preset Track pages.</p></aside>
+<aside class="note" id="note-2">
+<p>Note 2: The effect parameter block is <span class="value">40</span> bytes long and the first byte is always the algorithm index. Refer to the <a href="06-effects.html">Effect Parameter Definitions</a> section for more details.</p>
 </aside>
 <h3 id="s-4-2">4.2 Preset Parameters</h3>
 <h4 id="s-4-2-1">4.2.1 Preset Track Parameter Structure</h4>
