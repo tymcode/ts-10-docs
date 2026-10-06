@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutorial: Creating an Original Hyper-Wave Voice — Hyper-Wave Programming</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 Hyper-Wave Programming</span></a>
+    </div>
+  </header>
+  <nav class="section-nav">
+    <div><a href="02-modifying.html">← Tutorial: Modifying a Hyper-Wave Voice</a></div>
+    <div><a href="contents.html">Contents</a></div>
+    <div><a href="04-advanced.html">Advanced Hyper-Wave Applications →</a></div>
+  </nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS&#8209;10 / TS&#8209;12 · Hyper-Wave Programming</p>
+      <h1 id="tutorial-creating">II. Tutorial: Creating an Original Hyper-Wave Voice</h1>
+    </header>
+    <p>Here’s a tutorial that takes you through all the basic steps involved in creating an original Hyper-Wave voice “from scratch.” In the process, you’ll learn much more about how each of the Hyper-Wave programming parameters affects the overall sound.</p>
+    <ol>
+      <li id="create-1">
+        <p>Begin by pressing the <kbd class="button">Sounds</kbd> button and select any program. Again, remember that the TS&#8209;10/TS&#8209;12 utilizes a special area of memory called an <a class="refer-to" href="../musicians-manual/08-programs.html#using-the-edit-buffer"><dfn class="term">edit buffer</dfn></a> in which your edits are temporarily stored (this is described on page 129 of the TS&#8209;10/TS&#8209;12 Musician’s Manual). This ensures that no data is lost or overwritten until you specifically Write it to memory, so you can safely select any program at all for this editing procedure.</p>
+      </li>
+      <li id="create-2">
+        <p>Press the <kbd class="button">Select Voice</kbd> button, followed by the <kbd class="button">Copy</kbd> button. The display will change to the <span class="page-name">Copy</span> page, with the following options:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">COPY</td>
+                  <td class="cell" colspan="2">ALL VOICE PARAMETERS</td>
+                </tr>
+                <tr>
+                  <td class="cell">DEFAULT</td>
+                  <td class="cell">RECALL</td>
+                  <td class="cell">MAKE COPY</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Note that the <span class="value">ALL VOICE PARAMETERS</span> context (shown on the top line) and <span class="value">DEFAULT</span> option (in the lower left-hand corner) appear because you entered the <span class="page-name">Copy</span> page directly from the <span class="page-name">Select Voice</span> page. Press the soft button under the <span class="value">DEFAULT</span> option in order to create a default voice. This gives you a good starting point from which to do any TS&#8209;10/TS&#8209;12 programming “from scratch.”</p>
+      </li>
+      <li id="create-3">
+        <p>Also, since Hyper-Wave voices (like all other TS&#8209;10/TS&#8209;12 voices) are under the control of all three envelope generators, use the <span class="function">Copy</span> function to assign a default “Full On” envelope to each of the three. To accomplish this, start by pressing the <kbd class="button">Envelope 1</kbd> button, followed by the <kbd class="button">Copy</kbd> button. The following options will be presented:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">COPY</td>
+                  <td class="cell" colspan="2">ENVELOPE-1 PARAMETERS</td>
+                </tr>
+                <tr>
+                  <td class="cell">DEFAULT</td>
+                  <td class="cell">RECALL</td>
+                  <td class="cell">MAKE COPY</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>This time, the <span class="value">ENVELOPE-1 PARAMETERS</span> context is shown, since you entered the <span class="page-name">Copy</span> page directly from the <span class="page-name">Envelope 1</span> page. Press the soft button under the <span class="value">DEFAULT</span> option and select the <span class="value">FULL ON</span> envelope type, then press the <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> soft button to execute the command:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell" colspan="2">RECALL DEFAULT INTO ENVELOPE-1</td>
+                  <td class="cell"><span class="star">*</span>YES<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell selected" colspan="2">TYPE=FULL ON</td>
+                  <td class="cell"><span class="star">*</span>NO <span class="star">*</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn pressed" data-pos="bc" aria-label="Bottom center soft button" aria-pressed="true"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Repeat the process by pressing the <kbd class="button">Envelope 2</kbd> button, followed by the <kbd class="button">Copy</kbd> button (so that the <span class="value">ENVELOPE-2 PARAMETERS</span> context is displayed) in order to enter the same default “Full On” envelope. Finally, repeat the process one last time, this time pressing the <kbd class="button">Envelope 3</kbd> button, followed by the <kbd class="button">Copy</kbd> button (so that the <span class="value">ENVELOPE-3 PARAMETERS</span> context is displayed).</p>
+      </li>
+      <li id="create-4">
+        <p>As a last step in the preparation process, we’ll temporarily disable the TS&#8209;10/TS&#8209;12 Effects processor so that you can clearly hear every sonic nuance (without the addition of Effects) while you are “tweaking” the voice. To do so, press the <kbd class="button">Program Effects</kbd> button and select <span class="value">EFFECT=00 DRY/BYPASSED</span>:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell selected" colspan="3">EFFECT=00 DRY/BYPASSED</td>
+                </tr>
+                <tr>
+                  <td class="cell" colspan="3">VARIATION=<span class="star">*</span>-USER VARIATION-<span class="star">*</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-5">
+        <p>Next, press the <kbd class="button">Program Control</kbd> button to enter the <span class="page-name">Program Control</span> page. The display will look something like this:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">PROGRAM TYPE=OTHER</td>
+                  <td class="cell selected" colspan="2">OPTION=<span class="star">*</span>-NONE-<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell">PRESS=KEY</td>
+                  <td class="cell">PATCH=LIVE</td>
+                  <td class="cell">RESTRIKE=35</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-6">
+        <p>If it is not already underlined, press the soft button above the <span class="param">OPTION</span> parameter in order to underline it. Then press the <kbd class="button">Up Arrow</kbd> button. The display will read:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell" colspan="2">REPLACE VOICES 5<span class="plus">+</span>6 WITH</td>
+                  <td class="cell"><span class="star">*</span>EXIT<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell">PITCH-TABLE</td>
+                  <td class="cell">WAVE-LIST</td>
+                  <td class="cell">DRUM-MAP</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-7">
+        <p>Note that the top line of the display reads “<span class="lcd">REPLACE VOICES 5+6 WITH</span>…” Whenever you create a Hyper-Wave voice (that is, a sound that uses a wave-list), the TS&#8209;10/TS&#8209;12 automatically deletes voices 5 and 6, using the memory normally occupied by those parameters to store the wave-list data. Also, note that the total polyphony of the instrument is halved when playing a program that utilizes one or more wave-list voices. This is because each key played uses two notes of polyphony in order to allow smooth crossfades between each wave step. Press the soft button under <span class="value">WAVE-LIST</span> in order to replace voices 5 and 6 with wave-list data. The display will change to the <span class="page-name">Select Voice</span> page, which now includes the <span class="value">EDIT WAVE-LIST</span> option:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">SELV SAW-WAVE2</td>
+                  <td class="cell">ORCH-HIT</td>
+                  <td class="cell">APPLAUSE</td>
+                </tr>
+                <tr>
+                  <td class="cell">00 TRUMP-SEC</td>
+                  <td class="cell" colspan="2">EDIT WAVE-LIST</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-8">
+        <p>Here, the TS&#8209;10/TS&#8209;12 gives you the opportunity to select which of the four voices in the program is to receive a wave-list. The first voice (with the <span class="value">SAW-WAVE2</span> wave name) is the one that has received the default settings, so that is the one we’ll choose. It will also be easier to hear your edits if the other voices in the program are muted. Accordingly, solo the first voice by double-clicking on it. The display will look like this:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">SELV <span class="selected"><span class="star">*</span>SAW-WAVE2<span class="star">*</span></span></td>
+                  <td class="cell">(ORCH-HIT)</td>
+                  <td class="cell">(APPLAUSE)</td>
+                </tr>
+                <tr>
+                  <td class="cell">00 (TRUMP-SEC)</td>
+                  <td class="cell" colspan="2">EDIT WAVE-LIST</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-9">
+        <p>Press the <kbd class="button">Wave</kbd> button and select the Wave Class Category (top line center):</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">WAVE SAW-WAVE2</td>
+                  <td class="cell selected">WAVEFORM</td>
+                  <td class="cell">DELAY=0000</td>
+                </tr>
+                <tr>
+                  <td class="cell" colspan="2">MULTISAMPLE-SHIFT=<span class="plus">+</span>00</td>
+                  <td class="cell">DIR=FORWARD</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-10">
+        <p>Move the <kbd class="button">Data Entry Slider</kbd> all the way up in order to choose the <span class="value">WAVE-LIST</span> category. The selected voice within your program is now playing a factory default wave-list over and over in a loop, as you will hear if you play and hold down a note on the keyboard. This default wave-list contains sixteen wave steps, with each playing for the same duration and crossfading gently into the next. The internal ROM waves being played by each of these sixteen wave steps are:</p>
+        <ul>
+          <li>Step 1: <span class="value">TENOR-SAX</span> (pitch normal)</li>
+          <li>Step 2: <span class="value">TUBA</span> (pitch normal)</li>
+          <li>Step 3: <span class="value">CHOIR</span> (pitch normal)</li>
+          <li>Step 4: <span class="value">OPN-HAT-1</span> (pitch normal)</li>
+          <li>Step 5: <span class="value">CLARINET</span> (pitch normal)</li>
+          <li>Step 6: <span class="value">TUBA</span> (pitch normal)</li>
+          <li>Step 7: <span class="value">ELEC-GTR2</span> (pitch normal)</li>
+          <li>Step 8: <span class="value">WURLIE-LO</span> (pitch normal)</li>
+          <li>Step 9: <span class="value">BELL-XWV1</span> (pitch normal)</li>
+          <li>Step 10: <span class="value">TUBULAR</span> (pitch normal)</li>
+          <li>Step 11: <span class="value">ORG-WAVE6</span> (pitch normal)</li>
+          <li>Step 12: <span class="value">SOPRN-SAX</span> (transposed <span class="plus">+</span>02 semitones)</li>
+          <li>Step 13: <span class="value">SOPRN-SAX2</span> (transposed <span class="plus">+</span>05 semitones)</li>
+          <li>Step 14: <span class="value">ALTO-SAX</span> (transposed <span class="plus">+</span>07 semitones)</li>
+          <li>Step 15: <span class="value">TENOR-SAX</span> (transposed <span class="plus">+</span>10 semitones)</li>
+          <li>Step 16: <span class="value">EL-BASS-1</span> (pitch normal)</li>
+        </ul>
+        <p>The pitch transpositions in steps 12–15 account for the arpeggio you hear towards the end of each repetition. Note also that the duration of each wave step remains constant regardless of the note you play on the keyboard; you can even play chords, with each note in the chord cycling through the wave steps at the same time. However, if you play an arpeggiated chord, each note will cycle through the wave steps at different points, creating an interesting effect.</p>
+      </li>
+      <li id="create-11">
+        <p>We’ll get down to the nitty-gritty of editing the default wave-list shortly, but first let’s examine the various parameters provided by the <span class="page-name">Wave</span> page display when the current program contains a wave-list. The <span class="param">DELAY</span> parameter (range: 0000 to 5000 msec or <span class="value">KYUP</span>) determines how long the voice will wait after a key is struck before playing. If you want your wave-list to play immediately when you strike a key, leave this parameter set to 0000 (no delay). If you want the wave-list to play at some point after the key is struck (for example, if you want other voices within the program to play first, with the wave-list coming in or fading up later), you can use this parameter to delay its entry for up to five whole seconds (5000 msec). The <span class="value">KYUP</span> parameter is particularly interesting; when selected, the wave-list will not play until a key is released. In order to hear this effect, you’ll need to have a fairly high release time set in Envelope 3. Experiment with various <span class="param">DELAY</span> times, listening carefully as you do so; when you’re done, return it to its default value of 0000 and move on.</p>
+      </li>
+      <li id="create-12">
+        <p>The <span class="param">START-STEP</span>, <span class="param">LOOPSTART</span>, and <span class="param">END</span> parameters all allow you to specify what part of the total wave-list you wish to hear when a key is pressed. <span class="param">START-STEP</span> determines the starting step number when a key is initially struck; <span class="param">LOOPSTART</span> determines the starting point of the repeating loop (remember, Hyper-Wave voices always play wave-lists in continuous loops), and <span class="param">END</span> determines the last step played before looping back to play the <span class="param">LOOPSTART</span> step. To illustrate, suppose you enter a <span class="param">START-STEP</span> of 4, a <span class="param">LOOPSTART</span> of 6, and an <span class="param">END</span> of 10. When you then strike a key, you’ll hear wave steps 4–10 play, followed by wave steps 6–10, which then loop continuously (as long as Envelope 3 permits). If you want to hear all sixteen wave steps, simply leave the default values (<span class="value">START-STEP=01</span>; <span class="value">LOOPSTART=01</span>; and <span class="value">END=16</span>). Again, experiment freely with changing these values, listening carefully as you do so. When you’re done, restore the default values.</p>
+      </li>
+    </ol>
+    <aside class="note">
+      <p>Bear in mind that Hyper-Wave voices, like all other TS&#8209;10/TS&#8209;12 sounds, are always under the direct control of all three envelopes as well as being affected by all other parameters (such as filters, modulation sources, etc.).</p>
+    </aside>
+    <ol start="13">
+      <li id="create-13">
+        <p>If you press the <kbd class="button">Wave</kbd> button a second time, you’ll be taken to the <span class="page-name">Wave Modulation</span> page, which shows the various modulation options available to a Hyper-Wave voice—we’ll talk about these options shortly. Bear in mind that a Hyper-Wave voice does not have to necessarily utilize all sixteen wave steps; as we’ve seen, the <span class="param">START-STEP</span>, <span class="param">LOOPSTART</span>, and <span class="param">END</span> parameters all allow you to specify which steps you wish to hear. For the purposes of this Tutorial, we’re going to utilize wave steps 1–8 to create a drum pattern and steps 9–16 to create an accompanying bass pattern. Ultimately, we’ll have both parts play together. For now, though, set the current voice (voice 1) to play only the drum pattern contained in steps 1–8. Accordingly, press the <kbd class="button">Wave</kbd> button once again in order to return to the main <span class="page-name">Wave</span> page and change the <span class="param">END</span> parameter to a value of 08, leaving the <span class="param">START-STEP</span> and <span class="param">LOOPSTART</span> parameters at their default values of 01:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">WAVE WAVE-LIST</td>
+                  <td class="cell">WAVE-LIST</td>
+                  <td class="cell">DELAY=0000</td>
+                </tr>
+                <tr>
+                  <td class="cell">START-STEP=01</td>
+                  <td class="cell">LOOPSTART=01</td>
+                  <td class="cell">END=08</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-14">
+        <p>Now we’re ready to begin constructing a custom wave-list. To do so, we’ll need to enter the <span class="page-name">Wave-List Editor</span>, accessed by returning to the <span class="page-name">Select Voice</span> page (press the <kbd class="button">Select Voice</kbd> button) and then pressing either of the soft buttons under the <span class="value">EDIT WAVE-LIST</span> option (lower center or lower right-hand corner). Here’s what the main <span class="page-name">Wave-List Editor</span> page looks like:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">STEP=01</td>
+                  <td class="cell">WAVE=TENOR-SAX</td>
+                  <td class="cell">WIND<span class="plus">+</span>REEDS</td>
+                </tr>
+                <tr>
+                  <td class="cell">START=00</td>
+                  <td class="cell"><span class="star">*</span>TIME<span class="star">*</span></td>
+                  <td class="cell"><span class="star">*</span>PITCH<span class="star">*</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-15">
+        <p>The <span class="param">STEP</span> parameter (in the upper left-hand corner) allows you to select which of the sixteen wave steps you wish to edit. Start by setting this to step 01.</p>
+      </li>
+      <li id="create-16">
+        <p>The <span class="param">WAVE NAME</span> and <span class="param">WAVE CLASS</span> parameters (upper center and upper right-hand corner) allow you to specify which internal ROM wave you wish to assign to the selected step. Start by selecting the <span class="value">FAT-KICK</span> wave from the <span class="value">DRUM-SOUND</span> wave class for step 01:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">STEP=01</td>
+                  <td class="cell selected">WAVE=FAT-KICK</td>
+                  <td class="cell">DRUM-SOUND</td>
+                </tr>
+                <tr>
+                  <td class="cell">START=00</td>
+                  <td class="cell"><span class="star">*</span>TIME<span class="star">*</span></td>
+                  <td class="cell"><span class="star">*</span>PITCH<span class="star">*</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+      </li>
+      <li id="create-17">
+        <p>Use the same procedure to select the following internal ROM waves for each of the first eight wave steps:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Step</th><th>Wave Name</th><th>Wave Class</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td><span class="value">FAT-KICK</span></td><td><span class="value">DRUM-SOUND</span></td></tr>
+            <tr><td>02</td><td><span class="value">CLO-HAT-1</span></td><td><span class="value">CYMBALS</span></td></tr>
+            <tr><td>03</td><td><span class="value">RIMSHOT-1</span></td><td><span class="value">DRUM-SOUND</span></td></tr>
+            <tr><td>04</td><td><span class="value">CLO-HAT-1</span></td><td><span class="value">CYMBALS</span></td></tr>
+            <tr><td>05</td><td><span class="value">FAT-KICK</span></td><td><span class="value">DRUM-SOUND</span></td></tr>
+            <tr><td>06</td><td><span class="value">FAT-KICK</span></td><td><span class="value">DRUM-SOUND</span></td></tr>
+            <tr><td>07</td><td><span class="value">RIMSHOT-1</span></td><td><span class="value">DRUM-SOUND</span></td></tr>
+            <tr><td>08</td><td><span class="value">CLO-HAT-1</span></td><td><span class="value">CYMBALS</span></td></tr>
+          </tbody>
+        </table>
+        <p>Then select the <span class="value">SYNBASS-1</span> wave (from the <span class="value">BASS-SOUND</span> wave class) for steps 9–16.</p>
+      </li>
+      <li id="create-18">
+        <p>The <span class="param">START</span> parameter (in the lower left-hand corner) allows you to set the internal starting time for the selected wave. It has a range of 00 to 99, with larger values corresponding to later start times. When set to 00 (the default), you’ll hear the selected wave from its beginning. When set to larger values, the wave starts at a later point. The main function of the <span class="param">START</span> parameter is to allow you to delete the initial (attack) portion of a sound; this is mainly useful when you are trying to create smooth transitions between consecutive wave steps. Leave it at its default of 00 for wave steps 1–12, but change the <span class="param">START</span> time for steps 13–16 to a new value of 20 (this will cause the last four notes of the bass pattern to sound without their attacks, making for a more realistic effect).</p>
+      </li>
+      <li id="create-19">
+        <p>If you play a key on the keyboard, you’ll hear a definite drum pattern, but all the steps (after the initial attack) are somewhat muffled. The reason for this has to do with the default crossfade settings which are still being applied. Press the soft button under the <span class="value"><span class="star">*</span>TIME<span class="star">*</span></span> option (lower center) in order to enter the <span class="page-name">Time</span> sub-page:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">STEP=01 FAT-KICK</td>
+                  <td class="cell">DUR=00192</td>
+                  <td class="cell"><span class="star">*</span>EXIT<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell">VOL=<span class="plus">+</span>00DB</td>
+                  <td class="cell">XFADE-TIME=00192</td>
+                  <td class="cell">DEPTH=4DB</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>The <span class="param">STEP</span> parameter (upper left-hand corner) allows you to select the wave step you wish to edit. Select Step 01. The duration (<span class="param">DUR</span>) parameter (upper center) enables you to specify the duration of the selected wave step, in increments of 12 milliseconds. The range of this control is 00000 to 60000 (60 seconds). For now, leave the duration of wave step 1 at its default of 192. The volume (<span class="param">VOL</span>) parameter allows you to independently adjust the level of each wave step, over a range of −50 to <span class="plus">+</span>14 dB, with <span class="plus">+</span>00 dB (the default value) indicating no attenuation or boost in level. For now, leave the volume of wave step 1 at its default of <span class="plus">+</span>00. The crossfade time parameter (<span class="param">XFADE-TIME</span>) determines the amount of time that the currently selected wave step will use to fade out while the next wave step fades in. Like <span class="param">DUR</span>, the range of this parameter is 00000 to 60000 ms (60 seconds). When a value of 00000 is selected, there is no crossfade time; the currently selected wave step will play throughout its duration at the specified volume. When a value of greater than 00000 is selected, the <span class="param">DEPTH</span> parameter comes into play. This has a range of 0 to 6 dB. Greater values cause the crossfade curve to be steeper (thus yielding more apparent sonic changes), while smaller values result in a gentler curve, with more subtle sonic changes. Crossfades are useful when you’re using a wave-list to create a continuous complex timbre, but, when you’re using a wave-list to construct a distinct series of notes (like we are doing in this Tutorial for both the drum and bass patterns), you won’t want any crossfades at all. Accordingly, set the <span class="param">XFADE-TIME</span> of all wave steps (steps 1–16) to a value of 00000. Now play a note on the keyboard again—this time, you’ll hear all drum sounds at their full volume.</p>
+      </li>
+      <li id="create-20">
+        <p>Because the duration of each of the eight wave steps is currently identical (192 milliseconds), you’re hearing a very regular—in fact, some might say, boring—drum pattern. To spice it up a little, change the duration of wave step 4 to 96 (making it half as long) and that of wave step 5 to 288 (making it one and a half times as long). The effect will be equivalent to that of hearing an eighth note followed by a dotted quarter note. You can add a little more “feel” to the pattern by extending the duration of step 6 ever so slightly, changing it from 196 to 204. This will have the effect of making the beat just a bit “laid back”—and will also serve to reduce the mechanical aspect of the pattern. We’re also going to want to have the bass pattern closely match the timing of the drum pattern, so enter the same duration values in steps 9–16 that you just did in steps 1–8, as shown in this table:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Step</th><th>DUR Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>00192</td></tr>
+            <tr><td>02</td><td>00192</td></tr>
+            <tr><td>03</td><td>00192</td></tr>
+            <tr><td>04</td><td>00096</td></tr>
+            <tr><td>05</td><td>00288</td></tr>
+            <tr><td>06</td><td>00204</td></tr>
+            <tr><td>07</td><td>00192</td></tr>
+            <tr><td>08</td><td>00192</td></tr>
+            <tr><td>09</td><td>00192</td></tr>
+            <tr><td>10</td><td>00192</td></tr>
+            <tr><td>11</td><td>00192</td></tr>
+            <tr><td>12</td><td>00096</td></tr>
+            <tr><td>13</td><td>00288</td></tr>
+            <tr><td>14</td><td>00204</td></tr>
+            <tr><td>15</td><td>00192</td></tr>
+            <tr><td>16</td><td>00192</td></tr>
+          </tbody>
+        </table>
+        <p>When you’re done, press the soft key above the <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> option (upper right-hand corner) to return to the main <span class="page-name">Wave-List Editor</span> page.</p>
+      </li>
+      <li id="create-21">
+        <p>One thing you may have noticed at this point is that the pitch of the drum pattern changes as you play different notes on the keyboard. While this may be desirable for some Hyper-Wave voices, you’ll probably prefer to have a drum pattern stay at the same pitch, regardless of the note played. This is easily accomplished by going to the <span class="page-name">Pitch</span> sub-page, accessed by pressing the soft button beneath the <span class="value"><span class="star">*</span>PITCH<span class="star">*</span></span> option (lower right-hand corner) in the <span class="page-name">Wave-List Editor</span> page:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">STEP=01 FAT-KICK</td>
+                  <td class="cell">DIR=FORWARD</td>
+                  <td class="cell"><span class="star">*</span>EXIT<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell">PITCH-KBD-TRK=ON</td>
+                  <td class="cell">XPOS=<span class="plus">+</span>00</td>
+                  <td class="cell">DETUNE=<span class="plus">+</span>00</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn pressed" data-pos="br" aria-label="Bottom right soft button" aria-pressed="true"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>As with the <span class="page-name">Time</span> sub-page, the upper left-hand corner contains a <span class="param">STEP</span> parameter, allowing you to choose which of the sixteen wave steps you wish to edit. The <span class="param">PITCH-KBD-TRK</span> parameter in the lower left-hand corner enables you to specify whether a particular wave step will respond to the pitch played by the keyboard (as determined by the currently selected System pitch-table) or whether it will ignore it. Since we want all eight steps in the drum pattern to ignore the keyboard, set this parameter to <span class="value">OFF</span> for steps 1–8. Steps 9–16 (which will provide an accompanying bass pattern) should all be left at their default <span class="value">ON</span> settings so that the pitch of the pattern can be freely transposed by playing different notes on the keyboard.</p>
+      </li>
+      <li id="create-22">
+        <p>The Direction (<span class="param">DIR</span>) parameter (upper center) allows you to specify whether you want a wave step to play forward or backwards. This works just like the equivalent <span class="param">DIR</span> parameter on the <span class="page-name">Wave</span> page of non-Hyper-Wave voices; when set to <span class="value">REVERSE</span>, the wave is literally turned around. Experiment with each of the eight wave steps in the drum pattern—you’ll hear some really wild effects! As a suggestion, you might try reversing the direction of the three closed hi-hat sounds (steps 2, 4, and 8). Leave the direction of steps 9–16 at their default <span class="value">FORWARD</span> settings.</p>
+      </li>
+      <li id="create-23">
+        <p>The Transpose (<span class="param">XPOS</span>) and <span class="param">DETUNE</span> parameters (lower center and right) are used to alter the pitch of individual wave steps. <span class="param">XPOS</span> values can range from −36 to <span class="plus">+</span>36 semitones, while the much subtler <span class="param">DETUNE</span> parameter provides values that range from −99 to <span class="plus">+</span>99 cents (a cent is 1/100th of a semitone). For example, to make all the kick drum sounds slightly deeper, set the <span class="param">DETUNE</span> parameter for wave steps 1, 5, and 6 to a new value of −50. Conversely, to make the hi-hat sounds a bit brighter, change the <span class="param">XPOS</span> parameter for wave steps 2, 4, and 8 to a new value of <span class="plus">+</span>02. If you’re into really fine “tweaking,” you can literally set each wave step to a slightly different pitch, more closely emulating the subtleties of an acoustic drummer. You can even change <span class="param">XPOS</span> and <span class="param">DETUNE</span> values “on the fly,” entering them for specified steps while the loop is playing.</p>
+        <p>Next, we’re ready to program the pitches for our accompanying bass pattern. Enter the following <span class="param">XPOS</span> values for steps 9–16:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Step</th><th>XPOS Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>09</td><td><span class="plus">+</span>00</td></tr>
+            <tr><td>10</td><td><span class="plus">+</span>12</td></tr>
+            <tr><td>11</td><td><span class="plus">+</span>00</td></tr>
+            <tr><td>12</td><td><span class="plus">+</span>00</td></tr>
+            <tr><td>13</td><td>−09</td></tr>
+            <tr><td>14</td><td>−08</td></tr>
+            <tr><td>15</td><td>−07</td></tr>
+            <tr><td>16</td><td>−06</td></tr>
+          </tbody>
+        </table>
+        <p>When you’re done, return to the main <span class="page-name">Wave-List Editor</span> page by pressing the soft button above the <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> option (upper right-hand corner).</p>
+      </li>
+      <li id="create-24">
+        <p>To hear the bass pattern play back, press the <kbd class="button">Wave</kbd> button and change both the <span class="param">START-STEP</span> and <span class="param">LOOPSTART</span> values to 09. Then change the <span class="param">END</span> value to 16. Play various notes on the keyboard; because wave steps 9–16 (unlike wave steps 1–8) have their <span class="param">PITCH-KBD-TRK</span> value set to <span class="value">ON</span>, you’ll hear the pattern transpose as you play different notes.</p>
+        <aside class="note"><p>However, the tempo and rhythm of the pattern remain constant!</p></aside>
+      </li>
+      <li id="create-25">
+        <p>As mentioned previously, Hyper-Wave voices can also be modulated in a variety of interesting ways. Now that we’ve built a custom wave-list, let’s see how this works. Press the <kbd class="button">Wave</kbd> button a second time in order to view the <span class="page-name">Wave Modulation</span> sub-page:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">WAVE</td>
+                  <td class="cell selected" colspan="2">MOD-DESTINATION=<span class="star">*</span>--NONE--<span class="star">*</span></td>
+                </tr>
+                <tr>
+                  <td class="cell"></td>
+                  <td class="cell">MODSRC=<span class="star">*</span>OFF<span class="star">*</span></td>
+                  <td class="cell">MODAMT=<span class="plus">+</span>00</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Here, any of the TS&#8209;10/TS&#8209;12’s fifteen standard modulation sources (<span class="param">MODSRC</span>) can be applied to any of five possible destinations (<span class="param">MOD-DESTINATION</span>), with an adjustable <span class="param">MODAMT</span> parameter that allows you to apply negative or positive amounts of modulation signal, over a range of −15 to <span class="plus">+</span>15 (a value of <span class="plus">+</span>00 means that no modulation signal is being routed). The best way to understand how this works is to actually try each of the five possible modulation destinations, so begin by selecting <span class="value">WHEEL</span> as the <span class="param">MODSRC</span>, and set a <span class="param">MODAMT</span> of <span class="plus">+</span>15 for maximum effect. In the default voice (the voice we originally edited to create the wave-list), the modulation wheel is used to determine both LFO rate and depth, so we’ll want to disable these functions so that we won’t be confused by the addition of vibrato when the wheel is raised. Accordingly, press the <kbd class="button">LFO</kbd> button and change the <span class="param">MODSRC</span> for both LFO rate and depth to <span class="value"><span class="star">*</span>OFF<span class="star">*</span></span>, as shown below:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">LFO RATE=60<span class="star">*</span></td>
+                  <td class="cell selected">MODSRC=<span class="star">*</span>OFF<span class="star">*</span></td>
+                  <td class="cell">MODAMT=<span class="plus">+</span>16</td>
+                </tr>
+                <tr>
+                  <td class="cell">DEPTH=00</td>
+                  <td class="cell selected">MODSRC=<span class="star">*</span>OFF<span class="star">*</span></td>
+                  <td class="cell">MODAMT=<span class="plus">+</span>99</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Next, return to the <span class="page-name">Wave</span> page by pressing the <kbd class="button">Wave</kbd> button, and restore the <span class="param">START-STEP</span> and <span class="param">LOOPSTART</span> values to 01, and restore the <span class="param">END</span> value to 8 (this will allow us to hear the drum pattern once again). Then go to the <span class="page-name">Wave Modulation</span> sub-page by pressing the <kbd class="button">Wave</kbd> button a second time. Now we’re ready to explore the effects of applying modulation to each of the five possible destinations.</p>
+      </li>
+    </ol>
+    <aside class="note">
+      <p>The fifteen TS&#8209;10/TS&#8209;12 wave-list modulation sources are: Low Frequency Oscillator (<span class="value">LFO</span>); Noise Generator (<span class="value">NOISE</span>); Envelope 1 (<span class="value">ENV-1</span>); Envelope 2 (<span class="value">ENV-2</span>); Mod Mixer/Shaper (<span class="value">MIXER</span>); Modulation Wheel and Key Pressure (<span class="value">WL <span class="plus">+</span> PR</span>); Key Pressure and Velocity (<span class="value">PR <span class="plus">+</span> VL</span>); Modulation Wheel (<span class="value">WHEEL</span>); Pitch Bend Wheel (<span class="value">PITCH</span>); Voltage Control Foot Pedal (<span class="value">PEDAL</span>); Timbre Control (<span class="value">TIMBR</span>); External MIDI Controller (<span class="value">XCTRL</span>); Channel Key Pressure (<span class="value">PRESS</span>); Keyboard Tracking (<span class="value">KEYBD</span>); and Velocity (<span class="value">VELOC</span>). In addition, a sixteenth option (<span class="value"><span class="star">*</span>OFF<span class="star">*</span></span>) signifies no modulation source. When this is selected, no modulation signal is routed, regardless of the <span class="param">MODAMT</span> value and the selected <span class="param">MOD-DESTINATION</span>.</p>
+    </aside>
+    <ol start="26">
+      <li id="create-26">
+        <p>When <span class="value">START-STEP</span> is selected as the modulation destination, the modulation source (in this case, the wheel) alters the starting step played by the wave-list. To hear how this works, start by playing and holding down a key with the wheel all the way down. In obedience to the <span class="param">START-STEP</span>, <span class="param">LOOPSTART</span> and <span class="param">END</span> parameters we originally set on the <span class="page-name">Wave</span> page, the drum pattern faithfully begins at step 1, plays through to step 8, and then plays steps 1–8 in a continuous loop. Now raise the wheel slightly and play a key. At a certain point, you’ll hear the drum pattern start at step 2 instead; as always, after the first play-through, it loops from steps 1–8. Raise the wheel a little more and play a note again; this time, the drum pattern starts at step 3. Each time you raise the wheel, the drum pattern starts at a later point, but it always loops from steps 1–8 after the first play-through. When the wheel is placed above the halfway point, you’ll start hearing a bass note (from one of the steps 9–16) before the drum pattern begins; this is because the modulation source (in this case, the wheel) is causing the wave-list to start playback at a point after its specified end point (in this case, step 8). When this occurs, the TS&#8209;10/TS&#8209;12 plays that new start-step for its programmed duration and then immediately jumps into the specified loop (in this case, steps 1–8).</p>
+        <p>Now try lowering the <span class="param">MODAMT</span> to a new value of <span class="plus">+</span>08. You’ll find that moving the wheel causes the same thing to occur, but that you have to move the wheel approximately twice as far to get the same effect. At a <span class="param">MODAMT</span> of <span class="plus">+</span>08, for example, you’ll have to move the wheel all the way to the top—not just more than halfway—in order to hear a bass sound precede the drum pattern.</p>
+        <p>Finally, try changing the <span class="param">MODAMT</span> to the maximum negative value of −15. With the current settings, it will have no effect whatsoever, since both the <span class="param">START-STEP</span> and <span class="param">LOOPSTART</span> values are 01 (and you can’t start playback from any earlier point). Press the <kbd class="button">Wave</kbd> button and temporarily change the <span class="param">START-STEP</span> value to 04. Play a note on the keyboard with the wheel fully down. As you might expect, the drum pattern now begins at step 4 and then loops from steps 1–8. Raise the wheel all the way to the top and play a note again. This time, the wheel is having the maximum negative effect, causing the drum pattern to once again begin playback from step 1. With the wheel halfway (or with half the <span class="param">MODAMT</span>, say to −08), the drum pattern begins playback from step 2 or 3 before going into a loop. Before moving on, change the <span class="param">START-STEP</span> parameter back to its original value of 01.</p>
+      </li>
+      <li id="create-27">
+        <p>When <span class="value">LOOP-START</span> is selected as the modulation destination, the modulation source (in this case, the wheel) alters the first step of the continuous loop played by the wave-list. As before, start by playing and holding down a key with the wheel all the way down. Again, the drum pattern faithfully begins at step 1, plays through to step 8, and then plays steps 1–8 in a continuous loop. Now raise the wheel slightly and play a key. At a certain point, you’ll hear the loop change to steps 2–8 (the pattern begins with a closed high-hat instead of a kick drum). Raise the wheel a little more and play a note again; this time, the loop changes to steps 3–8 (starting with a snare drum). Each time you raise the wheel, initial play-through is the same, but the loop starts at a later point, always going through to step 8 (the specified <span class="param">END</span> value). When the wheel is placed above the halfway point, you’ll hear a loop of a single bass note (from one of the steps 9–16) after the first play-through; this is because the modulation source (in this case, the wheel) is causing the wave-list to start looping at a point after its specified end point (in this case, step 8). When this occurs, the TS&#8209;10/TS&#8209;12 continuously loops through that one step, stopping only when you release the key and play a new note.</p>
+        <p>Just as before, applying lesser amounts of positive modulation causes the modulation source (in this case, the wheel) to have less effect, and the application of negative amounts of modulation results in the inverse effect. In this particular case, negative amounts of modulation will have no effect, since the specified <span class="param">LOOPSTART</span> point is step 01 (and you can’t begin a loop any earlier than that). However, if you experiment by changing the <span class="param">LOOPSTART</span> point, you’ll be able to hear the effect of negative modulation. When you’re done experimenting, restore the <span class="param">LOOPSTART</span> value to 01 and set the <span class="param">MODAMT</span> value back to <span class="plus">+</span>15.</p>
+      </li>
+      <li id="create-28">
+        <p>When <span class="value">END-STEP</span> is selected as the modulation destination, the modulation source (in this case, the wheel) alters the end step. As before, start by playing a key with the wheel all the way down—everything plays through normally. In this particular case, however, if you raise the wheel slightly, you’ll hear the first note of the bass pattern at the end of each loop (since the wave-list is now looping through steps 1–9 instead of 1–8). The further forward you move the wheel (which is applying positive modulation), the longer the loop. As a result, you’ll hear more of the bass pattern in each repetition. When the wheel is placed past the half-way point, you’ll hear the entire bass pattern play through after each drum pattern—the wave-list is now looping through all sixteen steps.</p>
+        <p>As before, applying lesser amounts of positive modulation causes a lesser effect. For example, if the <span class="param">MODAMT</span> is changed to <span class="plus">+</span>08, you’ll need to move the wheel all the way up to hear the entire bass pattern play after each drum pattern loop. Negative modulation amounts will result in the inverse effect, with the end step being moved forward (instead of back) as greater modulation amounts are applied. In this case, the overall length of the loop is shortened instead of lengthened.</p>
+      </li>
+      <li id="create-29">
+        <p>Probably the most interesting effects can be generated by selecting <span class="value">TRAVELER</span> as the modulation destination. Here, only one wave step at a time is played (for its specified duration, but in a continuous loop)—but the particular step that is played is determined solely by the modulation source. To demonstrate, set the <span class="param">MODAMT</span> to <span class="plus">+</span>15 (maximum positive modulation), leaving the wheel as the modulation source. Choose <span class="value">TRAVELER</span> as the modulation destination and, with the wheel completely down, play and hold down a note on the keyboard—you’ll hear a continuously repeating kick drum sound (the first step in the wave-list). Now, while continuing to hold the note, move the wheel up slightly—you’ll hear a closed hi-hat sound (the second step in the wave-list). Continue moving the wheel while holding down the note—one by one, you’ll hear each wave step, in order, played on its own in a continuous loop. By adjusting the wheel in real time, you can create a wild new piece of music out of just these sixteen wave steps!</p>
+        <p>With a smaller positive modulation amount, the modulation source (in this case, the wheel) has less effect. For example, set the <span class="param">MODAMT</span> to <span class="plus">+</span>08 and repeat the above experiment. This time, even with the wheel full up, you’ll hear just the ninth step (the first note in the bass pattern). Negative modulation amounts, as usual, have the opposite effect. In this particular case, a negative modulation signal will have no effect, since the <span class="param">START-STEP</span> is currently at its lowest value (01). If, however, you change the <span class="param">START-STEP</span> to a larger value, you’ll be able to hear this inverse effect (when you’re done experimenting, be sure to restore the <span class="param">START-STEP</span> value back to 01).</p>
+      </li>
+      <li id="create-30">
+        <p>The final modulation destination option is called <span class="value">START<span class="plus">+</span>LOOP</span>. This causes all three values—<span class="param">START-STEP</span>, <span class="param">LOOPSTART</span>, and <span class="param">END</span>—to be modulated simultaneously. In effect, this creates a kind of “fixed window” which is superimposed over the wave-list loop. To demonstrate how this works, once again set the <span class="param">MODAMT</span> to <span class="plus">+</span>15 (maximum positive modulation), with the wheel still serving as the modulation source. Choose <span class="value">START<span class="plus">+</span>LOOP</span> as the modulation destination and, with the wheel completely down, play and hold down a note on the keyboard. You’ll hear the complete eight-step drum pattern play through and loop continuously, as usual. Now, while continuing to hold the note down, move the wheel slightly up. At a certain point, you’ll hear the loop change to include a single bass note (the first note of the bass pattern—that is, step 9) instead of the first note of the drum pattern (that is, step 1). What you have done is to shift the “window” forward so that the loop starts at step 2 (instead of step 1) and ends at step 9 (instead of step 8). While continuing to hold down the note, move the wheel up a bit more until you hear the first two notes of the bass pattern (steps 9 and 10) enter the loop in place of the first two notes of the drum pattern (steps 1 and 2). This time, the “window” has been shifted so that the loop starts at step 3 and ends at step 10. Keep moving the wheel up while continuing to hold down a note. As you get above the halfway point, the loop begins shortening, first containing only steps 9–16, then 10–16, then 11–16, and so on. At the topmost position, you’ll hear only a single note—step 16, the last note in the bass pattern—looping continuously. As with all other modulation routings, lesser positive modulation amounts yield a lesser effect, and negative modulation amounts yield an inverse effect, shifting the “window” backward.</p>
+      </li>
+      <li id="create-31">
+        <p>At last—the moment of truth: Let’s see how our drum pattern works along with the bass pattern by having both play simultaneously. To do so, we’ll need to give one voice within our program the job of playing the drum pattern while another one has the job of playing the bass pattern. Accordingly, press the <kbd class="button">Wave</kbd> button and make sure that the current voice has the following settings: <span class="value">START-STEP=01</span>; <span class="value">LOOPSTART=01</span>; and <span class="value">END=08</span>. Then press the <kbd class="button">Write Program</kbd> button and save your work to a user program location. Next, press the <kbd class="button">Voice Select</kbd> button and make sure that the first voice is selected and soloed (underlined with asterisks on either side)—it will be the only one named <span class="value">WAVE-LIST</span>. Press the <kbd class="button">Copy</kbd> button to enter the <span class="page-name">Copy</span> page with the <span class="value">ALL VOICE PARAMETERS</span> context:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">COPY</td>
+                  <td class="cell" colspan="2">ALL VOICE PARAMETERS</td>
+                </tr>
+                <tr>
+                  <td class="cell">DEFAULT</td>
+                  <td class="cell">RECALL</td>
+                  <td class="cell">MAKE COPY</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn pressed" data-pos="br" aria-label="Bottom right soft button" aria-pressed="true"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Press the soft button under the <span class="value">MAKE COPY</span> option (lower right-hand corner); after a second or two, the display will read <span class="lcd">COPY COMPLETED</span>. Now press the <kbd class="button">Voice Select</kbd> button once again and select and unmute the second voice by pressing the soft button over it twice. The screen should look something like this:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">SELV (WAVE-LIST)</td>
+                  <td class="cell selected"><span class="star">*</span>ORCH-HIT<span class="star">*</span></td>
+                  <td class="cell">(APPLAUSE)</td>
+                </tr>
+                <tr>
+                  <td class="cell">00 (TRUMP-SEC)</td>
+                  <td class="cell" colspan="2">EDIT WAVE-LIST</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>Press the <kbd class="button">Copy</kbd> button once again—as before, you’ll see the <span class="page-name">Copy</span> page with the <span class="value">ALL VOICE PARAMETERS</span> context. This time, however, press the soft button under the <span class="value">RECALL</span> option (lower center). After you see the <span class="lcd">COPY COMPLETED</span> message, press the <kbd class="button">Select Voice</kbd> button. The TS&#8209;10/TS&#8209;12 has copied the data from the first voice (the one with the wave-list) to the second voice:</p>
+        <figure class="vfd-unit">
+          <div class="vfd-bezel">
+            <table>
+              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell">SELV (WAVE-LIST)</td>
+                  <td class="cell selected"><span class="star">*</span>WAVE-LIST<span class="star">*</span></td>
+                  <td class="cell">(APPLAUSE)</td>
+                </tr>
+                <tr>
+                  <td class="cell">00 (TRUMP-SEC)</td>
+                  <td class="cell" colspan="2">EDIT WAVE-LIST</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </figure>
+        <p>At the moment, both voices are completely identical, and if you play a key on the keyboard, you’ll simply hear the drum pattern (which will sound slightly flanged since it is being doubled). To change the situation, press the <kbd class="button">Wave</kbd> button and change these parameters as follows: <span class="value">START-STEP=09</span>; <span class="value">LOOPSTART=09</span>; and <span class="value">END=16</span>. This second voice is now playing the bass pattern, while the original first voice is simultaneously playing the drum pattern—and, since we selected the same relative durations for each, the two are in complete synchronization. Play the keyboard and jam away! To add a little “icing” to the cake, you might want to press the <kbd class="button">Program Effects</kbd> button in order to go back to the <span class="page-name">Program Effects</span> pages (remember, the sound we are listening to is completely dry at the moment) and add the effects of your choice. Don’t forget to save your work one last time.</p>
+        <p>Bear in mind that the other two voices in your program are still ready and waiting to make a contribution—all you need to do is to unmute them to bring them to life. These other voices can play “normal” waves or can access other parts of the program’s wave-list. By using the <kbd class="button">Patch Select</kbd> buttons and other TS&#8209;10/TS&#8209;12 features, you can bring the various voices within your program in and out in real time, set up keyboard zones and splits, create velocity switches and crossfades, and so on. Again, the key is to experiment—and to have fun!</p>
+      </li>
+    </ol>
+  </article>
+  <footer class="site-footer">
+    Copyright © 1993 ENSONIQ Corp. All rights reserved.
+    Produced by On The Right Wavelength for ENSONIQ Corp. Part #9390001101.
+    This is a working HTML transcription; original pagination is omitted.
+  </footer>
+</body>
+</html>

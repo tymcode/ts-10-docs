@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Hyper-Wave Applications — Hyper-Wave Programming</title>
+  <link rel="stylesheet" href="../musicians-manual/css/manual.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="../index.html"><span class="brand">ENSONIQ</span></a>
+      <a href="index.html"><span class="product">TS-10 / TS-12 Hyper-Wave Programming</span></a>
+    </div>
+  </header>
+  <nav class="section-nav">
+    <div><a href="03-creating.html">← Tutorial: Creating an Original Hyper-Wave Voice</a></div>
+    <div><a href="contents.html">Contents</a></div>
+    <div><a href="index.html">Cover →</a></div>
+  </nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">TS&#8209;10 / TS&#8209;12 · Hyper-Wave Programming</p>
+      <h1 id="advanced">III. Advanced Hyper-Wave Applications</h1>
+    </header>
+    <p>In the first tutorial, we used Hyper-Wave programming to create a single cohesive sound that undergoes distinctive timbral change throughout its duration. In the second tutorial, we took an entirely different approach, instead creating two Hyper-Wave voices (from a single wave-list) that provided repetitive patterns of individual notes. When used this way, a Hyper-Wave voice acts almost as a rudimentary sixteen-step sequencer. The pitch, volume, and duration of each note can be independently set, as can its timbre (by the act of selecting a different wave for each step) and even wave direction. The major difference between the two approaches lies in whether or not crossfades are used—if they are not, the result is a distinct pattern of notes; if they are, the result is a single cohesive sound.</p>
+    <p>However, the exercises presented in these two tutorials are really only the tip of the iceberg when it comes to Hyper-Wave programming. Here are a few additional suggestions for advanced Hyper-Wave applications:</p>
+    <ul>
+      <li>
+        <p>Hyper-Wave voices normally loop as long as a key is held down or as long as Envelope 3 permits. However, you can create a Hyper-Wave voice that doesn’t loop, as long as it has fifteen or fewer steps. Here’s how to do it: Set the <span class="param">LOOPSTART</span> value to be one greater than the <span class="param">END</span> value (in other words, if the <span class="param">END</span> value is 8, make the <span class="param">LOOPSTART</span> value 9). Then, in the <span class="page-name">Time</span> sub-page, set the <span class="param">LOOPSTART</span> step (in this example, step 9) to its minimum volume (−50 DB). Finally, in order to remove any potential low-level sound which may come from that last step (which is actually looping indefinitely, though attenuated −50 DB), set the sustain level of Envelope 3 to 0 and adjust the decay 3 time accordingly.</p>
+      </li>
+      <li>
+        <p>The fact that the direction of each wave step can be independently set to forward or reverse allows you to create fascinating forward-backward sounds. For example, a fairly common studio trick is to have a backwards snare drum sound segue into the “normal,” forward version of that sound. This creates a unique effect, where the sound appears to suck inward. To recreate this with Hyper-Wave programming, create a wave-list that has a <span class="param">START-STEP</span> of 1, a <span class="param">LOOPSTART</span> of 3, and an <span class="param">END</span> of 2. Then set the volume of step 3 to −50DB and set the sustain level of Envelope 3 to 0, with a decay 3 time of about 20. As described in the paragraph above, this will result in a Hyper-Wave voice that does not loop. Choose a snare drum wave for steps 1 and 2, and, in the <span class="page-name">Pitch</span> sub-page set the direction of wave step 1 to <span class="value">REVERSE</span>. To make sure you get the full attack of step 2, use no crossfade time (a value of 00000) and set Envelope 3’s attack time to 00. You may want to experiment with using the same or different snare drum waves for steps 1 and 2 (a reverse <span class="value">FUNKSNARE</span> going into a forward <span class="value">ROCKSNARE</span> is particularly effective) and you might also want to experiment with various effect types (<span class="value">TIGHT AMBIENCE</span> and <span class="value">GATED REVERB</span> are two that work well).</p>
+      </li>
+      <li>
+        <p>Any kind of wave class—including Transwaves—can be incorporated into Hyper-Wave voices. When using Transwaves in a Hyper-Wave voice, entering different values into the <span class="param">START</span> parameter (in the main <span class="page-name">Wave-List Editor</span> page) will cause distinct timbral change. For example, create a sixteen-step Hyper-Wave voice (<span class="value">START-STEP=1</span>; <span class="value">LOOPSTART=1</span>; <span class="value">END=16</span>) and assign the same Transwave to each of the sixteen steps. Then enter a different <span class="param">START</span> value for each of the sixteen steps. Play and hold a note on the keyboard. Each wave step—though accessing the same wave—produces a significantly different sound, since it is accessing a different <em>area</em> of the same wave. To hear how this works in context with other sounds, call up the program you created in the second Tutorial and, in voice one (the only Hyper-Wave voice), change the wave for all sixteen steps to <span class="value">BELL-XWV2</span> (from the <span class="value">TRANSWAVE</span> wave class). Enter a different <span class="param">START</span> value for each of the sixteen steps (you can just randomly enter values here). Now play and hold a note on the keyboard. You’ll hear the original three drone voices playing along with this randomly changing Transwave sound. For an even better blend, try transposing each of the sixteen wave steps up two or three octaves (this will help better separate the Hyper-Wave voice from the other three, which are all playing a fairly low register).</p>
+      </li>
+      <li>
+        <p>After you’ve created a basic Hyper-Wave voice, take the time to experiment with applying different modulation sources (in both positive and negative amounts) to the five different Hyper-Wave modulation destinations. Particularly interesting effects can be created by using periodic sources such as the LFO or (for great random effects that completely remove the regularity from the wave-list loop) the noise generator. Aperiodic modulation sources such as envelope generators or realtime sources such as velocity or key pressure can also yield very interesting results. Try them all out!</p>
+      </li>
+      <li>
+        <p>In the first Tutorial, we saw how two different voices within a program can access different parts of the same wave-list. Bear in mind, however, that up to <em>four</em> voices within a program can access the same list, with each voice independently accessing any area of the list. For example, one voice might access wave steps 1–8, while a second one accesses steps 3–6, a third one accesses steps 9–16, and a fourth one accesses steps 2–10. The <span class="param">DELAY</span> parameter (in the main <span class="page-name">Wave</span> page) allows you to stagger the onset of each voice; this feature enables the construction of extremely complex sounds from a single wave-list. To demonstrate, call up the program created in the second Tutorial. Make sure all four voices are unmuted and select the second voice (<span class="patch-name">SHAKU</span>) so that it is underlined. Press the <kbd class="button">Wave</kbd> button and change the wave for this voice to <span class="value">WAVE-LIST</span>. Use the same procedure to change voices three and four so that they too use the <span class="value">WAVE-LIST</span> wave. In the <span class="page-name">Wave</span> page, set each of the three voices to access a different area of the wave-list. For example, you might set the <span class="param">LOOPSTART</span> value of voice two to 6, with an <span class="param">END</span> value of 12 (so that this voice loops through steps 6 through 12); voices three and four can be set in a similar, random way. Then set the <span class="param">DELAY</span> time for voice three to 500 msec; for voice four to 1000 msec; and for voice two to <span class="value">KYUP</span>. In the <span class="page-name">Voice Select</span> page, solo voice two and play and hold a note on the keyboard; you won’t hear much of anything at this point, since the release time for this voice is too fast. Accordingly, press the <kbd class="button">Envelope 3</kbd> button and change the release time to a new value of 80. Now unsolo voice two in order to hear all four voices play together. The sonic result is a beautiful blend of constantly changing timbres, with an additional “bonus” of a new timbral shift (added by voice two) when the key is released.</p>
+      </li>
+      <li>
+        <p>Taking this concept further, you can stack up to three Hyper-Wave programs (each playing up to four Hyper-Wave voices) in a Preset. All of the various Preset editing functions are then available, allowing you to quickly and easily create velocity ranges and keyboard zones, and so on, for these programs, as well as giving you live performance control over parameters such as volume, panning, attack, release, brightness, timbre, velocity sensitivity, and response to real-time controllers.</p>
+      </li>
+      <li>
+        <p>Last but not least, here’s an undocumented tip that doesn’t appear in the TS&#8209;10/TS&#8209;12 Musician’s Manual: you can copy a wave-list from one program to another simply by pressing the <kbd class="button">Copy</kbd> button from within the <span class="page-name">Wave-List Editor</span>. Select the <span class="value">MAKE COPY</span> option, then call up the program into which you wish to copy the wave-list parameters. If the destination program doesn’t already have a wave-list, add one by changing the <span class="param">OPTION</span> parameter in the <span class="page-name">Program Control</span> page. Then go to the <span class="page-name">Wave-List Editor</span> and press the <kbd class="button">Copy</kbd> button once again, this time choosing the <span class="value">RECALL</span> option. The entire wave-list (including all <span class="param">TIME</span> and <span class="param">PITCH</span> parameters) from the original voice are now copied into the new voice, ready for further editing as necessary.</p>
+      </li>
+    </ul>
+  </article>
+  <footer class="site-footer">
+    Copyright © 1993 ENSONIQ Corp. All rights reserved.
+    Produced by On The Right Wavelength for ENSONIQ Corp. Part #9390001101.
+    This is a working HTML transcription; original pagination is omitted.
+  </footer>
+</body>
+</html>

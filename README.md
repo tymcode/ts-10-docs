@@ -15,6 +15,7 @@ HTML transcriptions of the original ENSONIQ TS-10 (and TS-12) printed documents.
 | Document | Status |
 | --- | --- |
 | [Musician’s Manual](musicians-manual/) | Version 3.0 transcription |
+| [Hyper-Wave Programming](hyperwave-manual/) | Applications Guide, 1993 |
 | [MIDI Specification](midi-specification/) | SysEx Implementation V.2.0 |
 | [Service Manual](service-manual/) | Forthcoming |
 
