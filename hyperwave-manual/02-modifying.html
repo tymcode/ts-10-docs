@@ -29,116 +29,45 @@
       <li id="modify-1">
         <p>Begin by pressing the <kbd class="button">Sounds</kbd> button. Call up the <span class="patch-name">GENESIS</span> factory sound from bank <span class="value">R4-9</span> by pressing its soft button—the name will be underlined:</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">R4-9 <span class="selected">GENESIS</span></td>
-                  <td class="cell">GRAND-PIANO</td>
-                  <td class="cell">ELEC-KEYS</td>
-                </tr>
-                <tr>
-                  <td class="cell">MIST</td>
-                  <td class="cell">MULTI-BASS</td>
-                  <td class="cell">THE-GROOVE</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
+          <img src="images/displays/01-01.svg" alt="Wave-list editor step 1">
         </figure>
         <p>Remember that the TS&#8209;10/TS&#8209;12 utilizes a special area of memory called an <a class="refer-to" href="../musicians-manual/08-programs.html#using-the-edit-buffer"><dfn class="term">edit buffer</dfn></a> in which your edits are temporarily stored. This ensures that no data is lost or overwritten until you specifically Write it to memory, so you can safely follow the editing procedure in this Tutorial without any fear of permanently altering this factory sound.</p>
       </li>
       <li id="modify-2">
-        <p>Play a few notes on the keyboard while listening carefully. What you will hear is a combination of a drone playing over a repetitive percussive pattern. To start our “dissection” of this program, press the <kbd class="button">Voice Select</kbd> button. Here’s what you’ll see:</p>
+        <p>Play a few notes on the keyboard while listening carefully. What you will hear is a combination of a drone playing over a repetitive percussive pattern. To start our “dissection” of this program, press the <kbd class="button">Select Voice</kbd> button. Here’s what you’ll see:</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">SELV <span class="selected">WAVE-LIST</span></td>
-                  <td class="cell">SHAKU</td>
-                  <td class="cell">SYNTH-VOX</td>
-                </tr>
-                <tr>
-                  <td class="cell">00 XWAVE-EE</td>
-                  <td class="cell" colspan="2">EDIT WAVE-LIST</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
+          <img src="images/displays/02-voice-select.svg" alt="Wave-list editor step 1">
         </figure>
-        <p>We’ll begin by listening to the individual contribution of each voice to the overall program. Solo each of the four voices in turn (by double-clicking the soft button above or below each) and play a few notes as you do so. Voice 1 (which is the only one named <span class="value">WAVE-LIST</span>) is clearly responsible for the percussive pattern, while the other three voices combine to form the drone sound. In this Tutorial, we’ll edit voice 1 (the only Hyper-Wave voice in this program) in order to remove the percussive pattern and substitute instead another complementary drone voice.</p>
+    </li>
+        <p>We’ll begin by listening to the individual contribution of each voice to the overall program. Solo each of the four voices in turn (by double-clicking the soft button above or below each) and play a few notes as you do so. (Note that some Voices only play in specific keyboard zones, so try both high and low notes. Some voices emerge only after a key is held down for a few seconds.)</p> 
+        <p><span class="patch-name">Voice 1</span> is clearly responsible for the percussive pattern, while the other three voices combine to form the drone sound. In this Tutorial, we’ll edit <span class="patch-name">Voice 1</span> (the only Hyper-Wave voice in this program) in order to remove the percussive pattern and substitute instead another complementary drone voice.</p>
+        <p>By double-clicking the soft button above <span class="param">WAVE-LIST</span>, it soloes the voice. Parentheses appear around the other voices, indicating that they are muted.
+          <figure class="vfd-unit">
+            <img src="images/displays/02-solo.svg" alt="Soloing Voice 1">
+          </figure>
       </li>
-    </ol>
-    <aside class="note">
-      <p>Printed page 3 is missing from the scanned source. Steps 3–5 are not in this copy. The tutorial resumes below, already on the <span class="page-name">LFO</span> page, explaining why the factory wave-list is under <span class="value">TRAVELER</span> modulation.</p>
-    </aside>
-    <figure class="vfd-unit">
-      <div class="vfd-bezel">
-        <table>
-          <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-          <thead>
-            <tr class="soft-row top">
-              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-              <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
-              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-            </tr>
-          </thead>
-          <tbody class="vfd-screen">
-            <tr>
-              <td class="cell">LFO</td>
-              <td class="cell selected">WAVESHAPE=POS/SINE</td>
-              <td class="cell">RESTART-MODE=OFF</td>
-            </tr>
-            <tr>
-              <td class="cell">PHASE=128</td>
-              <td class="cell">DELAY=00</td>
-              <td class="cell">NOISE-RATE=71</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr class="soft-row bottom">
-              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </figure>
-    <p>A <span class="value">POS/SINE</span> waveshape is selected; in combination with the <span class="value">TRAVELER</span> <span class="param">MOD-DESTINATION</span>, this means that various steps within the wave-list are being played under the direct control of the rising and falling sine wave (as opposed to the wave-list playing through its steps in order).</p>
-    <aside class="note">
-      <p>You’ll find more information about the various Hyper-Wave parameters in <a href="03-creating.html">Tutorial Two</a>.</p>
+      <li id="modify-3">Press one of the soft buttons below <span class="lcd">EDIT WAVE-LIST</span> to open the <span class="page-name">Wave List</span> editor. Here’s what you’ll see:</p>
+
+        <figure class="vfd-unit">
+          <img src="images/displays/03-edit-wave-list-page.svg" alt="Wave-list editor step 1">
+        </figure>
+        <p>By increasing the <span class="param">STEP</span> value with the <kbd class="button">Data Slider</kbd> or the <kbd class="button">Up Arrow</kbd> key, you can see a variety of percussion instruments that make up the complex sound of the wave-list. However, if you hold down a key and listen carefully, the instruments are not simply playing in a sequence; there is no immediately obvious looping. This is because the wave-list is being sequenced through the <span class="value">TRAVELER</span> <span class="param">MOD-DESTINATION</span>, which is altering the order of the wave-list steps.</p>
+        <li>Press the <kbd class="button">Wave</kbd> button twice to reveal the second <span class="page-name">Wave</span> sub-page:</p>
+          <figure class="vfd-unit">
+            <img src="images/displays/04-mod-destination.svg" alt="TRAVELER modulation alters sequencing">
+          </figure>
+          <p>By setting the <span class="param">MOD-DESTINATION</span> to <span class="value">TRAVELER</span>, the playback order of the waves in the Wave-list is determined by the modulation source, in this case the LFO.</p>
+        </li>
+        <li><p>Changing the nature of the LFO's waveshape will change the ordering of the wave-list playback. Press the LFO button twice to reveal the second <span class="page-name">LFO</span> sub-page.</p>
+        <figure class="vfd-unit">
+          <img src="images/displays/05-lfo-shape.svg" alt="LFO waveshape determines pattern">
+        </figure>
+        <p>A <span class="value">POS/SINE</span> waveshape is selected; in combination with the <span class="value">TRAVELER</span> <span class="param">MOD-DESTINATION</span>, this means that various steps within the wave-list are being played under the direct control of the rising and falling sine wave (as opposed to the wave-list playing through its steps in order).</p>
+        <p> Changing the shape to <span class="value">SQUARE</span> will result in only two of the 16 waves in the list playing back, because a square wave only alternates between two values.</p>
+      </ol>
+
+        <aside class="note">
+          <p>You’ll find more information about the various Hyper-Wave parameters in <a href="03-creating.html">Tutorial Two</a>.</p>
     </aside>
     <ol start="6">
       <li id="modify-6">
@@ -172,146 +101,27 @@
         </table>
       </li>
       <li id="modify-8">
-        <p>Play a note on the keyboard—instead of the sixteen percussive sounds, you’ll now hear a continuous sound containing distinct timbral and (in the case of a few of the wave steps) pitch change. Before we get to the task of blending these changes together into one cohesive sound, we need to make a couple of other minor “tweaks” to this factory voice. First of all, you’ll find that the voice doesn’t change pitch as you play different notes on the keyboard. This is not because of any of the wave-list settings—in fact, all sixteen wave steps have their <span class="param">PITCH-KBD-TRK</span> parameter set to <span class="value">ON</span>. The explanation instead lies in the fact that this voice has not been assigned to the system pitch-table. Press the <kbd class="button">Pitch Mods</kbd> button and locate the <span class="param">PITCHTBL</span> parameter (in the lower left-hand corner). This is currently set to <span class="value">ALL-C4</span> (in other words, all notes played on the keyboard sound the C4 pitch instead of following the “normal” default system pitch-table). Change this parameter to <span class="value">SYSTEM</span> (as shown below), and you’ll find that the sound now changes pitch as you play different notes on the keyboard:</p>
+        <p>Play a note on the keyboard—instead of the sixteen percussive sounds, you’ll now hear a continuous sound containing distinct timbral and (in the case of a few of the wave steps) pitch change. Before we get to the task of blending these changes together into one cohesive sound, we need to make a couple of other minor “tweaks” to this factory voice. First of all, you’ll find that the voice doesn’t change pitch as you play different notes on the keyboard. This is not because of any of the wave-list settings—in fact, all sixteen wave steps have their <span class="param">PITCH-KBD-TRK</span> parameter set to <span class="value">ON</span>.</p>
+        <p>The explanation instead lies in the fact that this voice has not been assigned to the system pitch-table. Press the <kbd class="button">Pitch Mods</kbd> button and locate the <span class="param">PITCHTBL</span> parameter (in the lower left-hand corner). This is currently set to <span class="value">ALL-C4</span> (in other words, all notes played on the keyboard sound the <kbd class="key">C4</kbd> pitch instead of following the “normal” default system pitch-table). Change this parameter to <span class="value">SYSTEM</span>, and you’ll find that the sound now changes pitch as you play different notes on the keyboard.</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">PITCH MODSRC=LFO</td>
-                  <td class="cell">MODAMT=<span class="plus">+</span>00</td>
-                  <td class="cell">BEND=SYS</td>
-                </tr>
-                <tr>
-                  <td class="cell selected">PITCHTBL=SYSTEM</td>
-                  <td class="cell">ENV1=<span class="plus">+</span>00</td>
-                  <td class="cell">LFO=<span class="plus">+</span>00</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn pressed" data-pos="bl" aria-label="Bottom left soft button" aria-pressed="true"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </figure>
-      </li>
+          <img src="images/displays/08-pitch-tbl.svg" alt="Setting PITCHTBL to SYSTEM">
+        </figure>     </li>
       <li id="modify-9">
         <p>Secondly, this sound currently only plays monophonically. This is because of the Glide Mode that was selected when the voice was originally programmed. To change this and allow the voice to play polyphonically, press the <kbd class="button">Pitch</kbd> button and change the <span class="param">GLIDEMODE</span> parameter from <span class="value">MINIMODE</span> to <span class="value">NONE</span>:</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">PITCH OCTAVE=<span class="plus">+</span>0</td>
-                  <td class="cell">SEMITONE=<span class="plus">+</span>00</td>
-                  <td class="cell">FINE=<span class="plus">+</span>00</td>
-                </tr>
-                <tr>
-                  <td class="cell selected">GLIDEMODE=NONE</td>
-                  <td class="cell" colspan="2">GLIDETIME=00</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn pressed" data-pos="bl" aria-label="Bottom left soft button" aria-pressed="true"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
+          <img src="images/displays/09-glidemode.svg" alt="Setting GLIDEMODE to NONE">
         </figure>
       </li>
       <li id="modify-10">
-        <p>Third, the initial attack of the first wave step is not clearly audible. We specifically chose the <span class="value">CHIFFLUTE</span> wave (from the <span class="value">WIND<span class="plus">+</span>REEDS</span> wave class) as the starting step because it produces a characteristic attack that will give a great deal of character to the complex sound we’re trying to create. In this particular case, the reason why the beginning of this wave is cut off has nothing to do with any wave-list settings (the <span class="param">START</span> time of <em>wave step 1</em> is at <span class="value">00</span> and the <span class="param">DELAY</span> time of the overall wave-list is at <span class="value">0000</span>). Instead, the explanation lies in the action of <span class="param">Envelope 2</span>, which, in this particular sound, is modulating the cutoff frequency of <span class="param">Filter 1</span> (as you will see if you press the <kbd class="button">Filters</kbd> button). To change this, press the <kbd class="button">Envelope 2</kbd> button and alter the <span class="param">Attack</span> time to a new value of <span class="value">12</span>, as shown below:</p>
+        <p>Third, the initial attack of the first wave step is not clearly audible. We specifically chose the <span class="value">CHIFFLUTE</span> wave (from the <span class="value">WIND<span class="plus">+</span>REEDS</span> wave class) as the starting step because it produces a characteristic attack that will give a great deal of character to the complex sound we’re trying to create. In this particular case, the reason why the beginning of this wave is cut off has nothing to do with any wave-list settings (the <span class="param">START</span> time of wave <span class="value"> step 01</span> is at <span class="value">00</span> and the <span class="param">DELAY</span> time of the overall wave-list is at <span class="value">0000</span>). Instead, the explanation lies in the action of <span class="param">Envelope 2</span>, which, in this particular sound, is modulating the cutoff frequency of <span class="param">Filter 1</span> (as you will see if you press the <kbd class="button">Filters</kbd> button). To change this, press the <kbd class="button">Envelope 2</kbd> button and alter the <span class="param">Attack</span> time to a new value of <span class="value">12</span>, as shown below:</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-                  <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">ENV2 TIMES</td>
-                  <td class="cell selected">ATTACK=12</td>
-                  <td class="cell">DECAY1=50</td>
-                </tr>
-                <tr>
-                  <td class="cell">DECAY2=40</td>
-                  <td class="cell">DECAY3=61</td>
-                  <td class="cell">RELEASE=16</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
+          <img src="images/displays/10-envelope-attack.svg" alt="Editing Envelope 2 attack">
         </figure>
       </li>
       <li id="modify-11">
         <p>Play a few notes on the keyboard and listen carefully—we’re getting there, but each of the sixteen wave steps still sounds quite distinct, instead of blending into the one cohesive sound we’re trying to attain. This is where the Hyper-Wave <span class="param">XFADE</span> and <span class="param">DEPTH</span> parameters come into play. Press the <kbd class="button">Select Voice</kbd> button once again, and then press either soft button under the <span class="value">EDIT WAVE-LIST</span> option in order to enter the <span class="page-name">Wave List Editor</span>. Then press the soft button under the <span class="value"><span class="star">*</span>TIME<span class="star">*</span></span> parameter (lower center) in order to enter the <span class="page-name">Time</span> sub-page:</p>
         <figure class="vfd-unit">
-          <div class="vfd-bezel">
-            <table>
-              <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-              <thead>
-                <tr class="soft-row top">
-                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-                </tr>
-              </thead>
-              <tbody class="vfd-screen">
-                <tr>
-                  <td class="cell">STEP=01 CHIFFLUTE</td>
-                  <td class="cell">DUR=00192</td>
-                  <td class="cell"><span class="star">*</span>EXIT<span class="star">*</span></td>
-                </tr>
-                <tr>
-                  <td class="cell">VOL=<span class="plus">+</span>00DB</td>
-                  <td class="cell">XFADE-TIME=00000</td>
-                  <td class="cell">DEPTH=0DB</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="soft-row bottom">
-                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-                  <td><button type="button" class="soft-btn pressed" data-pos="bc" aria-label="Bottom center soft button" aria-pressed="true"></button></td>
-                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
+          <img src="images/displays/11-time-subpage.svg" alt="Editing Time subpage">
         </figure>
         <p>If you use the <span class="param">STEP</span> parameter to view all sixteen wave steps, you’ll find they all currently have a duration (<span class="param">DUR</span>) of <span class="value">192</span> (<span class="hex">00192</span>) msec, but with a crossfade time (<span class="param">XFADE-TIME</span>) of <span class="hex">00000</span>—in other words, there are no crossfades in use at all. Change this so that all sixteen steps utilize a crossfade time of <span class="value">192</span> (<span class="hex">00192</span>), with a depth of <span class="value">2</span> <span class="unit">DB</span>. This way, each wave step will seamlessly blend into the next one over its full duration. Play a note, and then a chord, on the keyboard. Quite a change!</p>
       </li>
